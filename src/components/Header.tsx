@@ -45,7 +45,7 @@ export default function Header() {
               Dr. William C.K. Yomes
             </span>
             <span className="text-[10px] text-gold-500 tracking-[0.25em] uppercase mt-0.5">
-              Pastor · Author · Apologist
+              Pastor · Apologist · Author
             </span>
           </Link>
 

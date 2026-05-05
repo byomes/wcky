@@ -10,7 +10,7 @@ export default function Footer() {
               Dr. William C.K. Yomes
             </h3>
             <p className="text-[11px] text-gold-500 tracking-[0.25em] uppercase mb-4">
-              Pastor · Author · Apologist
+              Pastor · Apologist · Author
             </p>
             <p className="text-sm text-slate-500 leading-relaxed">
               Exploring the deep foundations of Christian faith through
