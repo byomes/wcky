@@ -17,22 +17,25 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-navy-950">
-        {/* Background photo — offset right so Bill's face is visible */}
+      <section className="relative min-h-[90vh] flex items-end lg:items-center overflow-hidden bg-navy-950">
+        {/* Photo — left side on desktop, top on mobile */}
         <Image
           src="/images/Bill-HeroRC.png"
           alt=""
           fill
           priority
-          className="object-cover object-right"
+          className="object-cover object-top lg:object-left"
         />
-        {/* Dark navy overlay — stronger on the left for text legibility */}
-        <div className="absolute inset-0 bg-navy-950/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/60 to-transparent" />
 
-        {/* Text — left-aligned */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
-          <div className="max-w-xl">
+        {/* Mobile: gradient rising from bottom so photo is visible above text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/75 to-navy-950/10 lg:hidden" />
+
+        {/* Desktop: gradient from right so photo is visible on the left */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-navy-950/95 via-navy-950/70 to-navy-950/15" />
+
+        {/* Text — right half on desktop, full-width at bottom on mobile */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0">
+          <div className="w-full lg:w-1/2 lg:ml-auto">
             <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
               Pastor. Apologist. Author.
             </p>
