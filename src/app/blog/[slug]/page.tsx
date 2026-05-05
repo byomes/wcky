@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 
 interface Props {
@@ -13,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug)
+  const post = await getPostBySlug(params.slug)
   if (!post) return {}
   return {
     title: post.frontmatter.title,
@@ -21,9 +20,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const post = await getPostBySlug(params.slug)
   if (!post) notFound()
+
+  const labels = [
+    ...(post.frontmatter.categories ?? []),
+    ...(post.frontmatter.category ? [post.frontmatter.category] : []),
+    ...(post.frontmatter.tags ?? []),
+  ]
 
   return (
     <>
@@ -36,14 +41,14 @@ export default function BlogPostPage({ params }: Props) {
             ← Back to Blog
           </Link>
 
-          {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+          {labels.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
-              {post.frontmatter.tags.map(tag => (
+              {labels.map(label => (
                 <span
-                  key={tag}
+                  key={label}
                   className="text-xs text-gold-600 border border-gold-700/30 px-3 py-1"
                 >
-                  {tag}
+                  {label}
                 </span>
               ))}
             </div>
@@ -86,9 +91,8 @@ export default function BlogPostPage({ params }: Props) {
               prose-hr:border-navy-700
               prose-code:text-gold-400 prose-code:bg-navy-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
             "
-          >
-            <MDXRemote source={post.content} />
-          </article>
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </div>
       </section>
 
@@ -101,7 +105,7 @@ export default function BlogPostPage({ params }: Props) {
             ← All Posts
           </Link>
           <Link
-            href="/contact"
+            href="/connect"
             className="inline-flex items-center gap-2 text-slate-500 text-sm hover:text-gold-400 transition-colors"
           >
             Questions or feedback? Get in touch →

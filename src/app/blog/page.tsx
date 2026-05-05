@@ -43,18 +43,25 @@ export default function BlogPage() {
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div className="flex-1">
-                      {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.frontmatter.tags.map(tag => (
-                            <span
-                              key={tag}
-                              className="text-xs text-gold-700 border border-gold-800/40 px-2 py-0.5"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                      {(() => {
+                        const labels = [
+                          ...(post.frontmatter.categories ?? []),
+                          ...(post.frontmatter.category ? [post.frontmatter.category] : []),
+                          ...(post.frontmatter.tags ?? []),
+                        ]
+                        return labels.length > 0 ? (
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {labels.map(label => (
+                              <span
+                                key={label}
+                                className="text-xs text-gold-700 border border-gold-800/40 px-2 py-0.5"
+                              >
+                                {label}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null
+                      })()}
                       <h2 className="font-serif text-2xl lg:text-3xl font-bold text-white mb-3 group-hover:text-gold-300 transition-colors duration-200 leading-snug">
                         {post.frontmatter.title}
                       </h2>

@@ -4,6 +4,8 @@ export interface PostFrontmatter {
   excerpt: string
   author?: string
   tags?: string[]
+  category?: string
+  categories?: string[]
   coverImage?: string
 }
 

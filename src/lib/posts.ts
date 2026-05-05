@@ -1,19 +1,21 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { remark } from 'remark'
+import remarkHtml from 'remark-html'
 import type { Post, PostFrontmatter } from '@/types'
 
-const POSTS_DIR = path.join(process.cwd(), 'posts')
+const POSTS_DIR = path.join(process.cwd(), 'content/blog')
 
 export function getAllPosts(): Post[] {
   if (!fs.existsSync(POSTS_DIR)) return []
 
-  const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.mdx'))
+  const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'))
   const now = new Date()
 
   return files
     .map(filename => {
-      const slug = filename.replace(/\.mdx$/, '')
+      const slug = filename.replace(/\.md$/, '')
       const raw = fs.readFileSync(path.join(POSTS_DIR, filename), 'utf-8')
       const { data, content } = matter(raw)
       return { slug, frontmatter: data as PostFrontmatter, content }
@@ -26,8 +28,8 @@ export function getAllPosts(): Post[] {
     )
 }
 
-export function getPostBySlug(slug: string): Post | null {
-  const filePath = path.join(POSTS_DIR, `${slug}.mdx`)
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  const filePath = path.join(POSTS_DIR, `${slug}.md`)
   if (!fs.existsSync(filePath)) return null
 
   const raw = fs.readFileSync(filePath, 'utf-8')
@@ -36,5 +38,8 @@ export function getPostBySlug(slug: string): Post | null {
 
   if (new Date(frontmatter.date) > new Date()) return null
 
-  return { slug, frontmatter, content }
+  const processed = await remark().use(remarkHtml).process(content)
+  const htmlContent = processed.toString()
+
+  return { slug, frontmatter, content: htmlContent }
 }
