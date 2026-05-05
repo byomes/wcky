@@ -18,24 +18,29 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-end lg:items-center overflow-hidden bg-navy-950">
-        {/* Photo — left side on desktop, top on mobile */}
-        <Image
-          src="/images/Bill-HeroRC.png"
-          alt=""
-          fill
-          priority
-          className="object-cover object-top lg:object-left"
-        />
 
-        {/* Mobile: gradient rising from bottom so photo is visible above text */}
+        {/* Photo container:
+            Mobile — absolute inset-0 (full bleed behind text)
+            Desktop — clipped to left half via lg:right-1/2 */}
+        <div className="absolute inset-0 lg:right-1/2">
+          <Image
+            src="/images/Bill-HeroRC.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-top lg:object-center"
+          />
+        </div>
+
+        {/* Mobile only: bottom-up gradient so photo shows above the text */}
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/10 lg:hidden" />
 
-        {/* Desktop: gradient from right so photo is visible on the left */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-navy-950/85 via-navy-950/40 to-navy-950/10" />
+        {/* Desktop: soft feather at the right edge of the photo panel */}
+        <div className="absolute inset-y-0 left-0 right-1/2 hidden lg:block bg-gradient-to-r from-transparent to-navy-950/20" />
 
         {/* Text — right half on desktop, full-width at bottom on mobile */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0">
-          <div className="w-full lg:w-1/2 lg:ml-auto">
+        <div className="relative z-10 w-full flex items-end lg:items-center min-h-[90vh] pb-16 lg:pb-0">
+          <div className="w-full lg:w-1/2 lg:ml-auto px-6 lg:px-16 xl:px-20">
             <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
               Pastor. Apologist. Author.
             </p>
