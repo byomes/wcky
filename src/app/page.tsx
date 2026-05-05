@@ -17,12 +17,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy-950 overflow-hidden min-h-[600px] lg:min-h-[90vh]">
+      <section className="relative bg-navy-950 overflow-hidden min-h-[600px] lg:min-h-[90vh] lg:flex">
 
         {/* Photo:
             Mobile  — in normal flow at h-[62vh] so text follows below
             Desktop — absolute, left half only (out of flow) */}
-        <div className="relative h-[75vw] max-h-[520px] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2">
+        <div className="relative h-[75vw] max-h-[520px] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2 lg:left-0">
           <Image
             src="/images/Bill-HeroRC.png"
             alt=""
