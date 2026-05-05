@@ -55,16 +55,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/theology"
+                href="/start"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
-                Theology Books
+                Get the Free Resource
               </Link>
               <Link
-                href="/dreamstone"
+                href="/arc"
                 className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200"
               >
-                Dreamstone Chronicles
+                Join the Launch Team
               </Link>
             </div>
           </div>
