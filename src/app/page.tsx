@@ -17,55 +17,25 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy-950 overflow-hidden min-h-[600px] lg:min-h-[90vh] lg:flex">
-
-        {/* Photo:
-            Mobile  — in normal flow at h-[62vh] so text follows below
-            Desktop — absolute, left half only (out of flow) */}
-        <div className="relative h-[75vw] max-h-[520px] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2 lg:left-0">
+      <section className="relative bg-navy-950 overflow-hidden">
+        <div className="relative w-full h-[70vh] lg:h-screen">
           <Image
-            src="/images/Bill-HeroRC.png"
-            alt=""
+            src="/images/Bill-HeroRC2.png"
+            alt="Dr. William C.K. Yomes"
             fill
             priority
-            className="object-cover object-top lg:object-center"
+            className="object-cover object-center"
           />
-          {/* Mobile: soft bottom fade into navy so photo blends into text area */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy-950 to-transparent lg:hidden" />
-          {/* Desktop: soft right-edge feather */}
-          <div className="absolute inset-y-0 right-0 w-1/4 hidden lg:block bg-gradient-to-r from-transparent to-navy-950/20" />
-        </div>
-
-        {/* Text:
-            Mobile  — flows naturally below photo, py for breathing room
-            Desktop — fills section height, vertically centered, right half */}
-        <div className="relative z-10 -mt-24 lg:mt-0 lg:min-h-[90vh] lg:flex lg:items-center">
-          <div className="w-full lg:w-1/2 lg:ml-auto px-6 py-10 lg:py-0 lg:px-16 xl:px-20">
-            <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
-              Pastor. Apologist. Author.
-            </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">
-              Dr. William
-              <br />
-              C.K. Yomes
-            </h1>
-            <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10">
-              Theology, apologetics, and resources for Christians who take their
-              faith seriously.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/start"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-              >
-                Get the Free Resource
-              </Link>
-              <Link
-                href="/arc"
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200"
-              >
-                Join the Launch Team
-              </Link>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-950/20 to-navy-950/80" />
+          <div className="absolute inset-0 flex items-center justify-end">
+            <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right">
+              <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">Pastor. Apologist. Author.</p>
+              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">Dr. William<br />C.K. Yomes</h1>
+              <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10">Theology, apologetics, and resources for Christians who take their faith seriously.</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-end">
+                <Link href="/start" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200">Get the Free Resource</Link>
+                <Link href="/arc" className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200">Join the Launch Team</Link>
+              </div>
             </div>
           </div>
         </div>
