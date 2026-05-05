@@ -179,7 +179,7 @@ export default function HomePage() {
                 alt="The Wrong Jesus by Dr. William C.K. Yomes"
                 width={400}
                 height={600}
-                className="w-full h-auto drop-shadow-2xl"
+                className="w-full h-auto drop-shadow-2xl max-w-[260px] mx-auto lg:mx-0"
               />
             </div>
             <div>
