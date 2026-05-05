@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import FreeResourceModal from './FreeResourceModal'
+import LeadMagnetModal from './LeadMagnetModal'
 
 export default function HeroButtons() {
   const [kitOpen, setKitOpen] = useState(false)
 
   return (
     <>
-      <FreeResourceModal isOpen={kitOpen} onClose={() => setKitOpen(false)} />
+      <LeadMagnetModal isOpen={kitOpen} onClose={() => setKitOpen(false)} />
       <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-end">
         <button
           onClick={() => setKitOpen(true)}
