@@ -136,7 +136,16 @@ export default function HomePage() {
       <section className="bg-navy-950 py-24 lg:py-32 border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="relative max-w-sm mx-auto lg:mx-0 order-first lg:order-last">
+              <Image
+                src="/images/lead-magnet.png"
+                alt="Study the Bible Like a Pastor — Free Guide"
+                width={400}
+                height={520}
+                className="w-full h-auto drop-shadow-2xl"
+              />
+            </div>
+            <div className="order-last lg:order-first">
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
                 Free Resource
               </p>
@@ -148,21 +157,12 @@ export default function HomePage() {
                 Scripture — built for everyday believers who want to go deeper
                 than a devotional and actually know what the Bible says.
               </p>
-              <Link
-                href="/start"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              <button
+                data-uid="074d4e9a43"
+                className="formkit-button inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 cursor-pointer"
               >
                 Get the Free Resource →
-              </Link>
-            </div>
-            <div className="relative max-w-sm mx-auto lg:mx-0">
-              <Image
-                src="/images/lead-magnet.png"
-                alt="Study the Bible Like a Pastor — Free Guide"
-                width={400}
-                height={520}
-                className="w-full h-auto drop-shadow-2xl"
-              />
+              </button>
             </div>
           </div>
         </div>

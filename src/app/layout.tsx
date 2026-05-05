@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -35,6 +36,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans">
+        <Script
+          async
+          data-uid="074d4e9a43"
+          src="https://williamckyomes.kit.com/074d4e9a43/index.js"
+          strategy="afterInteractive"
+        />
         <Header />
         <main>{children}</main>
         <Footer />
