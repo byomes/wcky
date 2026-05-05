@@ -157,12 +157,9 @@ export default function HomePage() {
                 Scripture — built for everyday believers who want to go deeper
                 than a devotional and actually know what the Bible says.
               </p>
-              <button
-                data-uid="074d4e9a43"
-                className="formkit-button inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 cursor-pointer"
-              >
+              <Link href="/start" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200">
                 Get the Free Resource →
-              </button>
+              </Link>
             </div>
           </div>
         </div>
