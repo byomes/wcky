@@ -17,12 +17,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy-950 overflow-hidden lg:min-h-[90vh]">
+      <section className="relative bg-navy-950 overflow-hidden min-h-[600px] lg:min-h-[90vh]">
 
         {/* Photo:
             Mobile  — in normal flow at h-[62vh] so text follows below
             Desktop — absolute, left half only (out of flow) */}
-        <div className="relative h-[62vh] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2">
+        <div className="relative h-[75vw] max-h-[520px] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2">
           <Image
             src="/images/Bill-HeroRC.png"
             alt=""
@@ -39,7 +39,7 @@ export default function HomePage() {
         {/* Text:
             Mobile  — flows naturally below photo, py for breathing room
             Desktop — fills section height, vertically centered, right half */}
-        <div className="relative z-10 lg:min-h-[90vh] lg:flex lg:items-center">
+        <div className="relative z-10 -mt-24 lg:mt-0 lg:min-h-[90vh] lg:flex lg:items-center">
           <div className="w-full lg:w-1/2 lg:ml-auto px-6 py-10 lg:py-0 lg:px-16 xl:px-20">
             <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
               Pastor. Apologist. Author.
