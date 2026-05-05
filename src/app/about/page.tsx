@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -28,11 +29,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="aspect-[3/4] bg-navy-800 border border-navy-700 flex items-center justify-center mb-8">
-                <div className="text-center text-slate-600">
-                  <div className="w-20 h-20 rounded-full bg-navy-700 border border-navy-600 mx-auto mb-3" />
-                  <p className="text-sm">Photo placeholder</p>
-                </div>
+              <div className="relative aspect-[3/4] overflow-hidden mb-8">
+                <Image
+                  src="/images/Bill-RC.png"
+                  alt="Dr. William C.K. Yomes"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
 
               <div className="space-y-0">
