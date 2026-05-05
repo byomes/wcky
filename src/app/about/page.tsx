@@ -93,12 +93,9 @@ export default function AboutPage() {
                 >
                   View Books
                 </Link>
-                <Link
-                  href="/connect"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
-                >
+                <a href="mailto:me@williamckyomes.com" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200">
                   Get in Touch
-                </Link>
+                </a>
               </div>
             </div>
           </div>
