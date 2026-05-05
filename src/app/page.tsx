@@ -72,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* Bio */}
-      <section className="bg-navy-900 py-24 lg:py-32">
+      <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[3/4] bg-navy-800 border border-navy-700 overflow-hidden">
@@ -173,6 +173,15 @@ export default function HomePage() {
       <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative max-w-sm mx-auto lg:mx-0">
+              <Image
+                src="/images/wrong-jesus-cover-iso.png"
+                alt="The Wrong Jesus by Dr. William C.K. Yomes"
+                width={400}
+                height={600}
+                className="w-full h-auto drop-shadow-2xl"
+              />
+            </div>
             <div>
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
                 Coming Soon
@@ -183,55 +192,56 @@ export default function HomePage() {
               <p className="text-slate-300 text-xl leading-relaxed mb-6 font-serif italic">
                 When the Worship Is Real But the Jesus Is Wrong
               </p>
-              <p className="text-slate-400 leading-relaxed">
-                A new book from William CK Yomes. Sign up below to be notified
-                when it&apos;s available.
+              <p className="text-slate-400 leading-relaxed mb-10">
+                What happens when sincerity isn&apos;t enough? This book confronts
+                the most dangerous counterfeit in the church — a Jesus who feels
+                right but isn&apos;t. Sign up to be the first to know when it&apos;s
+                available.
               </p>
-            </div>
-
-            {/* Book cover placeholder */}
-            <div className="aspect-[2/3] max-w-sm mx-auto lg:mx-0 bg-navy-800 border border-navy-700 flex items-center justify-center">
-              <p className="text-slate-600 text-xs text-center px-6">
-                Book cover
-                <br />
-                placeholder
-              </p>
+              <Link
+                href="/arc"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Join the Launch Team →
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Email Signup */}
+      {/* Free Resource */}
       <section className="bg-navy-950 py-24 lg:py-32 border-t border-navy-800">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            Stay Connected
-          </p>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-            New Books. New Articles. New Thinking.
-          </h2>
-          <p className="text-slate-400 text-lg mb-10">Keep Me in the Loop</p>
-
-          {/* Replace action URL with your Mailchimp/ConvertKit/Formspree endpoint */}
-          <form
-            action="#"
-            method="POST"
-            className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Your email address"
-              className="flex-1 bg-navy-800 border border-navy-600 text-white px-5 py-4 text-sm focus:outline-none focus:border-gold-600 transition-colors placeholder-slate-600"
-            />
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 whitespace-nowrap"
-            >
-              Sign Me Up
-            </button>
-          </form>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+                Free Resource
+              </p>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Study the Bible Like a Pastor
+              </h2>
+              <p className="text-slate-400 text-lg leading-relaxed mb-10">
+                A practical guide to reading, understanding, and applying
+                Scripture — built for everyday believers who want to go deeper
+                than a devotional and actually know what the Bible says.
+              </p>
+              <Link
+                href="/start"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Get the Free Resource →
+              </Link>
+            </div>
+            <div className="relative max-w-sm mx-auto lg:mx-0">
+              <Image
+                src="/images/lead-magnet.png"
+                alt="Study the Bible Like a Pastor — Free Guide"
+                width={400}
+                height={520}
+                className="w-full h-auto drop-shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
