@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import StartCTA from '@/components/StartCTA'
 
@@ -43,8 +44,13 @@ export default function StartPage() {
 
         {/* Profile */}
         <div className="text-center mb-10">
-          <div className="w-24 h-24 rounded-full bg-navy-700 border border-navy-600 mx-auto mb-5 flex items-center justify-center">
-            <span className="text-slate-600 text-xs">Photo</span>
+          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-gold-500 mx-auto mb-4">
+            <Image
+              src="/images/Bill-CR.png"
+              alt="Dr. William C.K. Yomes"
+              fill
+              className="object-cover object-top"
+            />
           </div>
           <h1 className="font-serif text-2xl font-bold text-white mb-1">
             Dr. William C.K. Yomes
