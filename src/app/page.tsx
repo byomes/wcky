@@ -26,9 +26,8 @@ export default function HomePage() {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-950/20 to-navy-950/80" />
-          <div className="absolute inset-0 flex items-end lg:items-center justify-end">
-            <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right pb-10 lg:pb-0">
+          <div className="absolute inset-0 flex items-end lg:items-center justify-end bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-navy-950/20 lg:to-navy-950/80">
+            <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right pb-16 lg:pb-0">
               <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">Pastor. Apologist. Author.</p>
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">Dr. William<br />C.K. Yomes</h1>
               <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10">For believers and seekers who refuse to check their brains at the door.</p>
@@ -41,52 +40,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bio */}
-      <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[3/4] bg-navy-800 border border-navy-700 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 text-slate-600">
-                <div className="w-24 h-24 rounded-full bg-navy-700 border border-navy-600" />
-                <p className="text-sm">Photo placeholder</p>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-                About
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                Where Theology Puts Its Jeans On
-              </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                William CK Yomes is a husband, father, pastor, apologist,
-                daydreamer, guitar player, and lifelong ice cream superfan. He
-                has spent more than twenty years in local church ministry,
-                earned a doctorate in Theology and Apologetics, and believes
-                the local church is where theology puts its jeans on.
-              </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                He serves as Senior Pastor of Catalyst Community Church in
-                Wilmington, Delaware, founded Adelphos Academy to put
-                theological education within reach of everyday believers, and
-                leads Faith Makes Sense — a ministry devoted to showing that
-                Christian faith is intellectually defensible.
-              </p>
-              <p className="text-slate-400 leading-relaxed">
-                He writes everyday theology for the church and children&apos;s
-                fiction for his family.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 mt-8 text-gold-400 text-sm font-semibold tracking-wide uppercase hover:text-gold-300 transition-colors duration-200"
-              >
-                Read Full Bio <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Recent Posts */}
       {recentPosts.length > 0 && (
