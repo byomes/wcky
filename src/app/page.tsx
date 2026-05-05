@@ -28,10 +28,10 @@ export default function HomePage() {
         />
 
         {/* Mobile: gradient rising from bottom so photo is visible above text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/75 to-navy-950/10 lg:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/10 lg:hidden" />
 
         {/* Desktop: gradient from right so photo is visible on the left */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-navy-950/95 via-navy-950/70 to-navy-950/15" />
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-navy-950/85 via-navy-950/40 to-navy-950/10" />
 
         {/* Text — right half on desktop, full-width at bottom on mobile */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0">
