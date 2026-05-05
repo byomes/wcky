@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 
@@ -16,47 +17,49 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-950">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800" />
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212,168,83,0.15), transparent)',
-          }}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-navy-950">
+        {/* Background photo — offset right so Bill's face is visible */}
+        <Image
+          src="/images/bill-hero.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-right"
         />
+        {/* Dark navy overlay — stronger on the left for text legibility */}
+        <div className="absolute inset-0 bg-navy-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/60 to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-gold-500 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
-            Pastor. Apologist. Author.
-          </p>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-8">
-            Dr. William
-            <br />
-            <span className="text-gold-400">C.K. Yomes</span>
-          </h1>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-            Theology, apologetics, and resources for Christians who take their
-            faith seriously.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/books"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-            >
-              Theology Books
-            </Link>
-            <Link
-              href="/dreamstone"
-              className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
-            >
-              Dreamstone Chronicles
-            </Link>
+        {/* Text — left-aligned */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div className="max-w-xl">
+            <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
+              Pastor. Apologist. Author.
+            </p>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">
+              Dr. William
+              <br />
+              C.K. Yomes
+            </h1>
+            <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10">
+              Theology, apologetics, and resources for Christians who take their
+              faith seriously.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/theology"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Theology Books
+              </Link>
+              <Link
+                href="/dreamstone"
+                className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200"
+              >
+                Dreamstone Chronicles
+              </Link>
+            </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-          <div className="w-px h-14 bg-gradient-to-b from-transparent to-gold-600/40 mx-auto" />
         </div>
       </section>
 
