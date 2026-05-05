@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+import HeroButtons from '@/components/HeroButtons'
+import FreeResourceButton from '@/components/FreeResourceButton'
 
 export const metadata: Metadata = {
   title: {
@@ -32,10 +34,7 @@ export default function HomePage() {
               <p className="hidden lg:block text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">Pastor. Apologist. Author.</p>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-8xl font-bold text-white leading-[1.05] mb-4 lg:mb-6">Dr. William<br />C.K. Yomes</h1>
               <p className="hidden lg:block text-white/75 text-lg md:text-xl leading-relaxed mb-10">For believers and seekers who refuse to check their brains at the door.</p>
-              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-end">
-                <Link href="/start" className="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 bg-gold-500 text-navy-950 text-xs lg:text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200">Get the Free Resource</Link>
-                <Link href="/arc" className="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 border border-white/40 text-white text-xs lg:text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200">Join the Launch Team</Link>
-              </div>
+              <HeroButtons />
             </div>
           </div>
         </div>
@@ -158,9 +157,7 @@ export default function HomePage() {
                 Scripture — built for everyday believers who want to go deeper
                 than a devotional and actually know what the Bible says.
               </p>
-              <Link href="/start" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200">
-                Get the Free Resource →
-              </Link>
+              <FreeResourceButton />
             </div>
           </div>
         </div>
