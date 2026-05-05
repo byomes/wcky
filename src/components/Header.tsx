@@ -7,10 +7,12 @@ import { usePathname } from 'next/navigation'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/books', label: 'Books' },
-  { href: '/speaking', label: 'Speaking' },
+  { href: '/start', label: 'Start' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/theology', label: 'Theology' },
+  { href: '/dreamstone', label: 'Dreamstone' },
+  { href: '/arc', label: 'Arc' },
+  { href: '/connect', label: 'Connect' },
 ]
 
 export default function Header() {
@@ -47,7 +49,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map(link => (
               <Link
                 key={link.href}

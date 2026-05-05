@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Dr. William C.K. Yomes | Pastor. Apologist. Author.',
+  },
+  description:
+    'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+}
 
 export default function HomePage() {
   const recentPosts = getAllPosts().slice(0, 3)
@@ -19,7 +28,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-gold-500 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
-            Pastor · Author · Apologist
+            Pastor. Apologist. Author.
           </p>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-8">
             Dr. William
@@ -27,21 +36,21 @@ export default function HomePage() {
             <span className="text-gold-400">C.K. Yomes</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-            Defending the faith, enriching the mind, and strengthening the church
-            through preaching, writing, and apologetics.
+            Theology, apologetics, and resources for Christians who take their
+            faith seriously.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/books"
               className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
             >
-              Explore the Books
+              Theology Books
             </Link>
             <Link
-              href="/speaking"
+              href="/dreamstone"
               className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
             >
-              Book for Speaking
+              Dreamstone Chronicles
             </Link>
           </div>
         </div>
@@ -51,7 +60,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Snippet */}
+      {/* Bio */}
       <section className="bg-navy-900 py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -60,7 +69,6 @@ export default function HomePage() {
                 <div className="w-24 h-24 rounded-full bg-navy-700 border border-navy-600" />
                 <p className="text-sm">Photo placeholder</p>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gold-700/8 to-transparent" />
             </div>
 
             <div>
@@ -68,21 +76,26 @@ export default function HomePage() {
                 About
               </p>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                Faith, Reason, and the Life of the Mind
+                Where Theology Puts Its Jeans On
               </h2>
-              <div className="space-y-4 text-slate-400 leading-relaxed">
-                <p>
-                  Dr. William C.K. Yomes is a pastor, author, and Christian
-                  apologist committed to defending the historic Christian faith
-                  with intellectual rigor and pastoral warmth.
-                </p>
-                <p>
-                  With decades of ministry experience and advanced theological
-                  training, Dr. Yomes bridges the gap between the academy and
-                  the local church — making the case for Christianity accessible
-                  to both the scholar and the skeptic.
-                </p>
-              </div>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                William CK Yomes is a husband, father, pastor, apologist,
+                daydreamer, guitar player, and lifelong ice cream superfan. He
+                has spent more than twenty years in local church ministry,
+                earned a doctorate in Theology and Apologetics, and believes
+                the local church is where theology puts its jeans on.
+              </p>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                He serves as Senior Pastor of Catalyst Community Church in
+                Wilmington, Delaware, founded Adelphos Academy to put
+                theological education within reach of everyday believers, and
+                leads Faith Makes Sense — a ministry devoted to showing that
+                Christian faith is intellectually defensible.
+              </p>
+              <p className="text-slate-400 leading-relaxed">
+                He writes everyday theology for the church and children&apos;s
+                fiction for his family.
+              </p>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 mt-8 text-gold-400 text-sm font-semibold tracking-wide uppercase hover:text-gold-300 transition-colors duration-200"
@@ -94,77 +107,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Books */}
-      <section className="bg-navy-950 py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-              Published Works
-            </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white">
-              Books
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'The Case for the Resurrection',
-                subtitle: "Historical Evidence for Christianity's Central Claim",
-                year: '2023',
-                description:
-                  'A rigorous examination of the historical evidence for the resurrection of Jesus Christ, engaging both scholarly and popular audiences.',
-              },
-              {
-                title: 'Faith That Thinks',
-                subtitle: 'An Introduction to Christian Apologetics',
-                year: '2021',
-                description:
-                  'An accessible guide to defending the Christian faith, equipping believers to engage thoughtfully with the questions of our age.',
-              },
-              {
-                title: "The Preacher's Creed",
-                subtitle: 'Expository Preaching in the 21st Century',
-                year: '2019',
-                description:
-                  'A theology and practice of biblical preaching, calling pastors back to the power of the proclaimed Word of God.',
-              },
-            ].map(book => (
-              <div
-                key={book.title}
-                className="group border border-navy-700 hover:border-gold-600/40 transition-colors duration-300 p-8 flex flex-col"
-              >
-                <div className="aspect-[2/3] bg-navy-800 border border-navy-700/60 mb-6 flex items-center justify-center shrink-0">
-                  <p className="text-slate-600 text-xs">Cover placeholder</p>
-                </div>
-                <p className="text-gold-600 text-xs tracking-widest uppercase mb-2">
-                  {book.year}
-                </p>
-                <h3 className="font-serif text-xl font-bold text-white mb-1 group-hover:text-gold-300 transition-colors duration-200 leading-snug">
-                  {book.title}
-                </h3>
-                <p className="text-slate-500 text-sm mb-4">{book.subtitle}</p>
-                <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                  {book.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/books"
-              className="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold tracking-wide uppercase hover:text-gold-300 transition-colors duration-200"
-            >
-              View All Books <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Recent Posts */}
       {recentPosts.length > 0 && (
-        <section className="bg-navy-900 py-24 lg:py-32">
+        <section className="bg-navy-950 py-24 lg:py-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16">
               <div>
@@ -213,26 +158,69 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Speaking CTA */}
-      <section className="bg-navy-800 py-24 lg:py-32 border-t border-navy-700">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      {/* Coming Soon: The Wrong Jesus */}
+      <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+                Coming Soon
+              </p>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                The Wrong Jesus
+              </h2>
+              <p className="text-slate-300 text-xl leading-relaxed mb-6 font-serif italic">
+                When the Worship Is Real But the Jesus Is Wrong
+              </p>
+              <p className="text-slate-400 leading-relaxed">
+                A new book from William CK Yomes. Sign up below to be notified
+                when it&apos;s available.
+              </p>
+            </div>
+
+            {/* Book cover placeholder */}
+            <div className="aspect-[2/3] max-w-sm mx-auto lg:mx-0 bg-navy-800 border border-navy-700 flex items-center justify-center">
+              <p className="text-slate-600 text-xs text-center px-6">
+                Book cover
+                <br />
+                placeholder
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Email Signup */}
+      <section className="bg-navy-950 py-24 lg:py-32 border-t border-navy-800">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            Speaking Engagements
+            Stay Connected
           </p>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Bring Dr. Yomes to Your Church or Event
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+            New Books. New Articles. New Thinking.
           </h2>
-          <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            Available for conferences, church services, apologetics seminars, and
-            academic events. Dr. Yomes brings scholarly depth and pastoral heart
-            to every engagement.
-          </p>
-          <Link
-            href="/speaking"
-            className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+          <p className="text-slate-400 text-lg mb-10">Keep Me in the Loop</p>
+
+          {/* Replace action URL with your Mailchimp/ConvertKit/Formspree endpoint */}
+          <form
+            action="#"
+            method="POST"
+            className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
           >
-            Learn About Speaking
-          </Link>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Your email address"
+              className="flex-1 bg-navy-800 border border-navy-600 text-white px-5 py-4 text-sm focus:outline-none focus:border-gold-600 transition-colors placeholder-slate-600"
+            />
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 whitespace-nowrap"
+            >
+              Sign Me Up
+            </button>
+          </form>
         </div>
       </section>
     </>

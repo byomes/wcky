@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Dr. William C.K. Yomes — pastor, author, and Christian apologist.',
+    'William CK Yomes — pastor, apologist, and author. Senior Pastor of Catalyst Community Church and founding apologist of Faith Makes Sense.',
 }
 
 export default function AboutPage() {
@@ -16,9 +16,9 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Pastor, Author,
+            Pastor, Apologist,
             <br />
-            <span className="text-gold-400">and Apologist</span>
+            <span className="text-gold-400">and Author</span>
           </h1>
         </div>
       </section>
@@ -26,6 +26,7 @@ export default function AboutPage() {
       <section className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="aspect-[3/4] bg-navy-800 border border-navy-700 flex items-center justify-center mb-8">
                 <div className="text-center text-slate-600">
@@ -37,10 +38,11 @@ export default function AboutPage() {
               <div className="space-y-0">
                 {[
                   { label: 'Role', value: 'Senior Pastor' },
-                  { label: 'Church', value: 'Placeholder Church' },
-                  { label: 'Location', value: 'City, State' },
-                  { label: 'Degree', value: 'Ph.D., Theology' },
-                  { label: 'Books', value: '3 Published' },
+                  { label: 'Church', value: 'Catalyst Community Church' },
+                  { label: 'Location', value: 'Wilmington, Delaware' },
+                  { label: 'D.Min.', value: 'Liberty University' },
+                  { label: 'M.A.', value: 'Luther Rice College & Seminary' },
+                  { label: 'Ministry', value: 'Faith Makes Sense' },
                 ].map(fact => (
                   <div
                     key={fact.label}
@@ -55,51 +57,52 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Main bio */}
             <div className="lg:col-span-2">
-              <h2 className="font-serif text-3xl font-bold text-white mb-6">
-                A Life Devoted to Truth
-              </h2>
-              <div className="space-y-5 text-slate-400 leading-relaxed mb-10">
+              <div className="space-y-5 text-slate-400 leading-relaxed mb-12">
                 <p>
-                  Dr. William C.K. Yomes has served as a pastor, teacher, and
-                  defender of the Christian faith for over [X] years. His
-                  ministry is marked by a deep commitment to biblical preaching,
-                  rigorous scholarship, and a pastor&apos;s heart for the flock
-                  of God.
+                  William CK Yomes is a pastor, apologist, and author based in
+                  Wilmington, Delaware. He serves as Senior Pastor of Catalyst
+                  Community Church and is the founding apologist of Faith Makes
+                  Sense, a nonprofit providing free apologetics and theological
+                  education for pastors, leaders, and believers around the world.
                 </p>
                 <p>
-                  Placeholder biography text. Dr. Yomes received his academic
-                  training from [institutions] and holds advanced degrees in
-                  [fields]. His dissertation explored [topic], and his academic
-                  work has been published in [journals and venues].
+                  He holds a Master&apos;s Degree in Apologetics from Luther
+                  Rice College and Seminary and a Doctor of Ministry in Theology
+                  and Apologetics from Liberty University. Through Faith Makes
+                  Sense he oversees Adelphos Academy, an online theological
+                  education platform, and provides training to a pastor training
+                  network in Uganda.
                 </p>
                 <p>
-                  Beyond the academy, Dr. Yomes is passionate about equipping
-                  ordinary believers to engage with the intellectual challenges
-                  to their faith. His books and speaking ministry aim to show
-                  that Christian faith is not only personally transformative but
-                  also historically grounded and intellectually credible.
+                  He writes theology for the church — including{' '}
+                  <em className="text-slate-300">He Is Risen</em> and the
+                  forthcoming{' '}
+                  <em className="text-slate-300">The Wrong Jesus</em> — and
+                  children&apos;s fantasy fiction for his family through the
+                  Dreamstone Chronicles series.
+                </p>
+                <p>
+                  He and his wife Melanie share an ever-growing family. He is
+                  also a daydreamer, guitar player, and lifelong ice cream
+                  superfan.
                 </p>
               </div>
 
-              <h2 className="font-serif text-3xl font-bold text-white mb-5">
-                Academic Credentials
-              </h2>
-              <ul className="text-slate-400 space-y-2 mb-10 text-sm">
-                <li>Ph.D., [Field], [Institution], [Year]</li>
-                <li>Th.M., [Field], [Institution], [Year]</li>
-                <li>M.Div., [Institution], [Year]</li>
-                <li>B.A., [Field], [Institution], [Year]</li>
-              </ul>
-
-              <h2 className="font-serif text-3xl font-bold text-white mb-5">
-                Ministry &amp; Affiliations
-              </h2>
-              <p className="text-slate-400 leading-relaxed mb-10">
-                Placeholder text about ministry affiliations, denominations,
-                organizations, boards, or other relevant associations that
-                Dr. Yomes is involved with.
-              </p>
+              <div className="border-t border-navy-800 pt-10 mb-10">
+                <p className="text-slate-400 leading-relaxed">
+                  For ministry resources and theological education, visit{' '}
+                  <a
+                    href="https://faithmakessense.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold-400 hover:text-gold-300 transition-colors duration-200"
+                  >
+                    FaithMakesSense.com
+                  </a>
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -109,7 +112,7 @@ export default function AboutPage() {
                   View Books
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/connect"
                   className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
                 >
                   Get in Touch

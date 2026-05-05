@@ -18,15 +18,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Dr. William C.K. Yomes',
+    default: 'Dr. William C.K. Yomes | Pastor. Apologist. Author.',
     template: '%s | Dr. William C.K. Yomes',
   },
   description:
-    'Pastor, author, and Christian apologist. Exploring faith, reason, and the foundations of Christian belief.',
-  keywords: ['William Yomes', 'WCKY', 'Christian apologist', 'pastor', 'author', 'theology'],
+    'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+  keywords: ['William Yomes', 'WCKY', 'Christian apologist', 'pastor', 'author', 'theology', 'Faith Makes Sense', 'Adelphos Academy'],
   openGraph: {
-    title: 'Dr. William C.K. Yomes',
-    description: 'Pastor, author, and Christian apologist.',
+    title: 'Dr. William C.K. Yomes | Pastor. Apologist. Author.',
+    description: 'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
     type: 'website',
   },
 }

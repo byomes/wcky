@@ -26,10 +26,12 @@ export default function Footer() {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About' },
-                { href: '/books', label: 'Books' },
-                { href: '/speaking', label: 'Speaking' },
+                { href: '/start', label: 'Start' },
                 { href: '/blog', label: 'Blog' },
-                { href: '/contact', label: 'Contact' },
+                { href: '/theology', label: 'Theology' },
+                { href: '/dreamstone', label: 'Dreamstone' },
+                { href: '/arc', label: 'Arc' },
+                { href: '/connect', label: 'Connect' },
               ].map(link => (
                 <Link
                   key={link.href}
@@ -59,7 +61,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-navy-800/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-600">
-            © {new Date().getFullYear()} Dr. William C.K. Yomes. All rights reserved.
+            © 2026 WilliamCKYomes
           </p>
         </div>
       </div>
