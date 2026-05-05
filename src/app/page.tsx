@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-navy-950">
         {/* Background photo — offset right so Bill's face is visible */}
         <Image
-          src="/images/bill-hero.png"
+          src="/images/Bill-SQ.png"
           alt=""
           fill
           priority
