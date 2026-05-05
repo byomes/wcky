@@ -37,27 +37,6 @@ export default function AboutPage() {
                   className="object-cover object-top"
                 />
               </div>
-
-              <div className="space-y-0">
-                {[
-                  { label: 'Role', value: 'Senior Pastor' },
-                  { label: 'Church', value: 'Catalyst Community Church' },
-                  { label: 'Location', value: 'Wilmington, Delaware' },
-                  { label: 'D.Min.', value: 'Liberty University' },
-                  { label: 'M.A.', value: 'Luther Rice College & Seminary' },
-                  { label: 'Ministry', value: 'Faith Makes Sense' },
-                ].map(fact => (
-                  <div
-                    key={fact.label}
-                    className="flex gap-4 py-3 border-b border-navy-800 text-sm"
-                  >
-                    <span className="text-gold-600 font-semibold w-24 shrink-0">
-                      {fact.label}
-                    </span>
-                    <span className="text-slate-400">{fact.value}</span>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Main bio */}
