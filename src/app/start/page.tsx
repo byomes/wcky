@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const links = [
   {
     label: 'Catalyst Community Church',
-    href: 'https://catalystchurchde.com',
+    href: 'https://catalyst302.com',
     external: true,
   },
   {
     label: 'Adelphos Academy',
-    href: 'https://adelphosonline.com',
+    href: 'https://adelphosacademy.com',
     external: true,
   },
   {
