@@ -17,12 +17,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-end lg:items-center overflow-hidden bg-navy-950">
+      <section className="relative bg-navy-950 overflow-hidden lg:min-h-[90vh]">
 
-        {/* Photo container:
-            Mobile — absolute inset-0 (full bleed behind text)
-            Desktop — clipped to left half via lg:right-1/2 */}
-        <div className="absolute inset-0 lg:right-1/2">
+        {/* Photo:
+            Mobile  — in normal flow at h-[62vh] so text follows below
+            Desktop — absolute, left half only (out of flow) */}
+        <div className="relative h-[62vh] lg:h-auto lg:absolute lg:inset-0 lg:right-1/2">
           <Image
             src="/images/Bill-HeroRC.png"
             alt=""
@@ -30,17 +30,17 @@ export default function HomePage() {
             priority
             className="object-cover object-top lg:object-center"
           />
+          {/* Mobile: soft bottom fade into navy so photo blends into text area */}
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy-950 to-transparent lg:hidden" />
+          {/* Desktop: soft right-edge feather */}
+          <div className="absolute inset-y-0 right-0 w-1/4 hidden lg:block bg-gradient-to-r from-transparent to-navy-950/20" />
         </div>
 
-        {/* Mobile only: bottom-up gradient so photo shows above the text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/10 lg:hidden" />
-
-        {/* Desktop: soft feather at the right edge of the photo panel */}
-        <div className="absolute inset-y-0 left-0 right-1/2 hidden lg:block bg-gradient-to-r from-transparent to-navy-950/20" />
-
-        {/* Text — right half on desktop, full-width at bottom on mobile */}
-        <div className="relative z-10 w-full flex items-end lg:items-center min-h-[90vh] pb-16 lg:pb-0">
-          <div className="w-full lg:w-1/2 lg:ml-auto px-6 lg:px-16 xl:px-20">
+        {/* Text:
+            Mobile  — flows naturally below photo, py for breathing room
+            Desktop — fills section height, vertically centered, right half */}
+        <div className="relative z-10 lg:min-h-[90vh] lg:flex lg:items-center">
+          <div className="w-full lg:w-1/2 lg:ml-auto px-6 py-10 lg:py-0 lg:px-16 xl:px-20">
             <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">
               Pastor. Apologist. Author.
             </p>
