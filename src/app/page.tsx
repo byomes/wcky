@@ -27,8 +27,8 @@ export default function HomePage() {
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-950/20 to-navy-950/80" />
-          <div className="absolute inset-0 flex items-center justify-end">
-            <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right">
+          <div className="absolute inset-0 flex items-end lg:items-center justify-end">
+            <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right pb-10 lg:pb-0">
               <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">Pastor. Apologist. Author.</p>
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">Dr. William<br />C.K. Yomes</h1>
               <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10">Theology, apologetics, and resources for Christians who take their faith seriously.</p>
