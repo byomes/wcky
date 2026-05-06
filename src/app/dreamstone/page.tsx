@@ -31,10 +31,6 @@ export default function DreastonePage() {
           <p className="text-slate-400 text-lg max-w-xl leading-relaxed mb-6">
             A children&apos;s fantasy series. Written for the family.
           </p>
-          <span className="inline-flex items-center gap-2 text-xs text-gold-500 border border-gold-700/40 px-4 py-2 tracking-widest uppercase font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
-            Series in Progress
-          </span>
         </div>
       </section>
 

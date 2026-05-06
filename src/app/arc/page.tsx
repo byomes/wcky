@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 }
 
 const commitments = [
+  'Pray for the book\'s impact',
   'Receive an advance copy of The Wrong Jesus before it\'s published',
   'Read the book before the launch date',
   'Post an honest review on Amazon on launch day',
   'Share about the book on at least one social media platform',
-  'Pray for the book\'s impact',
   'Spread the word to anyone who might benefit from reading it',
 ]
 

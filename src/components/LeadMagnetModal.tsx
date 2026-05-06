@@ -33,7 +33,7 @@ export default function LeadMagnetModal({ isOpen, onClose }: Props) {
         {/* Cover image */}
         <div className="relative w-full h-48 sm:h-auto sm:w-2/5 shrink-0">
           <Image
-            src="/images/lead-magnet.png"
+            src="/images/lead-magnet2.png"
             alt="Study the Bible Like a Pastor"
             fill
             className="object-cover"
