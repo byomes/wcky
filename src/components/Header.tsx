@@ -12,7 +12,6 @@ const navLinks = [
   { href: '/theology', label: 'Theology' },
   { href: '/dreamstone', label: 'Dreamstone' },
   { href: '/arc', label: 'Arc' },
-  { href: '/connect', label: 'Connect' },
 ]
 
 export default function Header() {

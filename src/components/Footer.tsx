@@ -31,7 +31,6 @@ export default function Footer() {
                 { href: '/theology', label: 'Theology' },
                 { href: '/dreamstone', label: 'Dreamstone' },
                 { href: '/arc', label: 'Arc' },
-                { href: '/connect', label: 'Connect' },
               ].map(link => (
                 <Link
                   key={link.href}

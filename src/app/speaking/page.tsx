@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Speaking',
@@ -151,12 +150,12 @@ export default function SpeakingPage() {
             dates, and topic interests. We&apos;ll be in touch within 2–3
             business days.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="mailto:speaking@williamckyomes.com"
             className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
           >
             Submit a Speaking Inquiry
-          </Link>
+          </a>
         </div>
       </section>
     </>

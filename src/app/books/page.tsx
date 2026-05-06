@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Books',
@@ -126,12 +125,12 @@ export default function BooksPage() {
           <p className="text-slate-400 text-lg mb-6">
             Interested in bulk orders for your church or organization?
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="mailto:contact@williamckyomes.com"
             className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
           >
             Contact for Bulk Orders
-          </Link>
+          </a>
         </div>
       </section>
     </>
