@@ -33,14 +33,13 @@ export default function TheologyPage() {
           {/* Book 1: He Is Risen — Published */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] relative">
-                <Image
-                  src="/images/HeIsRisen-Cover.jpg"
-                  alt="He Is Risen book cover"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/HeIsRisen-Cover.jpg"
+                alt="He Is Risen book cover"
+                width={220}
+                height={330}
+                className="object-cover"
+              />
             </div>
 
             <div className="lg:col-span-3">
@@ -70,7 +69,7 @@ export default function TheologyPage() {
           {/* Book 2: The Wrong Jesus — Coming Soon */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] bg-navy-800 border border-navy-700 flex items-center justify-center relative overflow-hidden">
+              <div className="w-[220px] h-[330px] bg-navy-800 border border-navy-700 flex items-center justify-center">
                 <p className="text-slate-600 text-xs text-center px-4">
                   Cover
                   <br />

@@ -67,14 +67,13 @@ export default function DreastonePage() {
           {/* Book 1: The Blackstone Curse */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] relative">
-                <Image
-                  src="/images/DS1-cover.png"
-                  alt="The Blackstone Curse book cover"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/DS1-cover.png"
+                alt="The Blackstone Curse book cover"
+                width={220}
+                height={330}
+                className="object-cover"
+              />
             </div>
             <div className="lg:col-span-3">
               <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
@@ -102,14 +101,13 @@ export default function DreastonePage() {
           {/* Book 2: The Wolf's War */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] relative">
-                <Image
-                  src="/images/DS2-cover.png"
-                  alt="The Wolf's War book cover"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/DS2-cover.png"
+                alt="The Wolf's War book cover"
+                width={220}
+                height={330}
+                className="object-cover"
+              />
             </div>
             <div className="lg:col-span-3">
               <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
@@ -137,14 +135,13 @@ export default function DreastonePage() {
           {/* Book 3: The Cave of Kings */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] relative">
-                <Image
-                  src="/images/DS3-cover.png"
-                  alt="The Cave of Kings book cover"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/DS3-cover.png"
+                alt="The Cave of Kings book cover"
+                width={220}
+                height={330}
+                className="object-cover"
+              />
             </div>
             <div className="lg:col-span-3">
               <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
