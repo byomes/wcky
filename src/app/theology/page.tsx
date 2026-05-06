@@ -56,7 +56,7 @@ export default function TheologyPage() {
                 href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Order on Amazon
               </a>
@@ -95,7 +95,7 @@ export default function TheologyPage() {
                 href="https://faithmakessense.kit.com/31040c8e97"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Let Me Know When It&apos;s Available
               </a>

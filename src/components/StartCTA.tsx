@@ -11,7 +11,7 @@ export default function StartCTA() {
       <LeadMagnetModal isOpen={open} onClose={() => setOpen(false)} />
       <button
         onClick={() => setOpen(true)}
-        className="w-full flex items-center justify-between px-6 py-4 bg-gold-500 text-navy-950 hover:bg-gold-400 transition-colors duration-200 group"
+        className="w-full flex items-center justify-between px-6 py-4 bg-gold-500 text-white hover:bg-gold-400 transition-colors duration-200 group"
       >
         <span className="font-bold text-sm tracking-wide">Get Your Free Copy</span>
         <span className="text-lg leading-none">→</span>

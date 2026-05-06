@@ -102,7 +102,7 @@ export default function BooksPage() {
                   <div className="flex flex-wrap gap-4">
                     <a
                       href={book.buyLinks.amazon}
-                      className="inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
                     >
                       Buy on Amazon
                     </a>
