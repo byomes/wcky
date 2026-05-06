@@ -69,13 +69,13 @@ export default function TheologyPage() {
           {/* Book 2: The Wrong Jesus — Coming Soon */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="w-[344px] h-[516px] bg-navy-800 border border-navy-700 flex items-center justify-center">
-                <p className="text-slate-600 text-xs text-center px-4">
-                  Cover
-                  <br />
-                  placeholder
-                </p>
-              </div>
+              <Image
+                src="/images/wrong-jesus-cover-iso.png"
+                alt="The Wrong Jesus book cover"
+                width={344}
+                height={516}
+                className="object-cover"
+              />
             </div>
 
             <div className="lg:col-span-3">
