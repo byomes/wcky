@@ -70,8 +70,8 @@ export default function DreastonePage() {
               <Image
                 src="/images/DS1-cover.png"
                 alt="The Blackstone Curse book cover"
-                width={220}
-                height={330}
+                width={275}
+                height={413}
                 className="object-cover"
               />
             </div>
@@ -104,8 +104,8 @@ export default function DreastonePage() {
               <Image
                 src="/images/DS2-cover.png"
                 alt="The Wolf's War book cover"
-                width={220}
-                height={330}
+                width={275}
+                height={413}
                 className="object-cover"
               />
             </div>
@@ -138,8 +138,8 @@ export default function DreastonePage() {
               <Image
                 src="/images/DS3-cover.png"
                 alt="The Cave of Kings book cover"
-                width={220}
-                height={330}
+                width={275}
+                height={413}
                 className="object-cover"
               />
             </div>
