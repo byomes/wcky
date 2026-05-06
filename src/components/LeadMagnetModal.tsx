@@ -87,7 +87,7 @@ export default function LeadMagnetModal({ isOpen, onClose }: Props) {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase py-4 hover:bg-gold-400 transition-colors"
+                  className="w-full bg-gold-500 text-white text-sm font-bold tracking-wide uppercase py-4 hover:bg-gold-400 transition-colors"
                 >
                   Send It To Me
                 </button>

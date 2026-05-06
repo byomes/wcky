@@ -13,7 +13,7 @@ export default function HeroButtons() {
       <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-end">
         <button
           onClick={() => setKitOpen(true)}
-          className="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 bg-gold-500 text-navy-950 text-xs lg:text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+          className="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 bg-gold-500 text-white text-xs lg:text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
         >
           Get the Free Resource
         </button>

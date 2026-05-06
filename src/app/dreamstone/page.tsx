@@ -85,7 +85,7 @@ export default function DreastonePage() {
                 href="https://www.amazon.com/Blackstone-Curse-Dream-Stone-Chronicles/dp/B09GZBXB3B/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Order on Amazon
               </a>
@@ -119,7 +119,7 @@ export default function DreastonePage() {
                 href="https://www.amazon.com/gp/product/B09LZSF37J"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Order on Amazon
               </a>
@@ -153,7 +153,7 @@ export default function DreastonePage() {
                 href="https://www.amazon.com/gp/product/B09NR7CBFK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Order on Amazon
               </a>
