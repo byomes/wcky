@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Theology & Apologetics',
@@ -33,12 +33,13 @@ export default function TheologyPage() {
           {/* Book 1: He Is Risen — Published */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
-              <div className="aspect-[2/3] bg-navy-800 border border-navy-700 flex items-center justify-center">
-                <p className="text-slate-600 text-xs text-center px-4">
-                  Cover
-                  <br />
-                  placeholder
-                </p>
+              <div className="aspect-[2/3] relative">
+                <Image
+                  src="/images/HeIsRisen-Cover.jpg"
+                  alt="He Is Risen book cover"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -50,14 +51,15 @@ export default function TheologyPage() {
                 He Is Risen
               </h2>
               <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                A theological and apologetic case for the bodily resurrection
-                of Jesus Christ.
+                A careful examination of the resurrection accounts across the four Gospels. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
               </p>
               <a
-                href="#"
+                href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
-                Get the Book
+                Order on Amazon
               </a>
             </div>
           </div>
@@ -88,23 +90,16 @@ export default function TheologyPage() {
                 When the Worship Is Real But the Jesus Is Wrong
               </p>
               <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                A new book from Dr. William C.K. Yomes. Sign up to be notified
-                when it&apos;s available.
+                Many people are devoted — but devoted to a Jesus they constructed rather than the Jesus of Scripture. This book diagnoses the problem and points back to the real thing.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/arc"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-                >
-                  Join the ARC Team
-                </Link>
-                <Link
-                  href="/arc"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
-                >
-                  Notify Me at Launch
-                </Link>
-              </div>
+              <a
+                href="https://faithmakessense.kit.com/31040c8e97"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Let Me Know When It&apos;s Available
+              </a>
             </div>
           </div>
 

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'The Dreamstone Chronicles',
   description:
-    'The Dreamstone Chronicles — a children\'s fantasy series by William CK Yomes. Written for the family.',
+    "The Dreamstone Chronicles — a children's fantasy series by William CK Yomes. Written for the family.",
 }
 
 export default function DreastonePage() {
@@ -59,58 +59,114 @@ export default function DreastonePage() {
 
       {/* Books */}
       <section className="bg-navy-950 py-16 lg:py-24 border-t border-navy-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-0">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-10">
             The Books
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Placeholder book card */}
-            <div className="border border-navy-700 p-6 flex flex-col">
-              <div className="aspect-[2/3] bg-navy-800 border border-navy-700/60 mb-5 flex items-center justify-center">
-                <p className="text-slate-600 text-xs text-center px-3">
-                  Cover
-                  <br />
-                  placeholder
-                </p>
+          {/* Book 1: The Blackstone Curse */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+            <div className="lg:col-span-1">
+              <div className="aspect-[2/3] relative">
+                <Image
+                  src="/images/DS1-cover.png"
+                  alt="The Blackstone Curse book cover"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <span className="inline-block text-xs text-gold-600 border border-gold-700/30 px-2 py-0.5 tracking-wide uppercase mb-3 self-start">
-                Coming Soon
-              </span>
-              <h3 className="font-serif text-lg font-bold text-white leading-snug">
-                Title Placeholder
-              </h3>
-              <p className="text-slate-500 text-sm mt-1">Book 1</p>
             </div>
-
-            {/* Future slots */}
-            {[2, 3, 4].map(n => (
-              <div
-                key={n}
-                className="border border-navy-800/60 border-dashed p-6 flex flex-col items-center justify-center aspect-[2/3] max-h-80"
+            <div className="lg:col-span-3">
+              <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                Published · Book 1
+              </span>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                The Blackstone Curse
+              </h2>
+              <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                When teenage Ella finds herself sharing dreams with her three younger sisters, she soon discovers they are more than just dreams. Every night while the Stone sisters are asleep they are transported to a magical world and given tremendous powers. But their dreams quickly turn to nightmares as an ancient prophecy places them in the path of a rising evil. Students by day and heroes by night, the sisters must learn to master their powers, defend their family, and become the guardians they were born to be or risk being trapped in their own dreams forever.
+              </p>
+              <a
+                href="https://www.amazon.com/Blackstone-Curse-Dream-Stone-Chronicles/dp/B09GZBXB3B/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
-                <p className="text-navy-600 text-xs tracking-widest uppercase font-semibold">
-                  Book {n}
-                </p>
-                <p className="text-navy-700 text-xs mt-1">Coming</p>
-              </div>
-            ))}
+                Order on Amazon
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Notify CTA */}
-      <section className="bg-navy-900 py-16 lg:py-20 border-t border-navy-800">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-slate-400 leading-relaxed mb-6 text-lg">
-            Want to know when the first book is available?
-          </p>
-          <Link
-            href="/start"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-          >
-            Get Updates
-          </Link>
+          <div className="border-t border-navy-800" />
+
+          {/* Book 2: The Wolf's War */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+            <div className="lg:col-span-1">
+              <div className="aspect-[2/3] relative">
+                <Image
+                  src="/images/DS2-cover.png"
+                  alt="The Wolf's War book cover"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                Published · Book 2
+              </span>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                The Wolf&apos;s War
+              </h2>
+              <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                The Stone sisters continue their exciting adventures as Ella, Charlie, Nicki, and Reagan return each night in their dreams to the magical world of Terea. There, they enhance their powers and discover more about what it means to be Guardians. Werewolves from the western mountains threaten an invasion of the peaceful lands they&apos;re sworn to protect. The heroic Stone sisters are called upon once again to fight against this new evil and to aid the mysterious and powerful Aquarian Queen in defending her kingdom.
+              </p>
+              <a
+                href="https://www.amazon.com/gp/product/B09LZSF37J"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Order on Amazon
+              </a>
+            </div>
+          </div>
+
+          <div className="border-t border-navy-800" />
+
+          {/* Book 3: The Cave of Kings */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+            <div className="lg:col-span-1">
+              <div className="aspect-[2/3] relative">
+                <Image
+                  src="/images/DS3-cover.png"
+                  alt="The Cave of Kings book cover"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                Published · Book 3
+              </span>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                The Cave of Kings
+              </h2>
+              <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                Ella and her sisters continue their adventure as they learn to balance the challenges of being a student in real life and a Guardian in the magical land of Terea. After the events of The Wolf&apos;s War, the Stone family must seek help from the high council and root out a hidden plot, all while being hunted by a ghostly elemental seeking to destroy them. Meeting new allies and enemies, the Guardians are on a collision course with destiny in the Cave of Kings.
+              </p>
+              <a
+                href="https://www.amazon.com/gp/product/B09NR7CBFK"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Order on Amazon
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
     </>
