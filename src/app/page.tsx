@@ -31,7 +31,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-navy-950/20 lg:to-navy-950/80" />
           <div className="absolute inset-0 flex items-end lg:items-center justify-end">
             <div className="w-full lg:w-1/2 xl:w-2/5 px-8 lg:px-16 xl:px-20 text-right pb-10 lg:pb-0">
-              <p className="hidden lg:block text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-6">Pastor. Apologist. Author.</p>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-8xl font-bold text-white leading-[1.05] mb-4 lg:mb-6">Dr. William<br />C.K. Yomes</h1>
               <p className="hidden lg:block text-white/75 text-lg md:text-xl leading-relaxed mb-10">For believers and seekers who refuse to check their brains at the door.</p>
               <HeroButtons />
