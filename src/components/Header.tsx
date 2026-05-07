@@ -43,9 +43,6 @@ export default function Header() {
             <span className="font-serif text-base lg:text-lg font-bold text-white tracking-wide group-hover:text-gold-300 transition-colors duration-200">
               Dr. William C.K. Yomes
             </span>
-            <span className="text-[10px] text-gold-500 tracking-[0.25em] uppercase mt-0.5">
-              Pastor · Apologist · Author
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5">
