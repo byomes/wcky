@@ -3,7 +3,6 @@ title: "God Is Not a Genie, and Your Prayer List Is Not a Spell"
 date: "2026-05-07"
 slug: "2026-05-07-god-is-not-a-genie"
 categories: ["Prayer", "Sermon on the Mount", "Kingdom"]
-tags: ["prayer", "sermon on the mount", "kingdom"]
 excerpt: "Prayer is not a mechanism. The length or volume of your words does not obligate God's actions. Jesus had something to say about that."
 author: "William CK Yomes"
 ---
