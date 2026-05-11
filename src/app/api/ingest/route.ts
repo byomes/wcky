@@ -5,7 +5,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as XLSX from 'xlsx';
 import mammoth from 'mammoth';
-import pdfParse from 'pdf-parse';
+import * as pdfParse from 'pdf-parse';
 
 const GITHUB_TOKEN = process.env.WATSON_GITHUB_TOKEN;
 const REPO         = 'byomes/watson';
