@@ -51,16 +51,17 @@ export default function DraftPage() {
     setLoading(false);
   }
 
-  const statusColor = { success: '#16a34a', error: '#dc2626', loading: '#6b7280' }[status.type] ?? 'transparent';
+  const statusColor = { success: '#4ade80', error: '#f87171', loading: '#9ca3af' }[status.type] ?? 'transparent';
 
   const field: React.CSSProperties = {
     display: 'block',
     width: '100%',
     boxSizing: 'border-box',
-    backgroundColor: '#ffffff',
-    color: '#111827',
-    WebkitTextFillColor: '#111827',
-    border: '1px solid #d1d5db',
+    backgroundColor: '#0f172a',
+    color: '#f1f5f9',
+    WebkitTextFillColor: '#f1f5f9',
+    caretColor: '#f1f5f9',
+    border: '1px solid #334155',
     borderRadius: 8,
     outline: 'none',
   };
@@ -70,8 +71,10 @@ export default function DraftPage() {
       <style>{`
         .draft-wrap { max-width:760px; margin:0 auto; padding:3rem 1.5rem 4rem; }
         .draft-actions { display:flex; align-items:center; justify-content:space-between; margin-top:1.25rem; }
-        .draft-btn { display:inline-flex; align-items:center; justify-content:center; padding:0 20px; height:40px; font-size:14px; font-weight:500; background:#ffffff; color:#111827; border:1px solid #d1d5db; border-radius:8px; cursor:pointer; }
+        .draft-btn { display:inline-flex; align-items:center; justify-content:center; padding:0 20px; height:40px; font-size:14px; font-weight:500; background:#1e293b; color:#f1f5f9; border:1px solid #334155; border-radius:8px; cursor:pointer; }
         .draft-btn:disabled { opacity:0.5; cursor:not-allowed; }
+        .draft-textarea::placeholder { color:#475569; }
+        .draft-input::placeholder { color:#475569; }
         @media (max-width:600px) {
           .draft-wrap { padding:1.5rem 1rem 3rem !important; }
           .draft-actions { flex-direction:column; align-items:stretch; gap:10px; }
@@ -80,21 +83,23 @@ export default function DraftPage() {
       `}</style>
       <div className="draft-wrap">
         <div style={{ marginBottom:'2rem' }}>
-          <p style={{ fontSize:12, letterSpacing:'0.08em', textTransform:'uppercase', color:'#9ca3af', margin:'0 0 4px' }}>Watson</p>
-          <h1 style={{ fontSize:28, fontWeight:500, margin:0, color:'#111827' }}>Blog preparation</h1>
+          <p style={{ fontSize:12, letterSpacing:'0.08em', textTransform:'uppercase', color:'#64748b', margin:'0 0 4px' }}>Watson</p>
+          <h1 style={{ fontSize:28, fontWeight:500, margin:0 }}>Blog preparation</h1>
         </div>
 
         <textarea
+          className="draft-textarea"
           value={content}
           onChange={handleContentChange}
           placeholder="Paste markdown here — frontmatter, body, everything..."
           style={{ ...field, minHeight:460, fontFamily:'ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace', fontSize:13, lineHeight:1.7, padding:'1rem', resize:'vertical' }}
         />
-        <p style={{ fontSize:12, color:'#9ca3af', textAlign:'right', margin:'4px 0 0' }}>
+        <p style={{ fontSize:12, color:'#64748b', textAlign:'right', margin:'4px 0 0' }}>
           {content.length.toLocaleString()} characters
         </p>
 
         <input
+          className="draft-input"
           type="text"
           value={slug}
           onChange={handleSlugChange}
