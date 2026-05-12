@@ -1,8 +1,6 @@
 'use client';
 
 // src/app/draft/page.tsx
-// Blog preparation tool — paste markdown, auto-slugs from frontmatter title,
-// submits to /api/submit-draft which holds the GitHub token server-side.
 
 import { useState, useRef } from 'react';
 
@@ -16,16 +14,10 @@ export default function DraftPage() {
   function handleContentChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     const val = e.target.value;
     setContent(val);
-
     if (!slugTouched.current) {
       const match = val.match(/^title:\s*['"]?(.+?)['"]?\s*$/m);
       if (match) {
-        setSlug(
-          match[1]
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, '-')
-            .replace(/^-|-$/g, '')
-        );
+        setSlug(match[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
       }
     }
   }
@@ -36,121 +28,87 @@ export default function DraftPage() {
   }
 
   async function handleSubmit() {
-    if (!content.trim()) {
-      setStatus({ msg: 'Paste your markdown first.', type: 'error' });
-      return;
-    }
-    if (!slug.trim()) {
-      setStatus({ msg: 'Add a slug before pushing.', type: 'error' });
-      return;
-    }
-
+    if (!content.trim()) { setStatus({ msg: 'Paste your markdown first.', type: 'error' }); return; }
+    if (!slug.trim()) { setStatus({ msg: 'Add a slug before pushing.', type: 'error' }); return; }
     setLoading(true);
-    setStatus({ msg: 'Pushing to GitHub…', type: 'loading' });
-
+    setStatus({ msg: 'Pushing to GitHub\u2026', type: 'loading' });
     try {
       const res = await fetch('/api/submit-draft', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slug: slug.trim(), content: content.trim() }),
       });
-
       const data = await res.json();
-
       if (res.ok) {
-        setStatus({ msg: '✓ Pushed — Vercel will deploy on schedule.', type: 'success' });
-        setContent('');
-        setSlug('');
-        slugTouched.current = false;
+        setStatus({ msg: '\u2713 Pushed \u2014 Vercel will deploy on schedule.', type: 'success' });
+        setContent(''); setSlug(''); slugTouched.current = false;
       } else {
         setStatus({ msg: `GitHub error: ${data.error}`, type: 'error' });
       }
     } catch {
-      setStatus({ msg: 'Network error — check connection.', type: 'error' });
+      setStatus({ msg: 'Network error \u2014 check connection.', type: 'error' });
     }
-
     setLoading(false);
   }
 
-  const statusColor = {
-    success: '#16a34a',
-    error: '#dc2626',
-    loading: '#6b7280',
-  }[status.type] ?? 'transparent';
+  const statusColor = { success: '#16a34a', error: '#dc2626', loading: '#6b7280' }[status.type] ?? 'transparent';
+
+  const field: React.CSSProperties = {
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box',
+    backgroundColor: '#ffffff',
+    color: '#111827',
+    WebkitTextFillColor: '#111827',
+    border: '1px solid #d1d5db',
+    borderRadius: 8,
+    outline: 'none',
+  };
 
   return (
-    <div style={{ maxWidth: 760, margin: '0 auto', padding: '3rem 1.5rem 4rem' }}>
-      <div style={{ marginBottom: '2rem' }}>
-        <p style={{ fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#9ca3af', margin: '0 0 4px' }}>
-          Watson
+    <>
+      <style>{`
+        .draft-wrap { max-width:760px; margin:0 auto; padding:3rem 1.5rem 4rem; }
+        .draft-actions { display:flex; align-items:center; justify-content:space-between; margin-top:1.25rem; }
+        .draft-btn { display:inline-flex; align-items:center; justify-content:center; padding:0 20px; height:40px; font-size:14px; font-weight:500; background:#ffffff; color:#111827; border:1px solid #d1d5db; border-radius:8px; cursor:pointer; }
+        .draft-btn:disabled { opacity:0.5; cursor:not-allowed; }
+        @media (max-width:600px) {
+          .draft-wrap { padding:1.5rem 1rem 3rem !important; }
+          .draft-actions { flex-direction:column; align-items:stretch; gap:10px; }
+          .draft-btn { width:100%; }
+        }
+      `}</style>
+      <div className="draft-wrap">
+        <div style={{ marginBottom:'2rem' }}>
+          <p style={{ fontSize:12, letterSpacing:'0.08em', textTransform:'uppercase', color:'#9ca3af', margin:'0 0 4px' }}>Watson</p>
+          <h1 style={{ fontSize:28, fontWeight:500, margin:0, color:'#111827' }}>Blog preparation</h1>
+        </div>
+
+        <textarea
+          value={content}
+          onChange={handleContentChange}
+          placeholder="Paste markdown here — frontmatter, body, everything..."
+          style={{ ...field, minHeight:460, fontFamily:'ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace', fontSize:13, lineHeight:1.7, padding:'1rem', resize:'vertical' }}
+        />
+        <p style={{ fontSize:12, color:'#9ca3af', textAlign:'right', margin:'4px 0 0' }}>
+          {content.length.toLocaleString()} characters
         </p>
-        <h1 style={{ fontSize: 28, fontWeight: 500, margin: 0 }}>Blog preparation</h1>
+
+        <input
+          type="text"
+          value={slug}
+          onChange={handleSlugChange}
+          placeholder="slug (e.g. kingdom-over-empire)"
+          style={{ ...field, marginTop:'0.75rem', height:40, padding:'0 12px', fontSize:14 }}
+        />
+
+        <div className="draft-actions">
+          <span style={{ fontSize:13, color:statusColor }}>{status.msg}</span>
+          <button className="draft-btn" onClick={handleSubmit} disabled={loading}>
+            Push to queue
+          </button>
+        </div>
       </div>
-
-      <textarea
-        value={content}
-        onChange={handleContentChange}
-        placeholder="Paste markdown here — frontmatter, body, everything..."
-        style={{
-          width: '100%',
-          minHeight: 460,
-          boxSizing: 'border-box',
-          fontFamily: 'monospace',
-          fontSize: 13,
-          lineHeight: 1.7,
-          padding: '1rem',
-          border: '1px solid #e5e7eb',
-          borderRadius: 8,
-          resize: 'vertical',
-          outline: 'none',
-        }}
-      />
-      <p style={{ fontSize: 12, color: '#9ca3af', textAlign: 'right', margin: '4px 0 0' }}>
-        {content.length.toLocaleString()} characters
-      </p>
-
-      <input
-        type="text"
-        value={slug}
-        onChange={handleSlugChange}
-        placeholder="slug (e.g. kingdom-over-empire)"
-        style={{
-          display: 'block',
-          width: '100%',
-          boxSizing: 'border-box',
-          marginTop: '0.75rem',
-          height: 40,
-          padding: '0 12px',
-          fontSize: 14,
-          border: '1px solid #e5e7eb',
-          borderRadius: 8,
-          outline: 'none',
-        }}
-      />
-
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '1.25rem' }}>
-        <span style={{ fontSize: 13, color: statusColor }}>{status.msg}</span>
-        <button
-          onClick={handleSubmit}
-          disabled={loading}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 8,
-            padding: '0 20px',
-            height: 40,
-            fontSize: 14,
-            fontWeight: 500,
-            background: '#fff',
-            border: '1px solid #d1d5db',
-            borderRadius: 8,
-            cursor: loading ? 'not-allowed' : 'pointer',
-            opacity: loading ? 0.5 : 1,
-          }}
-        >
-          Push to queue
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
