@@ -1,7 +1,7 @@
 // src/app/api/submit-draft/route.ts
 // Receives { slug, content } from the /draft page.
-// Pushes the file to content/blog/<slug>.md in byomes/wcky via GitHub API.
-// Token lives in WCKY_GITHUB_TOKEN env var — never exposed to the browser.
+// Saves to Upstash KV as draft:pending:<slug>
+// Watson polls KV every 15 min and moves drafts into watson.db for scheduling.
 
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -12,52 +12,30 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'slug and content are required' }, { status: 400 });
   }
 
-  const token = process.env.WCKY_GITHUB_TOKEN;
-  if (!token) {
-    return NextResponse.json({ error: 'GitHub token not configured' }, { status: 500 });
+  const kvUrl   = process.env.VERCEL_KV_REST_API_URL;
+  const kvToken = process.env.VERCEL_KV_REST_API_TOKEN;
+
+  if (!kvUrl || !kvToken) {
+    return NextResponse.json({ error: 'KV not configured' }, { status: 500 });
   }
 
-  const repo = 'byomes/wcky';
-  const branch = 'main';
-  const path = `content/blog/${slug}.md`;
-  const encoded = Buffer.from(content).toString('base64');
-
-  const headers = {
-    Authorization: `token ${token}`,
-    Accept: 'application/vnd.github+json',
-    'Content-Type': 'application/json',
-  };
+  const key = `draft:pending:${slug}`;
 
   try {
-    // Check if file already exists (needed for sha on update)
-    let sha: string | null = null;
-    const checkRes = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${path}`,
-      { headers }
-    );
-    if (checkRes.ok) {
-      const existing = await checkRes.json();
-      sha = existing.sha;
-    }
+    const res = await fetch(`${kvUrl}/set/${encodeURIComponent(key)}`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${kvToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ value: content }),
+    });
 
-    // Create or update
-    const body: Record<string, string> = {
-      message: `draft: add ${slug}`,
-      content: encoded,
-      branch,
-    };
-    if (sha) body.sha = sha;
-
-    const pushRes = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${path}`,
-      { method: 'PUT', headers, body: JSON.stringify(body) }
-    );
-
-    if (pushRes.ok) {
-      return NextResponse.json({ ok: true, path });
+    if (res.ok) {
+      return NextResponse.json({ ok: true, message: 'Draft queued for scheduling' });
     } else {
-      const err = await pushRes.json();
-      return NextResponse.json({ error: err.message || 'GitHub error' }, { status: pushRes.status });
+      const err = await res.json();
+      return NextResponse.json({ error: err.message || 'KV error' }, { status: res.status });
     }
   } catch (e: unknown) {
     const message = e instanceof Error ? e.message : 'Unknown error';
