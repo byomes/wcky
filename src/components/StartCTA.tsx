@@ -13,7 +13,7 @@ export default function StartCTA() {
         onClick={() => setOpen(true)}
         className="w-full flex items-center justify-between px-6 py-4 bg-gold-500 text-white hover:bg-gold-400 transition-colors duration-200 group"
       >
-        <span className="font-bold text-sm tracking-wide">Get Your Free Copy</span>
+        <span className="font-bold text-sm tracking-wide">Get The Free Resource</span>
         <span className="text-lg leading-none">→</span>
       </button>
     </>
