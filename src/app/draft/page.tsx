@@ -29,9 +29,9 @@ export default function DraftPage() {
 
   async function handleSubmit() {
     if (!content.trim()) { setStatus({ msg: 'Paste your markdown first.', type: 'error' }); return; }
-    if (!slug.trim()) { setStatus({ msg: 'Add a slug before pushing.', type: 'error' }); return; }
+    if (!slug.trim()) { setStatus({ msg: 'Add a slug before submitting.', type: 'error' }); return; }
     setLoading(true);
-    setStatus({ msg: 'Pushing to GitHub\u2026', type: 'loading' });
+    setStatus({ msg: 'Queuing draft\u2026', type: 'loading' });
     try {
       const res = await fetch('/api/submit-draft', {
         method: 'POST',
@@ -40,10 +40,10 @@ export default function DraftPage() {
       });
       const data = await res.json();
       if (res.ok) {
-        setStatus({ msg: '\u2713 Pushed \u2014 Vercel will deploy on schedule.', type: 'success' });
+        setStatus({ msg: '\u2713 Draft queued \u2014 Watson will publish on schedule.', type: 'success' });
         setContent(''); setSlug(''); slugTouched.current = false;
       } else {
-        setStatus({ msg: `GitHub error: ${data.error}`, type: 'error' });
+        setStatus({ msg: `Error: ${data.error}`, type: 'error' });
       }
     } catch {
       setStatus({ msg: 'Network error \u2014 check connection.', type: 'error' });
