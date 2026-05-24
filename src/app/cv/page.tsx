@@ -111,7 +111,7 @@ export default function CVPage() {
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Founder &amp; Dean</p>
                 <p className="text-[14px] text-gray-700 font-medium">Adelphos Academy — Digital Theological Education</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
-                  Founded and directs an accreditation-track online school offering courses in theology and apologetics to the global church. Certificate-level instruction across three tracks: Bible Teaching, Elder/Pastor Formation, and Apologetics.
+                  Founded and directs an online school offering courses in theology and apologetics to the global church. Certificate-level instruction across three tracks: Bible Teaching, Elder/Pastor Formation, and Apologetics.
                 </p>
               </div>
               <span className="text-[13px] text-gray-500 whitespace-nowrap mt-0.5" style={{ fontFamily: 'var(--font-jost, system-ui, sans-serif)' }}>2024–Present</span>
