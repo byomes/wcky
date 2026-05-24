@@ -4,7 +4,7 @@ date: "2026-05-21"
 slug: "pearls-pigs-and-reading-the-room"
 category: "Teaching"
 categories: ["Teaching"]
-excerpt: "Of all the lines Jesus delivers in the Sermon on the Mount, few have caused more confusion than this one: "Do not give dogs what is sacred; do not throw your..."
+excerpt: "Of all the lines Jesus delivers in the Sermon on the Mount, few have caused more confusion than this one: 'Do not give dogs what is sacred; do not throw your...'
 ---
 
 Of all the lines Jesus delivers in the Sermon on the Mount, few have caused more confusion than this one: "Do not give dogs what is sacred; do not throw your pearls to pigs. If you do, they may trample them under their feet, and turn and tear you to pieces." Read in isolation, it sounds strange — almost harsh. Dogs. Pigs. Sacred things. Pearls. What does any of this have to do with the kingdom of God?
