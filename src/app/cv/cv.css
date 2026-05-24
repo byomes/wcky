@@ -1,0 +1,23 @@
+.cv-body {
+  font-family: var(--font-garamond), Georgia, 'Times New Roman', serif;
+}
+
+@media print {
+  header,
+  footer,
+  .cv-no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .cv-page {
+    padding-top: 1.5rem !important;
+  }
+
+  @page {
+    margin: 0.85in 1in;
+  }
+}
