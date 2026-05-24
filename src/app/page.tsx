@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import HeroButtons from '@/components/HeroButtons'
 import FreeResourceButton from '@/components/FreeResourceButton'
+import HomePopup from '@/components/HomePopup'
 
 export const metadata: Metadata = {
   title: {
@@ -18,6 +19,7 @@ export default function HomePage() {
 
   return (
     <>
+      <HomePopup />
       {/* Hero */}
       <section className="relative bg-navy-950 overflow-hidden">
         <div className="relative w-full h-[70vh] lg:h-screen">

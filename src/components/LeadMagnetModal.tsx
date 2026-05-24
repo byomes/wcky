@@ -54,7 +54,7 @@ export default function LeadMagnetModal({ isOpen, onClose }: Props) {
                 Study the Bible Like a Pastor
               </h3>
               <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                Enter your name and email and we&apos;ll send it right to you.
+                A free guide for everyday believers who want to go deeper than a devotional and actually know what the Bible says.
               </p>
               <form
                 action="https://app.kit.com/forms/9400485/subscriptions"
@@ -89,7 +89,7 @@ export default function LeadMagnetModal({ isOpen, onClose }: Props) {
                   type="submit"
                   className="w-full bg-gold-500 text-white text-sm font-bold tracking-wide uppercase py-4 hover:bg-gold-400 transition-colors"
                 >
-                  Send It To Me
+                  Get the Free Guide
                 </button>
                 <p className="text-slate-400 text-xs text-center mt-3">
                   We respect your privacy. Unsubscribe anytime.
