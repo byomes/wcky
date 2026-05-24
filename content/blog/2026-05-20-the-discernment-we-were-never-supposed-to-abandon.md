@@ -4,7 +4,8 @@ date: "2026-05-20"
 slug: "the-discernment-we-were-never-supposed-to-abandon"
 category: "Teaching"
 categories: ["Teaching"]
-excerpt: "Few phrases get weaponized against Christians more reliably than three words from the Sermon on the Mount: "Do not judge." The moment we identify something a..."
+excerpt: "Do not judge is one of the most misquoted lines in all of scripture — and misreading it costs us something essential."
+draft: false
 ---
 
 Few phrases get weaponized against Christians more reliably than three words from the Sermon on the Mount: "Do not judge." The moment we identify something as morally wrong, the moment we call out a pattern of behavior in a friend, the moment we hold a conviction about holiness and say so — someone fires those three words back at us like a closing argument. And somewhere along the way, many of us believed it. We tucked our discernment away, stopped speaking into each other's lives, and called it humility. Jesus, we were told, said not to judge.
