@@ -60,7 +60,7 @@ export default function CVPage() {
             <span className="text-gray-300">|</span>
             <span>williamckyomes.com</span>
             <span className="text-gray-300">|</span>
-            <span>Newport / Wilmington, DE</span>
+            <span>Wilmington, DE</span>
           </div>
           <CvDownloadButton />
         </div>
@@ -119,7 +119,7 @@ export default function CVPage() {
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Lead Pastor</p>
-                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church — Newport / Wilmington, DE</p>
+                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church — Wilmington, DE</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Verse-by-verse expository preaching, theological formation, and congregational leadership. 20+ years in pastoral ministry.
                 </p>
@@ -166,7 +166,7 @@ export default function CVPage() {
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Pastoral &amp; Theological Instruction</p>
-                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church — Newport / Wilmington, DE</p>
+                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church — Wilmington, DE</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Weekly expository teaching, adult theological education, and pastoral apprenticeship program (PACT).
                 </p>
@@ -193,7 +193,7 @@ export default function CVPage() {
         <section className="mb-9">
           <SectionHeading>Digital Scholarship &amp; Educational Technology</SectionHeading>
           <p className="text-[14.5px] leading-relaxed text-gray-700">
-            Designed and deployed a Moodle 5.0 LMS environment (adelphosonline.com) for global theological education. Developed web-deployed curriculum assets for distribution in low-bandwidth East Africa contexts via WhatsApp and GitHub Pages. DMin research focused on asynchronous digital learning as a vehicle for apologetics formation in local church contexts.
+            Designed and deployed a Moodle 5.0 LMS environment (adelphosonline.com) for global theological education. Developed web-deployed curriculum assets for distribution in low-bandwidth East Africa contexts via web-deployed resources. DMin research focused on asynchronous digital learning as a vehicle for apologetics formation in local church contexts.
           </p>
         </section>
 
