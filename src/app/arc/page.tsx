@@ -16,8 +16,6 @@ const commitments = [
   'Spread the word to anyone who might benefit from reading it',
 ]
 
-const ARC_FORM_HTML = `<form action="https://app.kit.com/forms/9395205/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9395205" data-uid="ada13c59d0" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="true" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" aria-label="First Name" name="fields[first_name]" placeholder="First Name" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><div class="formkit-field"><fieldset data-group="checkboxes" class="formkit-5227" type="Custom" order="2" save_as="Tag" group="field"><legend style="color: rgb(0, 0, 0); font-weight: 400;">I have read the ARC Partner commitments above and I agree to fulfill all six.</legend><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"><input class="formkit-checkbox" id="tag-1831783686-19285341" type="checkbox" name="tags[]" value="19285341"><label for="tag-1831783686-19285341">I want to be an ARC team member.</label></div></fieldset></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(100, 100, 100); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Join The Team</span></button></div></div></form>`
-
 export default function ArcPage() {
   return (
     <>
@@ -75,7 +73,93 @@ export default function ArcPage() {
             to all six ARC Partner responsibilities. We&apos;ll be in touch with
             details as the launch approaches.
           </p>
-          <div dangerouslySetInnerHTML={{ __html: ARC_FORM_HTML }} />
+
+          <form
+            action="https://app.kit.com/forms/9395205/subscriptions"
+            className="seva-form formkit-form"
+            method="post"
+            data-sv-form="9395205"
+            data-uid="ada13c59d0"
+            data-format="inline"
+            data-version="5"
+          >
+            <ul
+              className="formkit-alert formkit-alert-error text-red-400 text-sm mb-6 list-none p-0 empty:hidden"
+              data-element="errors"
+              data-group="alert"
+            />
+
+            <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="formkit-field">
+                  <input
+                    className="formkit-input w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors"
+                    aria-label="First Name"
+                    name="fields[first_name]"
+                    placeholder="First Name"
+                    type="text"
+                  />
+                </div>
+                <div className="formkit-field">
+                  <input
+                    className="formkit-input w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors"
+                    aria-label="Last Name"
+                    name="fields[last_name]"
+                    placeholder="Last Name"
+                    type="text"
+                  />
+                </div>
+              </div>
+
+              <div className="formkit-field">
+                <input
+                  className="formkit-input w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors"
+                  name="email_address"
+                  aria-label="Email Address"
+                  placeholder="Email Address"
+                  required
+                  type="email"
+                />
+              </div>
+
+              <div className="formkit-field pt-2">
+                <fieldset data-group="checkboxes" className="formkit-5227 border-0 p-0 m-0">
+                  <div
+                    className="formkit-checkboxes flex items-start gap-3"
+                    data-element="tags-checkboxes"
+                    data-group="checkbox"
+                  >
+                    <input
+                      className="formkit-checkbox mt-1 shrink-0 w-4 h-4 accent-gold-500 cursor-pointer"
+                      id="tag-1831783686-19285341"
+                      type="checkbox"
+                      name="tags[]"
+                      value="19285341"
+                    />
+                    <label
+                      htmlFor="tag-1831783686-19285341"
+                      className="text-slate-300 text-sm leading-relaxed cursor-pointer"
+                    >
+                      I have read the ARC Partner commitments above and I agree to fulfill all six.
+                      I want to be an ARC team member.
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div className="pt-2">
+                <button
+                  data-element="submit"
+                  className="formkit-submit w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold py-4 px-8 text-sm tracking-[0.15em] uppercase transition-colors"
+                >
+                  <div className="formkit-spinner hidden">
+                    <div /><div /><div />
+                  </div>
+                  <span>Join The Team</span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </>
