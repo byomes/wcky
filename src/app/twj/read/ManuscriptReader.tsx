@@ -63,15 +63,25 @@ export default function ManuscriptReader({ chapters, userName }: ManuscriptReade
     <div className="min-h-screen bg-navy-950 pt-16 lg:pt-20">
       {/* Top bar */}
       <div className="bg-navy-900 border-b border-navy-800 sticky top-16 lg:top-20 z-40">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
-          <div>
-            <span className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold">
-              The Wrong Jesus
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold shrink-0 hidden sm:block">
+              Advance Reader Manuscript
             </span>
-            <span className="text-navy-600 mx-3">·</span>
-            <span className="text-slate-400 text-xs">Advance Reader Manuscript</span>
+            <span className="text-navy-600 hidden sm:block">·</span>
+            <select
+              value={activeId}
+              onChange={(e) => setActiveId(e.target.value)}
+              className="bg-navy-800 border border-navy-700 text-slate-200 text-xs px-3 py-1.5 focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors min-w-0 max-w-[220px] sm:max-w-xs"
+            >
+              {chapters.map((chapter) => (
+                <option key={chapter.id} value={chapter.id}>
+                  {chapter.title}
+                </option>
+              ))}
+            </select>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 shrink-0">
             <span className="text-slate-500 text-xs hidden sm:block">
               Reading as <span className="text-slate-300">{userName}</span>
             </span>
@@ -86,46 +96,8 @@ export default function ManuscriptReader({ chapters, userName }: ManuscriptReade
       </div>
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-12">
-        <div className="flex flex-col lg:flex-row gap-10">
-          {/* Chapter navigation sidebar */}
-          <aside className="lg:w-56 shrink-0">
-            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-              Chapters
-            </p>
-            <nav className="space-y-1">
-              {chapters.map((chapter) => (
-                <button
-                  key={chapter.id}
-                  onClick={() => setActiveId(chapter.id)}
-                  className={`w-full text-left px-4 py-3 text-sm transition-colors border-l-2 ${
-                    activeId === chapter.id
-                      ? 'border-gold-500 bg-navy-800 text-white'
-                      : 'border-transparent text-slate-400 hover:text-slate-200 hover:bg-navy-900'
-                  }`}
-                >
-                  {chapter.title}
-                </button>
-              ))}
-            </nav>
-
-            {/* Mobile chapter selector */}
-            <div className="mt-4 lg:hidden">
-              <select
-                value={activeId}
-                onChange={(e) => setActiveId(e.target.value)}
-                className="w-full bg-navy-800 border border-navy-700 text-slate-200 px-4 py-3 text-sm focus:outline-none focus:border-gold-600"
-              >
-                {chapters.map((chapter) => (
-                  <option key={chapter.id} value={chapter.id}>
-                    {chapter.title}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </aside>
-
-          {/* Main content */}
-          <main className="flex-1 min-w-0">
+        {/* Main content */}
+        <main className="min-w-0">
             {activeChapter && (
               <>
                 {/* Copy-protected chapter content */}
@@ -199,8 +171,7 @@ export default function ManuscriptReader({ chapters, userName }: ManuscriptReade
                 </div>
               </>
             )}
-          </main>
-        </div>
+        </main>
       </div>
     </div>
   )
