@@ -60,9 +60,9 @@ export default function ManuscriptReader({ chapters, userName }: ManuscriptReade
   }
 
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-navy-950 pt-16 lg:pt-20">
       {/* Top bar */}
-      <div className="bg-navy-900 border-b border-navy-800 sticky top-0 z-10">
+      <div className="bg-navy-900 border-b border-navy-800 sticky top-16 lg:top-20 z-40">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <div>
             <span className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold">
