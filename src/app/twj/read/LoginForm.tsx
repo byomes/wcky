@@ -117,10 +117,10 @@ export default function LoginForm({ error: initialError }: LoginFormProps) {
           <p className="mt-8 text-slate-500 text-sm text-center">
             Don&apos;t have access? Contact{' '}
             <a
-              href="mailto:bill@williamckyomes.com"
+              href="mailto:me@williamckyomes.com"
               className="text-gold-600 hover:text-gold-500 transition-colors"
             >
-              bill@williamckyomes.com
+              me@williamckyomes.com
             </a>
           </p>
         </div>
