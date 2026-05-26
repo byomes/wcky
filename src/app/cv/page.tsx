@@ -201,7 +201,7 @@ export default function CVPage() {
             Christian apologetics · Resurrection studies · Theological education in digital contexts · Biblical theology · Christian ethics · Ministry formation
           </p>
           <p className="text-[14.5px] leading-relaxed text-gray-700 mt-3">
-            Designed and deployed a full Moodle 5.0 learning management system for global theological education, building the infrastructure, course architecture, and digital curriculum from the ground up.
+            Utilizing learning management systems for global theological education, building the infrastructure, course architecture, and digital curriculum from the ground up.
           </p>
         </section>
 
