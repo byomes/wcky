@@ -1,37 +1,61 @@
-# Chapter One: The Jesus We Think We Know
+## **CHAPTER ONE**
 
-There is a Jesus that most of us grew up with. He is gentle, patient, and endlessly accommodating. He is the Jesus of the flannel-board Sunday school lesson, smiling warmly at small children while lambs gather at his sandaled feet. He is the Jesus of the greeting card and the decorative print, hanging in church hallways in a golden frame. He is, in almost every sense that matters, manageable.
+### **The Parade We All Join**
 
-This Jesus makes no uncomfortable demands. He certainly does not say hard things. When the disciples misunderstand him, he corrects them with a sigh and a tender smile. When the religious leaders challenge him, he deflects with patient diplomacy. When sinners approach him, he embraces them without conditions and sends them home with a warm word and a lighter heart. He fits neatly into our categories, our politics, our preferred version of the good life. He is, to put it plainly, the Jesus we want.
+Nobody comes to Jesus as a blank slate.
 
-The trouble is that this Jesus does not exist.
+That's the thing Palm Sunday exposes that we don't like to look at too directly. We prefer to think of faith as something clean, a simple, unencumbered transaction between a soul and its Savior. You hear the gospel, you believe, you follow. But the reality is messier than that. Every person who has ever encountered Jesus has encountered Him through something. Through a tradition, a wound, a hope, a fear, a political moment, a cultural assumption. We bring all of it with us. And most of the time, we have no idea we're doing it.
 
-## The Distance Between Image and Reality
+The crowd on Palm Sunday didn't know they were doing it either. That's the first thing we need to understand about them, and about ourselves.
 
-Every generation reshapes Jesus in its own image. This is not a new problem. The church fathers of the second century complained about Gnostic teachers who had turned Jesus into a purely spiritual being, too holy to have actually touched human flesh. Medieval artists made him a pale European king. The Romantics made him a revolutionary poet. The Social Gospel movement made him a labor organizer. The prosperity preachers made him a wealth advisor. And in our current cultural moment, he has become something like a therapeutic life coach with a strong emphasis on inclusivity.
+To understand what happened that Sunday in Jerusalem, you have to understand what happened in the four hundred years before it.
 
-None of these images is entirely fabricated. Each latches onto something real. Jesus was spiritual. He was, in a sense, a king. He cared about the poor and the marginalized. He was interested in human flourishing. But each image is also a dramatic reduction, a silhouette mistaken for a portrait.
+The Old Testament ends with a promise. The prophet Malachi speaks, God gives His word, and then silence. For four hundred years, no prophet, no word, and no direct communication was given from God to His people. For four centuries, the Jewish people lived between a promise made and a promise fulfilled, waiting for a Messiah who had not yet come.
 
-The question this book asks is deceptively simple: What happens when we look carefully at the actual Jesus of the Gospels — not the Jesus filtered through our assumptions, not the Jesus our era requires — but the Jesus who emerges from the text itself, with all his strange authority and unsettling demands and confounding love?
+But that doesn't mean history stopped. Those four hundred years were full of empire and conquest, of suffering and survival, of moments that would permanently shape the way an entire people understood what deliverance was supposed to look like.
 
-## Why This Matters
+In 336 BC Alexander the Great became king after his father was assassinated. Shortly after his succession, Alexander began building his empire, sweeping across the known world with an army that moved faster than the news. After Alexander's death, his kingdom fractured. The piece of that kingdom that matters most for our story became the Seleucid Empire, Greek rulers who eventually came to govern the land of Israel. Under their rule, things went from difficult to catastrophic. A Seleucid king named Antiochus marched into the innermost part of the temple in Jerusalem, the holiest place in Jewish life, and defiled it. The wound ran deep and that pain fueled rebellion.
 
-The stakes are higher than they might appear. A distorted image of Jesus does not merely produce bad theology in the abstract. It produces a distorted following. If we imagine Jesus as primarily a teacher of self-improvement, we will reduce discipleship to personal development. If we imagine him as primarily a political revolutionary, we will turn the church into a partisan movement. If we imagine him as primarily a dispenser of comfort and affirmation, we will resist every invitation to repentance and transformation.
+What followed was one of the most defining moments in Jewish national memory: the Maccabean Revolt. A family of priests, the Maccabees, led an uprising against the Seleucid Empire and won against all odds. And when Judas Maccabeus finally led his people back into Jerusalem in triumph, the crowds responded the way crowds were expected to when their deliverer finally arrived. They lined the streets, cut palm branches and laid them down in his path as he entered the city. They worshiped a "messianic king" who had saved his people from the oppressive rule of pagan overlords.
 
-Bad Christology produces bad discipleship. Always.
+Sound familiar?
 
-This is not to say that any of us arrives at Jesus without distortion. The glass is dark; the seeing is partial. But there is a difference between partial vision and systematic distortion, between the honest acknowledgment that we do not fully understand and the willful construction of a Jesus who asks nothing we are not already prepared to give.
+On that Sunday morning in AD 30, the crowd watching Jesus had this story in their bones. It lived in their cultural memory. The image of a deliverer arriving in triumph, branches on the ground, the city liberated was the template they carried. They weren't making up how to do it, or acting irrationally. This was what they had been taught to expect, and they were pattern-matching. And the pattern fit close enough.
 
-## What We Will Examine
+Here is where it gets important. Jesus riding into Jerusalem on a donkey was a direct and deliberate fulfillment of Old Testament prophecy. Five hundred years earlier, the prophet Zechariah wrote: "Rejoice greatly, Daughter Zion! Shout, Daughter Jerusalem! See, your king comes to you, righteous and victorious, lowly and riding on a donkey, on a colt, the foal of a donkey" (Zechariah 9:9). Jesus chose this moment, chose this animal, chose this road. He was announcing Himself as the promised Messiah of the Jewish people. The promise made all those years ago was now being fulfilled before their eyes. The Messiah has come! Here He is!
 
-In the chapters that follow, we will look at the Jesus of the Gospels with fresh eyes — or rather, with the determination to let the text challenge the eyes we have brought to it. We will spend time with the hard sayings, the uncomfortable confrontations, the moments where Jesus refuses the role his audience has assigned him. We will sit with the disciples in their confusion and see whether their confusion illuminates our own.
+But here's the problem most people don't recognize. The palm branches they used to celebrate the arrival of the Messiah aren't in the passage in Zechariah. They're never mentioned. There is no Old Testament prophecy, messianic or otherwise, that calls for palm branches to be laid down for the arriving king. What Zechariah gives us is a donkey, a peaceful king, and a promise. Nothing more.
 
-This is not a book designed to make Jesus more palatable. It is designed, if it succeeds, to make him more actual — and therefore, paradoxically, more surprising, more demanding, and more worth following than the Jesus of our comfortable imagination.
+So where did the palm branches come from? They came from the political memory of the people. Let's call it what it is: politicization. The books of First and Second Maccabees are non-canonical historical books. They are not Scripture, but are historical writings that can help us understand more of the culture and background we find in Scripture. In 1 Maccabees 13, we find the story of Simon Maccabeus entering Jerusalem after driving out the Seleucid occupiers. The crowds who welcomed him did so with palm branches and singing. It was this image of liberation from pagan oppressors that burned into Jewish national consciousness. Not a prophetic script. A cultural and political memory of what deliverance looked like the last time it arrived.
 
-The Jesus we think we know is too small. The Jesus of the Gospels is something else entirely.
+Jesus was fulfilling what was written. The crowd was re-enacting what they remembered. Both things were happening simultaneously in the same street on the same morning, and nobody could see the difference.
+
+This is the uncomfortable truth this entire book is built around. Jesus announces Himself on His own terms, but the crowd mistakenly receives Him as something else.
+
+We do this constantly and we may not even realize it.
+
+Let me give you an example. Let's call her Sarah. She's not a real person, but a composite of a real pattern I've seen across years of pastoral ministry. Sarah came to faith in Christ through a painful season. She arrived at the cross carrying wounds that needed healing, the way most of us do, and Jesus, true to who He is, healed her. She was healed completely and powerfully. The chains that had held her came off and she was free in a way she had never experienced. Sarah was new, clean, and genuinely transformed.
+
+But then the newness began to settle and Sarah struggled.
+
+The problem wasn't that her healing wasn't real. It was. The problem was that Sarah had come to know Jesus primarily as her healer, so to her, relating to Him required being sick. As Jesus Himself said, it is not the healthy who need a doctor, but the sick (Matthew 9:12). Sarah understood this intuitively, but she drew the wrong conclusion. Instead of moving from patient to disciple, she stayed in the waiting room.
+
+So Sarah did what many people do when their theology quietly shapes their behavior. Without noticing and without intention, she began to look for and find new wounds. She would surface a fresh hurt, a new struggle, or even a manufactured anxiety and bring it to the Jesus she knew, the one who healed. It was the only way she knew how to be close to Him.
+
+The tragedy of Sarah's story is not that she didn't love Jesus. She did. The tragedy is that she had reduced Him to a single role of healer, and then organized her entire spiritual life around perpetually needing that one thing. What had been the doorway into her faith had become the room she never left. The wrong Jesus she carried kept her in exactly the kind of suffering she thought He had freed her from.
+
+What Sarah needed wasn't more healing. She needed a different Jesus.
+
+We all have traditions, experiences, and causes that have brought us to Jesus. There is no wrong way to find Him and every encounter with the Savior is sacred. But there is a difference between a lens that helps us see and a lens that quietly distorts or replaces what we're looking at. The crowd on Palm Sunday had a lens built from four hundred years of history, oppression, suffering, and longing for deliverance. It was a completely understandable lens. It was totally reasonable and still completely wrong. They saw a Maccabean warring king when the Prince of Peace was right in front of them.
+
+When Jesus arrived in Jerusalem that morning, He looked around at the temple courts, and took in the noise, the crowds, the chaos of the festival, and then quietly went back to Bethany with His twelve disciples for the night. There was no military action, no political declaration or confrontation with Rome, just a man on a donkey, looking around at a city that had completely misread His arrival.
+
+His Jewish worshipers had to be confused. They had been waiting their whole lives for a moment like this. Finally, after all the years of struggle and oppression at the hands of the Romans, the moment came, and nothing happened. Not yet anyway, and it wouldn't happen as they expected.
+
+That gap between what the crowd expected and what Jesus actually did is not just a first-century problem. It is the hinge on which the entire purpose of this book turns. Because the distance between the Jesus we expect and the Jesus who actually shows up is the space where most of our spiritual confusion lives. It is where disappointment grows and where, if we are not careful, we quietly start editing Jesus, trimming the parts that don't fit and amplifying the parts that do, until the Jesus we are following looks a great deal more like the one we wanted than the One who rode into Jerusalem on His own terms.
+
+The crowd on Palm Sunday was not unique. They were no better or worse than us. They were human, in exactly the way we are human, reading the present through the past, longing for a deliverance that looked like the deliverance they already understood.
+
+The parade they joined that day is not a historical oddity. It is the default human procession that we all, in one way or another, have joined in. The question is whether we are willing to stop waving our own palm branches long enough to recognize the Jesus who is right in front of us.
 
 ---
-
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*
-
-*Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.*

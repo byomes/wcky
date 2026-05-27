@@ -37,24 +37,36 @@ async function kvGet(key: string): Promise<string | null> {
   }
 }
 
+const CHAPTERS = [
+  { id: 'introduction', title: 'Introduction: The Most Dangerous Kind of Wrong' },
+  { id: 'chapter-01', title: 'Chapter 1: The Parade We All Join' },
+  { id: 'chapter-02', title: 'Chapter 2: The Jesus We Needed' },
+  { id: 'chapter-03', title: 'Chapter 3: The Sincerity Trap' },
+  { id: 'chapter-04', title: "Chapter 4: When Jesus Doesn't Do What You Hired Him For" },
+  { id: 'chapter-05', title: 'Chapter 5: The Jesus Who Tears Things Down' },
+  { id: 'chapter-06', title: "Chapter 6: Going Somewhere You Didn't Sign Up For" },
+  { id: 'chapter-07', title: 'Chapter 7: Choosing Barabbas' },
+  { id: 'chapter-08', title: 'Chapter 8: Loud Voices' },
+  { id: 'chapter-09', title: 'Chapter 9: The Quieter Sin' },
+  { id: 'chapter-10', title: 'Chapter 10: Jesus Has Never Been Ambiguous About Who He Is' },
+  { id: 'chapter-11', title: 'Chapter 11: The Disciples as Servants Who Simply Kept Walking' },
+  { id: 'chapter-12', title: 'Chapter 12: You Cannot Surrender What You Have Not Named' },
+  { id: 'conclusion', title: 'Conclusion: Not a Resolution, an Orientation' },
+]
+
 async function loadChapters(): Promise<Chapter[]> {
   const chaptersDir = path.join(process.cwd(), 'src/app/twj/read/chapters')
-  const filenames = ['chapter-01.md', 'chapter-02.md', 'chapter-03.md']
-
   const chapters: Chapter[] = []
 
-  for (const filename of filenames) {
-    const filepath = path.join(chaptersDir, filename)
+  for (const { id, title } of CHAPTERS) {
+    const filepath = path.join(chaptersDir, `${id}.md`)
     if (!fs.existsSync(filepath)) continue
 
     const source = fs.readFileSync(filepath, 'utf-8')
     const processed = await remark().use(remarkHtml, { sanitize: false }).process(source)
     const html = processed.toString()
 
-    const titleMatch = source.match(/^#\s+(.+)$/m)
-    const title = titleMatch ? titleMatch[1] : filename.replace('.md', '')
-
-    chapters.push({ id: filename.replace('.md', ''), title, html })
+    chapters.push({ id, title, html })
   }
 
   return chapters

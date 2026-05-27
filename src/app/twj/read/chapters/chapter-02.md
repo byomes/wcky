@@ -1,39 +1,49 @@
-# Chapter Two: A Lord Who Does Not Negotiate
+## **CHAPTER TWO**
 
-If chapter one diagnosed the problem — the manageable Jesus of our cultural imagination — then chapter two asks the harder question: What do we do with a Jesus who will not be managed?
+### **The Jesus We Needed**
 
-The Synoptic Gospels introduce Jesus with a kind of narrative abruptness that is itself a theological statement. He appears, he speaks, and what he says is not an invitation to dialogue. *The kingdom of God has come near. Repent and believe.* This is not the opening gambit of a negotiation. It is a declaration. The world has changed; now you must.
+Nobody builds their Jesus from scratch.
 
-## The Authority That Unsettles
+That's not how it works. We don't sit down one day with a blank page and invent a self-made savior. What we do is far more subtle, and very human. We come to Jesus carrying everything we already are. We bring every wound we've absorbed, every message we've received about who God is and who we are to Him. We bring every tradition, every culture, every family system, every moment of joy or devastation that has shaped the way we see the world with us. Without realizing it, we layer it over Jesus like a template and the Messiah that emerges looks remarkably like the person we wanted Him to be.
 
-One of the most striking features of Jesus's public ministry is the frequency with which his authority astonishes people — and the variety of ways that astonishment takes form. Sometimes it is wonder: *What is this? A new teaching — and with authority!* Sometimes it is fury: *By what authority are you doing these things?* Sometimes it is something harder to name, a combination of fear and fascination that makes people uncertain whether to come closer or to flee.
+The crowd on Palm Sunday did exactly this. They didn't set out to get Jesus wrong. They set out to welcome the Messiah they had been promised. The problem was that four hundred years of history had told them what that Messiah was supposed to look like, and they were no longer capable of seeing past the picture they were already holding. The Jesus they were expecting was shaped long before He rode into Jerusalem. He was shaped by exile, empire, the Maccabean revolt, and centuries of longing for someone to finally make things right again.
 
-This authority is not the authority of institutional position. The Pharisees had that. Jesus did not. His authority comes from somewhere else, and the Gospels suggest with a kind of patient insistence that locating its source is the central question his audience faces. Who is this person, and where does his authority come from? Answer that question, and everything else falls into place.
+Their Jesus made perfect sense given everything they had been through.
 
-The scribes taught by citing precedent. *Rabbi Akiva says... the school of Hillel holds...* Jesus taught by assertion. *You have heard that it was said... but I say to you.* This is either the voice of someone who has fundamentally misunderstood the nature of religious authority, or it is the voice of someone who stands behind all the authorities being cited. There is no third option that takes the text seriously.
+That's what makes this so hard to examine in ourselves. The wrong Jesus is almost never the product of rebellion. It is usually the product of our own pain and struggle.
 
-## What Lordship Requires
+Think for a moment about the most common versions of Jesus that people carry into church on any given Sunday.
 
-The language of lordship is uncomfortable in modern democratic ears. We are trained, rightly, to be suspicious of claims to absolute authority. We have seen what happens when human beings appoint themselves lords over other human beings, and we have learned to resist such claims. This instinct is healthy.
+There is the Jesus of the wounded. This is the Jesus found by the person who grew up in a home where love was conditional, where approval had to be earned, where the wrong move meant rejection. That person genuinely and powerfully found Him and the Jesus they found looked like everything their family wasn't. He was unconditional, accepting and safe. The Jesus of the wounded is not a false Jesus. He's real and His grace is real. But over time, without careful attention, this version of Jesus can quietly drift. He becomes a Jesus who never confronts, never corrects, never asks anything difficult, and certainly never challenges us in a way that makes us uncomfortable. This is a Jesus whose primary attribute is that He will never be like the person or people who hurt us. This is a Jesus shaped around a wound.
 
-But it creates a specific problem when we come to Jesus's claims about himself. He is not, the Gospels insist, making a claim to the kind of lordship that human tyrants exercise. His authority does not coerce. It invites. But the invitation is total, and it does not apologize for being total.
+There is the Jesus of the comfortable. This Jesus was found by the person for whom faith has always been relatively easy. They were raised in a good church, given a reasonable theology, and were never seriously challenged to pay a cost for following Him. The Jesus of the comfortable is good and moral and personally helpful. He improves our life, strengthens our family, and shows up reliably in the places we've already decided to go. He does not tend to ask us to go anywhere uncomfortable. He is, conveniently, already present in the places we were planning to be anyway. This is a Jesus shaped around comfort.
 
-*Love the Lord your God with all your heart, and with all your soul, and with all your mind, and with all your strength.* The word *all* appears four times. This is not an oversight. Jesus is describing a kind of allegiance that leaves nothing outside its scope — not our private inner life, not our political convictions, not our economics, not our relationships, not our ambitions, not our fears.
+There is the Jesus of the political. This is perhaps the most visible version in our current climate and He exists on every side of every divide. This is the Jesus who has been conscripted into a cause, who has been draped in a flag, handed a platform, and made the divine endorsement of a particular vision for how the world should be organized. The Jesus of the political is passionate, morally strong, and somehow always, remarkably, on the side of whatever argument His followers happen to be making. He has strong opinions about policy. He votes the right way. He would be disgusted by the other side.
 
-## The Rich Young Ruler and Us
+I have watched this version of Jesus get constructed in real time, from the left and from the right, in congregations and on social media and in the comments section of news articles that have nothing to do with the Gospel. And many times, the people doing the constructing are convinced they are simply following Jesus as He is. They are not even aware they are building Him into anything.
 
-Nowhere is this demand made more starkly than in the encounter with the wealthy young man who has kept every commandment and wants to know what he still lacks. Jesus looks at him and loves him — the text makes that explicit, which is important — and then tells him to sell everything, give to the poor, and follow.
+Here is the mechanism behind all of it:
 
-The young man goes away grieving. He cannot do it.
+We don't shape Jesus out of dishonesty. We shape Him out of need.
 
-We have been very creative in our attempts to soften this story. Perhaps Jesus was diagnosing a specific idolatry in this specific man. Perhaps the command is not universal. Perhaps we are meant to give the spirit of the teaching rather than its literal application.
+The Jesus of the wounded is shaped by someone who needed to be loved without condition. The Jesus of the comfortable is shaped by someone who needed faith to be manageable. The Jesus of the political is shaped by someone who needed God to be on their side. Every wrong Jesus begins with a real and legitimate human need. That is what makes this idea of Him so convincing. He feels like the answer, because He is. The problem is we are limiting Him in how He answers.
 
-Perhaps. But we should notice that the disciples, who are watching this exchange, are not comforted by these qualifications. They are deeply disturbed. *Who then can be saved?* If this man, with his moral seriousness and his sincere longing for eternal life, does not qualify, what hope is there for anyone?
+The problem is not where He starts. The problem is where we force Him to be. A Jesus shaped around a wound eventually becomes a Jesus who cannot heal it. A Jesus shaped around comfort eventually becomes a Jesus who cannot challenge you to grow. A Jesus shaped around a political cause eventually becomes a Jesus who cannot save anyone who disagrees with you. The very thing that made the wrong Jesus feel like the answer becomes the thing that limits what He can do.
 
-Jesus's answer is characteristically disorienting. The disciples are right to be disturbed. On their own resources, no one can meet this standard. What is impossible for human beings is possible for God. Which means that following Jesus is not primarily a matter of human achievement, but of divine transformation.
+The crowd on Palm Sunday had a Jesus who had been shaped by centuries of oppression and longing for national restoration. That Jesus was their answer. He was going to fix Rome. He was going to restore David's kingdom. He was going to do what needed to be done.
+
+And then He rode into Jerusalem on a donkey, looked around the temple courts, and went home for dinner.
+
+Not because He didn't care but because He had come to do something they didn't yet have categories for. Something bigger than Rome. Something that would require Him to go somewhere they absolutely did not want to follow.
+
+I want to be careful here, because it would be easy to read this chapter as an accusation as if the goal is to make us feel foolish for the Jesus we've been following. That is not my point. It's actually the opposite.
+
+The wrong Jesus almost always begins as an act of faith. The wounded person who reached for a Jesus of unconditional love was reaching for something real and true about who God is. The person who found Jesus in a community with strong political convictions was genuinely trying to live out their faith in the world. The Maccabean crowd who welcomed Jesus as a liberating king was longing for the restoration that God had actually promised them. They weren't wrong to long for it. They were wrong about the shape it would take.
+
+Examining the wrong Jesus is not an act of self-condemnation. It is an act of honesty. It opens the door to a Jesus who is big enough to be who He actually is, rather than who we want Him to be.
+
+The Jesus of the Gospels is not smaller than the ones we build for ourselves. He is larger and stronger. He is more demanding of us but at the same time, more gracious, and more surprising than anything we could construct from our expectations. That is the Jesus this book is trying to help us all find.
+
+But first, we have to be willing to take a hard look inside and examine the Jesus we've already been worshiping.
 
 ---
-
-*At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.*
-
-*Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.*
