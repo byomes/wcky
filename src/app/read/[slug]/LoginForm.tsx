@@ -39,21 +39,21 @@ export default function LoginForm({ slug, bookTitle, error: initialError }: Prop
 
   return (
     <>
-      <section className="bg-navy-950 pt-32 pb-16">
+      <section className="bg-navy-950 pt-20 pb-10 sm:pt-32 sm:pb-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
             {bookTitle}
           </p>
-          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Manuscript Access
           </h1>
-          <p className="text-slate-300 text-xl leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-xl leading-relaxed">
             This is a private pre-publication manuscript. Sign in with your reader credentials to continue.
           </p>
         </div>
       </section>
 
-      <section className="bg-navy-900 py-16 lg:py-24 border-t border-navy-800">
+      <section className="bg-navy-900 py-12 sm:py-16 lg:py-24 border-t border-navy-800">
         <div className="max-w-md mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
             Reader Login

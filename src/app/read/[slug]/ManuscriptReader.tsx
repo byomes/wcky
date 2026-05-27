@@ -96,7 +96,7 @@ export default function ManuscriptReader({ slug, bookTitle, chapters, userName }
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-8 sm:py-12">
         <main className="min-w-0">
           {chapters.length === 0 ? (
             <div className="py-24 text-center">
@@ -121,17 +121,17 @@ export default function ManuscriptReader({ slug, bookTitle, chapters, userName }
                 />
               </div>
 
-              <div className="mt-10 px-4 py-3 border border-navy-700 bg-navy-900">
+              <div className="mt-8 sm:mt-10 px-4 py-3 border border-navy-700 bg-navy-900">
                 <p className="text-slate-500 text-xs tracking-wide">
                   This is a confidential pre-publication manuscript. Please do not share, reproduce, or distribute any portion of this text.
                 </p>
               </div>
 
-              <div className="mt-12 pt-10 border-t border-navy-800">
+              <div className="mt-8 pt-8 sm:mt-12 sm:pt-10 border-t border-navy-800">
                 <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                   Reader Feedback
                 </p>
-                <h3 className="font-serif text-xl font-bold text-white mb-2">
+                <h3 className="font-serif text-lg sm:text-xl font-bold text-white mb-2">
                   Share Your Thoughts
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6">
