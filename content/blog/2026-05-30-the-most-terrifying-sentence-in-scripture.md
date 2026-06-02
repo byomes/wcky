@@ -4,15 +4,9 @@ date: "2026-05-30"
 slug: "the-most-terrifying-sentence-in-scripture"
 category: "Teaching"
 categories: ["Teaching"]
-excerpt: "title: 'The Most Terrifying Sentence in Scripture' date: '2026-05-24' slug: 'the-most-terrifying-sentence-in-scripture' category: 'Teaching' categories: ['Te..."
+excerpt: "Jesus tells us it is possible to speak His name, serve His kingdom, and still hear Him say: I never knew you."
 ---
 
-title: "The Most Terrifying Sentence in Scripture"
-date: "2026-05-24"
-slug: "the-most-terrifying-sentence-in-scripture"
-category: "Teaching"
-categories: ["Teaching"]
-excerpt: "Jesus tells us it is possible to speak His name, serve His kingdom, and still hear Him say: I never knew you."
 There is a sentence in Matthew 7:23 that should stop every serious follower of Jesus cold. It is not directed at atheists or skeptics or people who have openly rejected the faith. It is directed at people who called Jesus Lord. People who prophesied in His name, drove out demons in His name, and performed miracles in His name. People who, by every external measure, appeared to be deeply embedded in the work of the kingdom. And to all of them, Jesus says: I never knew you. Away from me.
 We do not get to soften that. We do not get to reinterpret it until it feels less urgent. It is Jesus speaking about His own kingdom, and He is telling us that it is entirely possible to be active in the kingdom without actually belonging to the King.
 The passage begins in verse 21 with a statement that deserves to sit in the silence for a moment. Not everyone who says to me Lord, Lord, will enter the kingdom of heaven. The Greek word translated Lord — kurios — means master, ruler, the one who possesses authority over me. It is a weighty word. And Jesus says you can say it all day long and it can mean nothing. Language is cheap. Fluency in the vocabulary of Christian faith is no indicator of genuine belonging. A person can be completely at home in the vernacular of the church — can use the right phrases, reference the right texts, carry the right posture in a worship service — and still not have submitted their heart and life to the one they are calling master.

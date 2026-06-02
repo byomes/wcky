@@ -4,15 +4,9 @@ date: "2026-06-02"
 slug: "you-can-t-fake-the-fruit"
 category: "Teaching"
 categories: ["Teaching"]
-excerpt: "title: 'You Can't Fake the Fruit' date: '2026-05-24' slug: 'you-cant-fake-the-fruit' category: 'Teaching' categories: ['Teaching'] excerpt: 'Jesus says false..."
+excerpt: "Jesus says false citizens are recognizable by what their lives produce — and appearance has nothing to do with it."
 ---
 
-title: "You Can't Fake the Fruit"
-date: "2026-05-24"
-slug: "you-cant-fake-the-fruit"
-category: "Teaching"
-categories: ["Teaching"]
-excerpt: "Jesus says false citizens are recognizable by what their lives produce — and appearance has nothing to do with it."
 An apple tree does not need to announce itself. It does not wear a sign or make a case for what kind of tree it is. The fruit does all the explaining. If there are apples on the branches, the question is settled. That seems obvious when we are talking about trees in an orchard. It becomes far more personal when Jesus applies the same logic to the people who claim to belong to His kingdom.
 In Matthew 7:15–20, Jesus pivots from the two roads and two gates to a warning that cuts even deeper. He tells us to be on guard — and the Greek word He uses carries a negative connotation, the kind of alertness you have when something threatening is approaching, not when something good is on its way. Be on guard, He says, for false prophets. People who look like us. People who talk like us. People who are fluent in our language and comfortable in our spaces. People whose outer appearance communicates belonging to the kingdom while their inner character tells a very different story.
 The definition Jesus gives is precise. False prophets are those who come in sheep's clothing but are inwardly ferocious wolves. The clothing and the character do not match. And the way we tell the difference, He says, is not by examining the clothing more carefully. It is by looking at the fruit.

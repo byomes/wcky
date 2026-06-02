@@ -4,15 +4,9 @@ date: "2026-05-28"
 slug: "rock-sand-and-the-storms-that-tell-the-truth"
 category: "Teaching"
 categories: ["Teaching"]
-excerpt: "title: 'Rock, Sand, and the Storms That Tell the Truth' date: '2026-05-24' slug: 'rock-sand-and-the-storms-that-tell-the-truth' category: 'Teaching' categori..."
+excerpt: "The storms of life do not destroy the foundation — they reveal it. Jesus closes His greatest sermon by showing us what solid ground actually looks like."
 ---
 
-title: "Rock, Sand, and the Storms That Tell the Truth"
-date: "2026-05-24"
-slug: "rock-sand-and-the-storms-that-tell-the-truth"
-category: "Teaching"
-categories: ["Teaching"]
-excerpt: "The storms of life do not destroy the foundation — they reveal it. Jesus closes His greatest sermon by showing us what solid ground actually looks like."
 Jesus does not close the Sermon on the Mount with a warm summary. He closes it with a house falling. The crash is loud, intentional, and the point. After five chapters of teaching about the DNA of kingdom citizenship — the Beatitudes, the antitheses, prayer, money, worry, and now false citizenship — He lands the entire sermon on a single image: two builders, two foundations, one storm, and two very different outcomes. Everything He has been building toward comes down to this. What is your life actually built on?
 The parable in Matthew 7:24–27 is so familiar that we risk letting it become wallpaper. We have heard it since childhood. We know the wise man and the foolish man. We know the rock and the sand. We know the rain comes down and the streams rise. What we sometimes miss is that this story is not primarily about the storm. It is about the foundation — and what the storm has the power to reveal about it.
 Both builders in the parable hear the words of Jesus. That is the first detail worth sitting with. The wise man and the foolish man are not distinguished by their access to the teaching. They both receive it. The difference is entirely in what they do with it. One hears and puts the words into practice. The other hears and does not. The storm does not create that difference. It exposes it. The foundation was either real or it was not long before the rain arrived.
