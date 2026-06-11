@@ -200,7 +200,7 @@ export default function MeetPage() {
                             <button
                               key={slot.start}
                               onClick={() => { setSelectedSlot(slot); setStep(4) }}
-                              className="w-full text-left px-4 py-3 text-slate-300 text-sm border-b border-navy-800 last:border-b-0 hover:bg-navy-800/60 hover:text-white transition-all duration-150"
+                              className="w-full text-left px-4 py-3 text-gold-400 text-sm border-b border-gold-700/30 last:border-b-0 hover:bg-gold-500/10 hover:text-gold-300 transition-all duration-150"
                             >
                               {fmtTime(slot.start)} – {fmtTime(slot.end)}
                             </button>
