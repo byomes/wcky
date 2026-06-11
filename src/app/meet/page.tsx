@@ -102,7 +102,7 @@ export default function MeetPage() {
 
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">Schedule Time</p>
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">Need to Talk?</p>
           <h1 className="font-serif text-3xl font-bold text-white leading-snug">
             Book an Appointment<br />with Pastor Bill
           </h1>
