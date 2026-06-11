@@ -46,6 +46,7 @@ export default function MeetPage() {
   const [name,              setName]              = useState('')
   const [email,             setEmail]             = useState('')
   const [suggestedLocation, setSuggestedLocation] = useState('')
+  const [context,           setContext]           = useState('')
   const [submitting,        setSubmitting]        = useState(false)
   const [result,            setResult]            = useState<BookResult | null>(null)
   const [error,             setError]             = useState<string | null>(null)
@@ -78,7 +79,7 @@ export default function MeetPage() {
       const resp = await fetch('/api/meet/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, start: selectedSlot.start, end: selectedSlot.end, type, duration, suggestedLocation: suggestedLocation || undefined }),
+        body: JSON.stringify({ name, email, start: selectedSlot.start, end: selectedSlot.end, type, duration, suggestedLocation: suggestedLocation || undefined, context }),
       })
       const data = await resp.json()
       if (!resp.ok) throw new Error(data.error ?? 'Booking failed')
@@ -280,13 +281,25 @@ export default function MeetPage() {
                   />
                 </div>
               )}
+              <div>
+                <label className="block text-xs text-slate-400 uppercase tracking-widest font-semibold mb-2">
+                  What are we talking about?
+                </label>
+                <textarea
+                  value={context}
+                  onChange={e => setContext(e.target.value)}
+                  placeholder="Give Pastor Bill a brief idea of what you'd like to discuss."
+                  rows={4}
+                  className={`${inputCls} resize-none`}
+                />
+              </div>
             </div>
 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <button
               onClick={handleBook}
-              disabled={!name.trim() || !email.trim() || submitting}
+              disabled={!name.trim() || !email.trim() || !context.trim() || submitting}
               className="w-full py-4 bg-navy-800 border border-gold-700/40 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-500/60 hover:bg-gold-500/10 hover:text-gold-300 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {submitting ? 'Booking…' : 'Confirm Booking'}

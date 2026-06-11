@@ -10,9 +10,9 @@ function fmt(iso: string, opts: Intl.DateTimeFormatOptions): string {
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-  const { name, email, start, end, type, duration, suggestedLocation } = body
+  const { name, email, start, end, type, duration, suggestedLocation, context } = body
 
-  if (!name || !email || !start || !end || !type) {
+  if (!name || !email || !start || !end || !type || !context) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
 
@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
     'Booked via wcky.com',
     `Guest: ${name} (${email})`,
     ...(!isVirtual && suggestedLocation ? [`Suggested Location: ${suggestedLocation}`] : []),
+    ``,
+    `Topic: ${context}`,
   ]
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -88,6 +90,8 @@ export async function POST(req: NextRequest) {
         `Google Meet Link:`,
         meetLink ?? '(link unavailable — please reply to this email)',
         ``,
+        `Topic: ${context}`,
+        ``,
         `See you then!`,
         ``,
         `— Dr. William C.K. Yomes`,
@@ -99,6 +103,8 @@ export async function POST(req: NextRequest) {
         ``,
         `Date: ${dateStr}`,
         `Time: ${timeRange}`,
+        ``,
+        `Topic: ${context}`,
         ``,
         `Pastor Bill will be in touch to confirm the location details.`,
         ``,
@@ -125,6 +131,7 @@ export async function POST(req: NextRequest) {
       `${name} (${email})`,
       `${dateStr} at ${startTime}`,
       ...(!isVirtual && suggestedLocation ? [`Suggested location: ${suggestedLocation}`] : []),
+      `📝 Topic: ${context}`,
     ]
     await fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
       method: 'POST',
