@@ -26,18 +26,16 @@ export async function POST(req: NextRequest) {
   auth.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH_TOKEN })
   const calendar = google.calendar({ version: 'v3', auth })
 
-  const descLines = [
-    'Booked via wcky.com',
-    `Guest: ${name} (${email})`,
-    ...(!isVirtual && suggestedLocation ? [`Suggested Location: ${suggestedLocation}`] : []),
-    ``,
-    `Topic: ${context}`,
-  ]
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const eventBody: Record<string, any> = {
     summary: isVirtual ? `Virtual Appointment — ${name}` : `In-Person Appointment — ${name}`,
-    description: descLines.join('\n'),
+    description: [
+      'Booked via wcky.com',
+      `Guest: ${name} (${email})`,
+      ...(!isVirtual && suggestedLocation ? [`Suggested Location: ${suggestedLocation}`] : []),
+      ``,
+      `Topic: ${context}`,
+    ].join('\n'),
     start: { dateTime: start, timeZone: 'America/New_York' },
     end: { dateTime: end, timeZone: 'America/New_York' },
     attendees: [{ email }],
@@ -59,6 +57,24 @@ export async function POST(req: NextRequest) {
   })
 
   const meetLink = event.data.conferenceData?.entryPoints?.[0]?.uri ?? null
+  const eventId  = event.data.id
+
+  // Patch description to include the generated Meet link now that we have it
+  if (isVirtual && meetLink && eventId) {
+    await calendar.events.patch({
+      calendarId: CALENDAR_ID,
+      eventId,
+      requestBody: {
+        description: [
+          'Booked via wcky.com',
+          `Guest: ${name} (${email})`,
+          `Join here: ${meetLink}`,
+          ``,
+          `Topic: ${context}`,
+        ].join('\n'),
+      },
+    })
+  }
 
   // ── Format date/time for notifications ──
   const dateStr = fmt(start, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
@@ -87,8 +103,7 @@ export async function POST(req: NextRequest) {
         `Date: ${dateStr}`,
         `Time: ${timeRange}`,
         ``,
-        `Google Meet Link:`,
-        meetLink ?? '(link unavailable — please reply to this email)',
+        `Join here: ${meetLink ?? '(link unavailable — please reply to this email)'}`,
         ``,
         `Topic: ${context}`,
         ``,
