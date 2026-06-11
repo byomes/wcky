@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const eventBody: Record<string, any> = {
-    summary: isVirtual ? `Virtual Appointment — ${name}` : `In-Person Appointment — ${name}`,
+    summary: isVirtual ? `VA: ${name}` : `IP: ${name}`,
     description: [
       'Booked via wcky.com',
       `Guest: ${name} (${email})`,
@@ -109,7 +109,11 @@ export async function POST(req: NextRequest) {
         ``,
         `See you then!`,
         ``,
-        `— Dr. William C.K. Yomes`,
+        `Sincerely,`,
+        `Watson`,
+        `AI-powered digital assistant`,
+        `Office of Dr. Bill Yomes`,
+        `williamckyomes.com/start`,
       ]
     : [
         `Hi ${name},`,
@@ -123,7 +127,11 @@ export async function POST(req: NextRequest) {
         ``,
         `Pastor Bill will be in touch to confirm the location details.`,
         ``,
-        `— Dr. William C.K. Yomes`,
+        `Sincerely,`,
+        `Watson`,
+        `AI-powered digital assistant`,
+        `Office of Dr. Bill Yomes`,
+        `williamckyomes.com/start`,
       ]
 
   await transporter.sendMail({
