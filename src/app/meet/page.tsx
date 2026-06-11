@@ -131,12 +131,12 @@ export default function MeetPage() {
               <button
                 key={opt.value}
                 onClick={() => { setType(opt.value); setStep(2) }}
-                className="w-full text-left p-6 bg-navy-800 border border-navy-700 hover:border-gold-700/50 hover:bg-navy-700/60 transition-all duration-200 group"
+                className="w-full text-left p-6 bg-navy-800 border border-gold-700/40 hover:border-gold-500/60 hover:bg-gold-500/10 transition-all duration-200"
               >
-                <p className="font-serif text-lg font-semibold text-white group-hover:text-gold-300 transition-colors duration-200 mb-1">
+                <p className="font-serif text-lg font-semibold text-gold-400 mb-1">
                   {opt.label}
                 </p>
-                <p className="text-slate-500 text-sm">{opt.desc}</p>
+                <p className="text-gold-700 text-sm">{opt.desc}</p>
               </button>
             ))}
           </div>
@@ -151,9 +151,9 @@ export default function MeetPage() {
                 <button
                   key={d}
                   onClick={() => { setDuration(d); setStep(3) }}
-                  className="w-full text-left p-5 bg-navy-800 border border-navy-700 hover:border-gold-700/50 hover:bg-navy-700/60 transition-all duration-200 group"
+                  className="w-full text-left p-5 bg-navy-800 border border-gold-700/40 hover:border-gold-500/60 hover:bg-gold-500/10 transition-all duration-200"
                 >
-                  <span className="font-semibold text-white group-hover:text-gold-300 transition-colors duration-200">
+                  <span className="font-semibold text-gold-400">
                     {durLabel(d)}
                   </span>
                 </button>
@@ -181,15 +181,15 @@ export default function MeetPage() {
                 {dates.slice(0, visibleDateCount).map(dk => {
                   const isOpen = expandedDate === dk
                   return (
-                    <div key={dk} className={`border transition-colors duration-200 ${isOpen ? 'border-gold-700/50' : 'border-navy-700'}`}>
+                    <div key={dk} className={`border transition-colors duration-200 ${isOpen ? 'border-gold-500/60' : 'border-gold-700/40'}`}>
                       <button
                         onClick={() => setExpandedDate(isOpen ? null : dk)}
-                        className="w-full flex items-center justify-between px-4 py-4 bg-navy-800 hover:bg-navy-700/60 transition-colors duration-200 group"
+                        className={`w-full flex items-center justify-between px-4 py-4 transition-colors duration-200 ${isOpen ? 'bg-gold-500/10' : 'bg-navy-800 hover:bg-gold-500/10'}`}
                       >
-                        <span className={`font-medium text-sm transition-colors duration-200 ${isOpen ? 'text-gold-300' : 'text-white group-hover:text-gold-300'}`}>
+                        <span className={`font-medium text-sm transition-colors duration-200 ${isOpen ? 'text-gold-300' : 'text-gold-400'}`}>
                           {fmtDateHeader(slotsByDate[dk][0].start)}
                         </span>
-                        <span className={`text-xs transition-all duration-200 ${isOpen ? 'text-gold-500 rotate-180' : 'text-slate-600'}`}>
+                        <span className={`text-xs transition-all duration-200 ${isOpen ? 'text-gold-500 rotate-180' : 'text-gold-700'}`}>
                           ▾
                         </span>
                       </button>
@@ -214,7 +214,7 @@ export default function MeetPage() {
                 {visibleDateCount < dates.length && (
                   <button
                     onClick={() => setVisibleDateCount(c => c + 14)}
-                    className="w-full py-3.5 text-sm text-slate-500 hover:text-slate-300 border border-navy-700 hover:border-navy-600 transition-colors duration-200"
+                    className="w-full py-3.5 text-sm text-gold-600 hover:text-gold-400 border border-gold-700/40 hover:border-gold-500/60 hover:bg-gold-500/10 transition-colors duration-200"
                   >
                     Show more dates →
                   </button>
