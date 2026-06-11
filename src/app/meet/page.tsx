@@ -125,8 +125,8 @@ export default function MeetPage() {
         {step === 1 && (
           <div className="space-y-3">
             {[
-              { value: 'virtual'  as const, label: 'Virtual Appointment',   desc: 'Meet via Google Meet from anywhere' },
-              { value: 'inperson' as const, label: 'In-Person Appointment', desc: 'Meet with Pastor Bill face to face'  },
+              { value: 'virtual'  as const, label: 'Virtual Appointment',   desc: "Meet in Dr. Bill's virtual office." },
+              { value: 'inperson' as const, label: 'In-Person Appointment', desc: 'Meet Dr. Bill face to face.'          },
             ].map(opt => (
               <button
                 key={opt.value}
@@ -287,7 +287,7 @@ export default function MeetPage() {
             <button
               onClick={handleBook}
               disabled={!name.trim() || !email.trim() || submitting}
-              className="w-full py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full py-4 bg-navy-800 border border-gold-700/40 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-500/60 hover:bg-gold-500/10 hover:text-gold-300 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {submitting ? 'Booking…' : 'Confirm Booking'}
             </button>
