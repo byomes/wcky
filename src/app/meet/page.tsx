@@ -27,9 +27,9 @@ function fmtDateKey(iso: string) {
     timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
   })
 }
-function fmtDateTab(iso: string) {
+function fmtDateHeader(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', {
-    timeZone: 'America/New_York', weekday: 'short', month: 'short', day: 'numeric',
+    timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric',
   })
 }
 function durLabel(d: number) { return d === 60 ? '1 hour' : `${d} minutes` }
@@ -40,7 +40,7 @@ export default function MeetPage() {
   const [duration,          setDuration]          = useState<number | null>(null)
   const [slots,             setSlots]             = useState<Slot[]>([])
   const [loadingSlots,      setLoadingSlots]      = useState(false)
-  const [selectedDate,      setSelectedDate]      = useState<string | null>(null)
+  const [visibleDateCount,  setVisibleDateCount]  = useState(14)
   const [selectedSlot,      setSelectedSlot]      = useState<Slot | null>(null)
   const [name,              setName]              = useState('')
   const [email,             setEmail]             = useState('')
@@ -53,6 +53,7 @@ export default function MeetPage() {
     if (step !== 3 || !duration) return
     setLoadingSlots(true)
     setError(null)
+    setVisibleDateCount(14)
     fetch(`/api/meet/availability?duration=${duration}`)
       .then(r => r.json())
       .then(data => { setSlots(data.slots ?? []); setLoadingSlots(false) })
@@ -163,7 +164,7 @@ export default function MeetPage() {
         {/* ── Step 3: Date/time ── */}
         {step === 3 && (
           <div>
-            <p className="text-slate-400 text-sm mb-5">Select a date and time</p>
+            <p className="text-slate-400 text-sm mb-6">Select a date and time</p>
 
             {loadingSlots ? (
               <div className="text-center py-16 text-slate-600 text-sm">Loading availability…</div>
@@ -174,56 +175,38 @@ export default function MeetPage() {
                 No availability found in the next 60 days. Please check back soon.
               </div>
             ) : (
-              <>
-                {/* Date tabs — horizontal scroll */}
-                <div className="flex gap-2 overflow-x-auto pb-3 mb-5">
-                  {dates.map(dk => (
-                    <button
-                      key={dk}
-                      onClick={() => { setSelectedDate(dk); setSelectedSlot(null) }}
-                      className={`flex-shrink-0 px-4 py-2.5 text-xs font-semibold tracking-wide uppercase transition-all duration-200 border ${
-                        selectedDate === dk
-                          ? 'border-gold-600 bg-gold-500/10 text-gold-400'
-                          : 'border-navy-700 bg-navy-800 text-slate-500 hover:text-slate-300 hover:border-navy-600'
-                      }`}
-                    >
-                      {fmtDateTab(slotsByDate[dk][0].start)}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Time slot grid */}
-                {selectedDate ? (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {slotsByDate[selectedDate].map(slot => (
-                      <button
-                        key={slot.start}
-                        onClick={() => setSelectedSlot(slot)}
-                        className={`py-3 px-3 text-sm font-medium transition-all duration-200 border ${
-                          selectedSlot?.start === slot.start
-                            ? 'border-gold-600 bg-gold-500/10 text-gold-400'
-                            : 'border-navy-700 bg-navy-800 text-slate-400 hover:border-navy-600 hover:text-white'
-                        }`}
-                      >
-                        {fmtTime(slot.start)}
-                      </button>
-                    ))}
+              <div className="space-y-7">
+                {dates.slice(0, visibleDateCount).map(dk => (
+                  <div key={dk}>
+                    <p className="text-xs text-gold-600 uppercase tracking-widest font-semibold mb-2">
+                      {fmtDateHeader(slotsByDate[dk][0].start)}
+                    </p>
+                    <div className="space-y-2">
+                      {slotsByDate[dk].map(slot => (
+                        <button
+                          key={slot.start}
+                          onClick={() => { setSelectedSlot(slot); setStep(4) }}
+                          className="w-full text-left px-4 py-3 bg-navy-800 border border-navy-700 text-slate-300 text-sm hover:border-gold-700/50 hover:text-white hover:bg-navy-700/60 transition-all duration-200"
+                        >
+                          {fmtTime(slot.start)} – {fmtTime(slot.end)}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                ) : (
-                  <p className="text-navy-600 text-sm text-center py-8">Select a date above</p>
+                ))}
+
+                {visibleDateCount < dates.length && (
+                  <button
+                    onClick={() => setVisibleDateCount(c => c + 14)}
+                    className="w-full py-3.5 text-sm text-slate-500 hover:text-slate-300 border border-navy-700 hover:border-navy-600 transition-colors duration-200"
+                  >
+                    Show more dates →
+                  </button>
                 )}
-              </>
+              </div>
             )}
 
-            {selectedSlot && (
-              <button
-                onClick={() => setStep(4)}
-                className="w-full mt-6 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-              >
-                Continue →
-              </button>
-            )}
-            {backBtn(() => { setStep(2); setSelectedSlot(null); setSelectedDate(null); setSlots([]) })}
+            {backBtn(() => { setStep(2); setSelectedSlot(null); setSlots([]) })}
           </div>
         )}
 
