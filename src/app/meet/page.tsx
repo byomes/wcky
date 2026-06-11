@@ -41,6 +41,7 @@ export default function MeetPage() {
   const [slots,             setSlots]             = useState<Slot[]>([])
   const [loadingSlots,      setLoadingSlots]      = useState(false)
   const [visibleDateCount,  setVisibleDateCount]  = useState(14)
+  const [expandedDate,      setExpandedDate]      = useState<string | null>(null)
   const [selectedSlot,      setSelectedSlot]      = useState<Slot | null>(null)
   const [name,              setName]              = useState('')
   const [email,             setEmail]             = useState('')
@@ -54,6 +55,7 @@ export default function MeetPage() {
     setLoadingSlots(true)
     setError(null)
     setVisibleDateCount(14)
+    setExpandedDate(null)
     fetch(`/api/meet/availability?duration=${duration}`)
       .then(r => r.json())
       .then(data => { setSlots(data.slots ?? []); setLoadingSlots(false) })
@@ -175,25 +177,39 @@ export default function MeetPage() {
                 No availability found in the next 60 days. Please check back soon.
               </div>
             ) : (
-              <div className="space-y-7">
-                {dates.slice(0, visibleDateCount).map(dk => (
-                  <div key={dk}>
-                    <p className="text-xs text-gold-600 uppercase tracking-widest font-semibold mb-2">
-                      {fmtDateHeader(slotsByDate[dk][0].start)}
-                    </p>
-                    <div className="space-y-2">
-                      {slotsByDate[dk].map(slot => (
-                        <button
-                          key={slot.start}
-                          onClick={() => { setSelectedSlot(slot); setStep(4) }}
-                          className="w-full text-left px-4 py-3 bg-navy-800 border border-navy-700 text-slate-300 text-sm hover:border-gold-700/50 hover:text-white hover:bg-navy-700/60 transition-all duration-200"
-                        >
-                          {fmtTime(slot.start)} – {fmtTime(slot.end)}
-                        </button>
-                      ))}
+              <div className="space-y-2">
+                {dates.slice(0, visibleDateCount).map(dk => {
+                  const isOpen = expandedDate === dk
+                  return (
+                    <div key={dk} className={`border transition-colors duration-200 ${isOpen ? 'border-gold-700/50' : 'border-navy-700'}`}>
+                      <button
+                        onClick={() => setExpandedDate(isOpen ? null : dk)}
+                        className="w-full flex items-center justify-between px-4 py-4 bg-navy-800 hover:bg-navy-700/60 transition-colors duration-200 group"
+                      >
+                        <span className={`font-medium text-sm transition-colors duration-200 ${isOpen ? 'text-gold-300' : 'text-white group-hover:text-gold-300'}`}>
+                          {fmtDateHeader(slotsByDate[dk][0].start)}
+                        </span>
+                        <span className={`text-xs transition-all duration-200 ${isOpen ? 'text-gold-500 rotate-180' : 'text-slate-600'}`}>
+                          ▾
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <div className="border-t border-navy-700 bg-navy-900">
+                          {slotsByDate[dk].map(slot => (
+                            <button
+                              key={slot.start}
+                              onClick={() => { setSelectedSlot(slot); setStep(4) }}
+                              className="w-full text-left px-4 py-3 text-slate-300 text-sm border-b border-navy-800 last:border-b-0 hover:bg-navy-800/60 hover:text-white transition-all duration-150"
+                            >
+                              {fmtTime(slot.start)} – {fmtTime(slot.end)}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
 
                 {visibleDateCount < dates.length && (
                   <button
