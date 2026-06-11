@@ -9,7 +9,9 @@ function fmt(iso: string, opts: Intl.DateTimeFormatOptions): string {
 }
 
 export async function POST(req: NextRequest) {
+  try {
   const body = await req.json()
+  console.error('[meet/book] request body:', JSON.stringify(body))
   const { name, email, start, end, type, duration, suggestedLocation, context } = body
 
   if (!name || !email || !start || !end || !type || !context) {
@@ -164,4 +166,8 @@ export async function POST(req: NextRequest) {
   }
 
   return NextResponse.json({ success: true, meetLink, isVirtual })
+  } catch (err) {
+    console.error('[meet/book] unhandled error:', err)
+    return NextResponse.json({ error: String(err) }, { status: 500 })
+  }
 }
