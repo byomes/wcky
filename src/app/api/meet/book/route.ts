@@ -60,6 +60,22 @@ export async function POST(req: NextRequest) {
 
   const meetLink = event.data.conferenceData?.entryPoints?.[0]?.uri ?? null
   const eventId  = event.data.id
+  const confirmationId = crypto.randomUUID()
+
+  await fetch('http://100.117.237.96:5200/api/book-appointment', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      confirmation_id: confirmationId,
+      event_id: eventId,
+      guest_name: name,
+      guest_email: email,
+      appointment_type: type,
+      scheduled_at: start,
+    }),
+  })
+
+  const cancelLink = `https://www.williamckyomes.com/meet/cancel?id=${confirmationId}`
 
   // Patch description to include the generated Meet link now that we have it
   if (isVirtual && meetLink && eventId) {
@@ -109,6 +125,9 @@ export async function POST(req: NextRequest) {
         ``,
         `Topic: ${context}`,
         ``,
+        `Need to cancel? Use this link:`,
+        `${cancelLink}`,
+        ``,
         `See you then!`,
         ``,
         `Sincerely,`,
@@ -128,6 +147,9 @@ export async function POST(req: NextRequest) {
         `Topic: ${context}`,
         ``,
         `Pastor Bill will be in touch to confirm the location details.`,
+        ``,
+        `Need to cancel? Use this link:`,
+        `${cancelLink}`,
         ``,
         `Sincerely,`,
         `Watson`,
