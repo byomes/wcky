@@ -62,18 +62,22 @@ export async function POST(req: NextRequest) {
   const eventId  = event.data.id
   const confirmationId = crypto.randomUUID()
 
-  await fetch('http://100.117.237.96:5200/api/book-appointment', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      confirmation_id: confirmationId,
-      event_id: eventId,
-      guest_name: name,
-      guest_email: email,
-      appointment_type: type,
-      scheduled_at: start,
-    }),
-  })
+  try {
+    await fetch('http://100.117.237.96:5200/api/book-appointment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        confirmation_id: confirmationId,
+        event_id: eventId,
+        guest_name: name,
+        guest_email: email,
+        appointment_type: type,
+        scheduled_at: start,
+      }),
+    })
+  } catch (e) {
+    console.error('[meet/book] watson store failed (non-fatal):', e)
+  }
 
   const cancelLink = `https://www.williamckyomes.com/meet/cancel?id=${confirmationId}`
 
