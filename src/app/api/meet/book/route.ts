@@ -79,8 +79,6 @@ export async function POST(req: NextRequest) {
     console.error('[meet/book] watson store failed (non-fatal):', e)
   }
 
-  const cancelLink = `https://www.williamckyomes.com/meet/cancel?id=${confirmationId}`
-
   // Patch description to include the generated Meet link now that we have it
   if (isVirtual && meetLink && eventId) {
     await calendar.events.patch({
@@ -129,9 +127,6 @@ export async function POST(req: NextRequest) {
         ``,
         `Topic: ${context}`,
         ``,
-        `Need to cancel? Use this link:`,
-        `${cancelLink}`,
-        ``,
         `See you then!`,
         ``,
         `Sincerely,`,
@@ -151,9 +146,6 @@ export async function POST(req: NextRequest) {
         `Topic: ${context}`,
         ``,
         `Pastor Bill will be in touch to confirm the location details.`,
-        ``,
-        `Need to cancel? Use this link:`,
-        `${cancelLink}`,
         ``,
         `Sincerely,`,
         `Watson`,
