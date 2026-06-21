@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation'
 
 const NAV = [
   { href: '/room/board',  label: 'Board'  },
+  { href: '/room/read',   label: 'Read'   },
   { href: '/room/beta',   label: 'Beta'   },
   { href: '/room/prayer', label: 'Prayer' },
-  { href: '/room/write',  label: 'Write'  },
   { href: '/room/calls',  label: 'Calls'  },
 ]
 
