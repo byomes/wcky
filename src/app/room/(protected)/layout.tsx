@@ -10,7 +10,7 @@ export default async function ProtectedLayout({ children }: { children: React.Re
   if (!session) redirect('/room/login')
 
   return (
-    <div className="min-h-screen bg-navy-950 flex flex-col">
+    <div className="min-h-screen bg-navy-950 flex flex-col pt-16 lg:pt-20">
       {/* Top bar */}
       <header className="bg-navy-900 border-b border-navy-800 px-4 sm:px-6 py-3 flex items-center justify-between shrink-0">
         <span className="font-serif text-white font-semibold text-base">The Writing Room</span>
