@@ -22,7 +22,7 @@ export default function RoomNav() {
           <Link
             key={href}
             href={href}
-            className={`flex-1 py-3 text-center text-xs tracking-widest uppercase transition-colors ${
+            className={`flex-1 py-6 text-center text-xs tracking-widest uppercase transition-colors ${
               active
                 ? 'text-gold-500 border-t-2 border-gold-500 -mt-px'
                 : 'text-slate-500 hover:text-slate-300'
