@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const PUBLIC_ROOM_PATHS = ['/room', '/room/login', '/room/reset', '/room/verify', '/room/admin/login']
+const PUBLIC_ROOM_PATHS = ['/room', '/room/login', '/room/apply', '/room/reset', '/room/verify', '/room/admin/login']
 
 function getSecret(): string {
   return process.env.WRITING_ROOM_SESSION_SECRET ?? 'dev-secret-change-me-in-production'
@@ -65,7 +65,7 @@ export async function middleware(request: NextRequest) {
   const sessionCookie = request.cookies.get('writing_room_session')
   const valid = sessionCookie?.value ? await verifyHmac(sessionCookie.value) : false
   if (!valid) {
-    return NextResponse.redirect(new URL('/room/login', request.url))
+    return NextResponse.redirect(new URL('/room', request.url))
   }
   return NextResponse.next()
 }

@@ -144,7 +144,7 @@ export default function ApplyForm() {
 
       <p className="text-slate-500 text-xs text-center">
         Already have access?{' '}
-        <a href="/room/login" className="text-gold-600 hover:text-gold-500 transition-colors">
+        <a href="/room" className="text-gold-600 hover:text-gold-500 transition-colors">
           Sign in here
         </a>
       </p>
