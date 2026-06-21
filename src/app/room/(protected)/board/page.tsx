@@ -1,0 +1,30 @@
+import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getPosts } from '@/lib/writing-room-api'
+import { getPartnerSession, PARTNER_COOKIE } from '@/lib/writing-room-auth'
+import PostList from '../PostList'
+
+export const metadata: Metadata = {
+  title: 'Board — Writing Room',
+  robots: 'noindex, nofollow',
+}
+
+export default async function BoardPage() {
+  const cookieStore = cookies()
+  const session = await getPartnerSession(cookieStore.get(PARTNER_COOKIE)?.value)
+  const posts = await getPosts('board')
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+      <h1 className="font-serif text-2xl font-bold text-white mb-6">Community Board</h1>
+      <PostList
+        posts={posts}
+        section="board"
+        partnerId={session?.partnerId ?? 0}
+        allowReplies
+        submitLabel="Post"
+        placeholder="Share something with the room…"
+      />
+    </div>
+  )
+}
