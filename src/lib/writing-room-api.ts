@@ -177,6 +177,23 @@ export async function confirmPasswordReset(
   return watsonPost('/api/writing-room/reset-confirm', { token, password: newPassword })
 }
 
+export async function validateVerifyToken(
+  token: string,
+): Promise<{ valid: boolean; name?: string }> {
+  return (
+    (await watsonGet<{ valid: boolean; name?: string }>(
+      `/api/writing-room/verify-validate?token=${encodeURIComponent(token)}`,
+    )) ?? { valid: false }
+  )
+}
+
+export async function confirmVerify(
+  token: string,
+  password: string,
+): Promise<{ ok: boolean } | null> {
+  return watsonPost('/api/writing-room/verify-confirm', { token, password })
+}
+
 // Admin
 export async function getPartners(): Promise<Partner[]> {
   return (await watsonGet<Partner[]>('/api/writing-room/partners')) ?? []

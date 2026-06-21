@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const PUBLIC_ROOM_PATHS = ['/room', '/room/login', '/room/reset', '/room/admin/login']
+const PUBLIC_ROOM_PATHS = ['/room', '/room/login', '/room/reset', '/room/verify', '/room/admin/login']
 
 function getSecret(): string {
   return process.env.WRITING_ROOM_SESSION_SECRET ?? 'dev-secret-change-me-in-production'

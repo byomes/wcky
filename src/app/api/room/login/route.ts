@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { loginPartner } from '@/lib/writing-room-api'
 import { makePartnerCookieValue, PARTNER_COOKIE, MAX_AGE } from '@/lib/writing-room-auth'
 
 export async function POST(req: NextRequest) {
@@ -12,7 +11,29 @@ export async function POST(req: NextRequest) {
   if (!username || !password)
     return NextResponse.json({ error: 'Username and password are required.' }, { status: 400 })
 
-  const partner = await loginPartner(username, password)
+  const res = await fetch(
+    `${process.env.WATSON_API_URL}/api/writing-room/login`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Watson-Key': process.env.WATSON_API_KEY ?? '' },
+      body: JSON.stringify({ username, password }),
+      cache: 'no-store',
+    },
+  )
+
+  if (res.status === 403) {
+    const body = await res.json().catch(() => ({}))
+    if (body.error === 'pending_verification') {
+      return NextResponse.json(
+        { error: 'Please check your email to verify your account before logging in.' },
+        { status: 403 },
+      )
+    }
+  }
+
+  if (!res.ok) return NextResponse.json({ error: 'Invalid username or password.' }, { status: 401 })
+
+  const partner = await res.json().catch(() => null)
   if (!partner) return NextResponse.json({ error: 'Invalid username or password.' }, { status: 401 })
 
   const cookieValue = await makePartnerCookieValue({
