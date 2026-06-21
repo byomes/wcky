@@ -16,15 +16,16 @@ export default async function PrayerPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl font-bold text-white mb-2">Prayer</h1>
-      <p className="text-slate-400 text-sm mb-6">We pray for each other here.</p>
+      <h1 className="font-serif text-2xl font-bold text-white mb-2">Prayer Wall</h1>
+      <p className="text-slate-400 text-sm mb-6">We carry each other&apos;s burdens here.</p>
       <PostList
-        posts={posts}
+        initialPosts={posts}
         section="prayer"
         partnerId={session?.partnerId ?? 0}
-        allowReplies={false}
-        submitLabel="Share Request"
+        emptyLabel="No prayer requests yet. Share what&apos;s on your heart."
+        submitLabel="Submit Prayer Request"
         placeholder="Share a prayer request…"
+        replyLabel="Pray with them"
       />
     </div>
   )

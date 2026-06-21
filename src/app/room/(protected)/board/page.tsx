@@ -16,14 +16,16 @@ export default async function BoardPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl font-bold text-white mb-6">Community Board</h1>
+      <h1 className="font-serif text-2xl font-bold text-white mb-2">Community Board</h1>
+      <p className="text-slate-400 text-sm mb-6">Share updates, questions, and encouragement.</p>
       <PostList
-        posts={posts}
+        initialPosts={posts}
         section="board"
         partnerId={session?.partnerId ?? 0}
-        allowReplies
+        emptyLabel="Be the first to post. Introduce yourself."
         submitLabel="Post"
         placeholder="Share something with the room…"
+        replyLabel="Reply"
       />
     </div>
   )
