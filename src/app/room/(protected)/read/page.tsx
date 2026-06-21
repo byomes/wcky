@@ -77,6 +77,10 @@ export default async function ReadPage() {
       </div>
 
       {/* Sticky anchor nav */}
+      <style>{`
+        .arc-nav-link { color: #888; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.25rem 0.5rem; transition: color 0.15s; }
+        .arc-nav-link:hover { color: #c9a84c; }
+      `}</style>
       <div style={{
         position: 'sticky',
         top: 0,
@@ -93,17 +97,7 @@ export default async function ReadPage() {
           <a
             key={s.id}
             href={`#${s.id}`}
-            style={{
-              color: '#888',
-              fontSize: '0.72rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-              padding: '0.25rem 0.5rem',
-              transition: 'color 0.15s',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--gold-500, #c9a84c)')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#888')}
+            className="arc-nav-link"
           >
             {s.label}
             {i < sections.length - 1 && (
