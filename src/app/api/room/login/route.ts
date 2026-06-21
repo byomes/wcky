@@ -40,6 +40,7 @@ export async function POST(req: NextRequest) {
     partnerId: partner.partnerId,
     username: partner.username,
     name: partner.name,
+    ...(partner.isAdmin ? { isAdmin: true } : {}),
   })
 
   const response = NextResponse.json({ ok: true })

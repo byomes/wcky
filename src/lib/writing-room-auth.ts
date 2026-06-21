@@ -54,7 +54,7 @@ async function verifyToken<T>(token: string): Promise<T | null> {
   }
 }
 
-export type PartnerSession = { partnerId: number; username: string; name: string }
+export type PartnerSession = { partnerId: number; username: string; name: string; isAdmin?: boolean }
 export type AdminSession = { admin: true }
 
 export async function getPartnerSession(

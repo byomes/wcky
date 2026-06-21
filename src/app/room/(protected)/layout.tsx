@@ -16,6 +16,21 @@ export default async function ProtectedLayout({ children }: { children: React.Re
         <span className="font-serif text-white font-semibold text-base">The Writing Room</span>
         <div className="flex items-center gap-4">
           <span className="text-slate-400 text-sm hidden sm:block">{session.name}</span>
+          {session.isAdmin && (
+            <>
+              <span className="text-xs font-semibold tracking-widest uppercase bg-gold-500/15 text-gold-400 border border-gold-500/30 px-2 py-0.5 rounded hidden sm:block">
+                Admin
+              </span>
+              <Link
+                href="https://admin.williamckyomes.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-400 hover:text-gold-300 text-xs tracking-widest uppercase transition-colors hidden sm:block"
+              >
+                Admin Dashboard →
+              </Link>
+            </>
+          )}
           <LogoutButton />
         </div>
       </header>
