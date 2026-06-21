@@ -25,7 +25,7 @@ export default async function RoomPage() {
             The Writing Room
           </h1>
           <p className="text-slate-300 text-base sm:text-xl leading-relaxed">
-            A private community for people helping shape the work. William reads everything. This is a real community.
+            A private community for people helping to shape the writing. Read and respond to Dr. Bill as the writing happens. Beta chapters. Cover designs. Author Calls. This is a real community.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default async function RoomPage() {
             Request to Join
           </h2>
           <p className="text-slate-400 text-sm mb-8">
-            William reviews every request personally. Membership is not guaranteed.
+            Dr. Bill reviews every request personally. Membership is not guaranteed.
           </p>
           <ApplyForm />
         </div>

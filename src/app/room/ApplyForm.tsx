@@ -7,6 +7,7 @@ export default function ApplyForm() {
     name: '',
     email: '',
     why_join: '',
+    faith_description: '',
     agreed_to_participate: false,
   })
   const [loading, setLoading] = useState(false)
@@ -45,7 +46,7 @@ export default function ApplyForm() {
       <div className="border border-navy-700 bg-navy-800/50 px-6 py-8">
         <p className="text-white font-serif text-xl mb-3">Application received.</p>
         <p className="text-slate-300 text-sm leading-relaxed">
-          William reviews every request personally. You&apos;ll hear from him if you&apos;re approved.
+          Dr. Bill reviews every request personally. You&apos;ll hear from him if you&apos;re approved.
         </p>
       </div>
     )
@@ -98,9 +99,24 @@ export default function ApplyForm() {
           value={form.why_join}
           onChange={(e) => update('why_join', e.target.value)}
           className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors resize-none"
-          placeholder="Tell William why this community matters to you…"
+          placeholder="Tell Dr. Bill why this community matters to you…"
         />
         <p className="mt-1 text-slate-500 text-xs">{form.why_join.length}/50 characters minimum</p>
+      </div>
+
+      <div>
+        <label className="block text-slate-400 text-xs tracking-widest uppercase mb-2">
+          Please describe your Christian faith.
+        </label>
+        <textarea
+          required
+          minLength={20}
+          rows={5}
+          value={form.faith_description}
+          onChange={(e) => update('faith_description', e.target.value)}
+          className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors resize-none"
+          placeholder="Share a bit about your faith…"
+        />
       </div>
 
       <label className="flex items-start gap-3 cursor-pointer">

@@ -39,14 +39,14 @@ export default function WritePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl font-bold text-white mb-2">Write to William</h1>
+      <h1 className="font-serif text-2xl font-bold text-white mb-2">Write to Dr. Bill</h1>
       <p className="text-slate-400 text-sm mb-8">
-        Direct line. No filters. William reads everything.
+        Direct line. No filters. Dr. Bill reads everything.
       </p>
 
       {sent && (
         <div className="mb-6 px-4 py-3 border border-navy-700 bg-navy-800 text-slate-300 text-sm">
-          William received your message.
+          Dr. Bill received your message.
         </div>
       )}
 
@@ -76,7 +76,7 @@ export default function WritePage() {
           disabled={submitting}
           className="w-full bg-gold-500 hover:bg-gold-400 disabled:bg-navy-700 disabled:text-slate-500 text-navy-950 font-semibold py-4 text-sm tracking-[0.15em] uppercase transition-colors"
         >
-          {submitting ? 'Sending…' : 'Send to William'}
+          {submitting ? 'Sending…' : 'Send to Dr. Bill'}
         </button>
       </form>
     </div>

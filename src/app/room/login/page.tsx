@@ -45,7 +45,7 @@ export default function RoomLoginPage() {
             Sign In
           </h1>
           <p className="text-slate-300 text-base leading-relaxed">
-            Use the credentials William sent you.
+            Use the credentials Dr. Bill sent you.
           </p>
         </div>
       </section>

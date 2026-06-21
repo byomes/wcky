@@ -90,6 +90,7 @@ export async function submitApplication(data: {
   name: string
   email: string
   why_join: string
+  faith_description: string
   agreed_to_participate: boolean
 }): Promise<{ ok: boolean } | null> {
   return watsonPost('/api/writing-room/signup', data)
