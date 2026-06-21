@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/blog', label: 'Blog' },
   { href: '/theology', label: 'Theology' },
   { href: '/dreamstone', label: 'Dreamstone' },
-  { href: '/arc', label: 'Arc' },
+  { href: '/room', label: 'Room' },
 ]
 
 export default function Header() {
