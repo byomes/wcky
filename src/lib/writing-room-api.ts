@@ -36,6 +36,16 @@ async function watsonPost<T>(path: string, body: object): Promise<T | null> {
   }
 }
 
+async function watsonDelete(path: string, body?: object): Promise<any> {
+  const res = await fetch(`${WATSON_BASE}${path}`, {
+    method: 'DELETE',
+    headers: headers(),
+    body: body ? JSON.stringify(body) : undefined,
+  })
+  if (!res.ok) return null
+  return res.json()
+}
+
 export interface Post {
   id: number
   partner_id: number
@@ -205,4 +215,8 @@ export async function getPendingApplications(): Promise<Partner[]> {
 
 export async function getRecentMessages(limit = 10): Promise<Message[]> {
   return (await watsonGet<Message[]>(`/api/writing-room/messages?limit=${limit}`)) ?? []
+}
+
+export async function deletePost(postId: number, partnerId: number): Promise<{ ok: boolean } | null> {
+  return watsonDelete(`/api/writing-room/post/${postId}`, { partner_id: partnerId })
 }

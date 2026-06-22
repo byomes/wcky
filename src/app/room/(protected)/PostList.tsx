@@ -7,6 +7,7 @@ interface PostListProps {
   initialPosts: Post[]
   section: string
   partnerId: number
+  session: { partnerId: number; isAdmin?: boolean }
   emptyLabel?: string
   submitLabel?: string
   placeholder?: string
@@ -33,6 +34,7 @@ export default function PostList({
   initialPosts,
   section,
   partnerId,
+  session,
   emptyLabel = 'Be the first to post. Introduce yourself.',
   submitLabel = 'Post',
   placeholder = 'Share something with the room…',
@@ -120,6 +122,18 @@ export default function PostList({
     setExpandedReplies((prev) => new Set(prev).add(postId))
   }
 
+  async function handleDelete(postId: number) {
+    if (!window.confirm('Delete this post?')) return
+    const res = await fetch('/api/room/post', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ postId }),
+    })
+    if (res.ok) {
+      setPosts((prev) => prev.filter((p) => p.id !== postId))
+    }
+  }
+
   return (
     <div className="space-y-4">
       {/* New post composer */}
@@ -168,10 +182,19 @@ export default function PostList({
                       {(post.partner_name ?? '?').charAt(0)}
                     </span>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <span className="text-white text-sm font-semibold">{post.partner_name}</span>
                     <span className="text-slate-500 text-xs ml-2">{fmtDate(post.created_at)}</span>
                   </div>
+                  {(session.partnerId === post.partner_id || session.isAdmin) && (
+                    <button
+                      onClick={() => handleDelete(post.id)}
+                      className="text-slate-600 hover:text-red-400 text-xs transition-colors ml-auto shrink-0"
+                      title="Delete post"
+                    >
+                      ✕
+                    </button>
+                  )}
                 </div>
                 <p
                   className="text-slate-200 text-sm leading-relaxed whitespace-pre-line"
@@ -220,6 +243,15 @@ export default function PostList({
                         </div>
                         <span className="text-white text-xs font-semibold">{reply.partner_name}</span>
                         <span className="text-slate-500 text-[11px]">{fmtDate(reply.created_at)}</span>
+                        {(session.partnerId === reply.partner_id || session.isAdmin) && (
+                          <button
+                            onClick={() => handleDelete(reply.id)}
+                            className="text-slate-600 hover:text-red-400 text-[10px] transition-colors ml-auto shrink-0"
+                            title="Delete reply"
+                          >
+                            ✕
+                          </button>
+                        )}
                       </div>
                       <p
                         className="text-slate-300 text-sm leading-relaxed whitespace-pre-line pl-8"

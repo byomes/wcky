@@ -22,6 +22,7 @@ export default async function BoardPage() {
         initialPosts={posts}
         section="board"
         partnerId={session?.partnerId ?? 0}
+        session={{ partnerId: session?.partnerId ?? 0, isAdmin: session?.isAdmin }}
         emptyLabel="Be the first to post. Introduce yourself."
         submitLabel="Post"
         placeholder="Share something with the room…"

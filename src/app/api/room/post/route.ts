@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import { getPartnerSession, PARTNER_COOKIE } from '@/lib/writing-room-auth'
-import { submitPost } from '@/lib/writing-room-api'
+import { submitPost, deletePost } from '@/lib/writing-room-api'
 
 export async function POST(req: NextRequest) {
   const cookieStore = cookies()
@@ -22,5 +22,15 @@ export async function POST(req: NextRequest) {
     parentId: data.parentId,
   })
   if (!result) return NextResponse.json({ error: 'Server error.' }, { status: 500 })
+  return NextResponse.json({ ok: true })
+}
+
+export async function DELETE(req: NextRequest) {
+  const cookieStore = cookies()
+  const session = await getPartnerSession(cookieStore.get(PARTNER_COOKIE)?.value)
+  if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const { postId } = await req.json()
+  const result = await deletePost(postId, session.partnerId)
+  if (!result) return NextResponse.json({ error: 'Server error' }, { status: 500 })
   return NextResponse.json({ ok: true })
 }

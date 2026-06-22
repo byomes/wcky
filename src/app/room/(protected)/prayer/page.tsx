@@ -22,6 +22,7 @@ export default async function PrayerPage() {
         initialPosts={posts}
         section="prayer"
         partnerId={session?.partnerId ?? 0}
+        session={{ partnerId: session?.partnerId ?? 0, isAdmin: session?.isAdmin }}
         emptyLabel="No prayer requests yet. Share what&apos;s on your heart."
         submitLabel="Submit Prayer Request"
         placeholder="Share a prayer request…"
