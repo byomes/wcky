@@ -33,20 +33,20 @@ export default function DraftPage() {
     setLoading(true);
     setStatus({ msg: 'Queuing draft\u2026', type: 'loading' });
     try {
-      const res = await fetch('/api/submit-draft', {
+      const res = await fetch('https://watson.tail0243ff.ts.net/api/submit-draft', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slug: slug.trim(), content: content.trim() }),
       });
       const data = await res.json();
       if (res.ok) {
-        setStatus({ msg: '\u2713 Draft queued \u2014 Watson will publish on schedule.', type: 'success' });
+        setStatus({ msg: 'Draft queued \u2014 Watson will schedule it shortly.', type: 'success' });
         setContent(''); setSlug(''); slugTouched.current = false;
       } else {
         setStatus({ msg: `Error: ${data.error}`, type: 'error' });
       }
     } catch {
-      setStatus({ msg: 'Network error \u2014 check connection.', type: 'error' });
+      setStatus({ msg: 'Submission failed \u2014 check that Watson is running.', type: 'error' });
     }
     setLoading(false);
   }
