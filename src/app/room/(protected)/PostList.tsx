@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent, useCallback } from 'react'
+import { Trash2 } from 'lucide-react'
 import type { Post } from '@/lib/writing-room-api'
 
 interface PostListProps {
@@ -195,10 +196,10 @@ export default function PostList({
                   {(session.partnerId === post.partner_id || session.isAdmin) && (
                     <button
                       onClick={() => handleDelete(post.id)}
-                      className="text-slate-600 hover:text-red-400 text-xs transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
+                      className="text-slate-600 hover:text-red-400 transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
                       title="Delete post"
                     >
-                      ✕
+                      <Trash2 size={20} />
                     </button>
                   )}
                 </div>
@@ -252,10 +253,10 @@ export default function PostList({
                         {(session.partnerId === reply.partner_id || session.isAdmin) && (
                           <button
                             onClick={() => handleDelete(reply.id)}
-                            className="text-slate-600 hover:text-red-400 text-[10px] transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
+                            className="text-slate-600 hover:text-red-400 transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
                             title="Delete reply"
                           >
-                            ✕
+                            <Trash2 size={20} />
                           </button>
                         )}
                       </div>
