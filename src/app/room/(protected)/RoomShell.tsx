@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Sun, Moon } from 'lucide-react'
 import RoomNav from './RoomNav'
 
 interface Props {
@@ -18,10 +17,9 @@ export default function RoomShell({ children, name, isAdmin }: Props) {
     if (localStorage.getItem('writing-room-theme') === 'light') setLight(true)
   }, [])
 
-  function toggle() {
-    const next = !light
-    setLight(next)
-    localStorage.setItem('writing-room-theme', next ? 'light' : 'dark')
+  function setTheme(isLight: boolean) {
+    setLight(isLight)
+    localStorage.setItem('writing-room-theme', isLight ? 'light' : 'dark')
   }
 
   return (
@@ -45,13 +43,24 @@ export default function RoomShell({ children, name, isAdmin }: Props) {
               </Link>
             </>
           )}
-          <button
-            onClick={toggle}
-            title={light ? 'Switch to dark mode' : 'Switch to light mode'}
-            className="text-slate-400 hover:text-white transition-colors w-8 h-8 flex items-center justify-center shrink-0"
-          >
-            {light ? <Moon size={16} /> : <Sun size={16} />}
-          </button>
+          <div className="flex items-center bg-navy-800 rounded-full p-0.5 shrink-0">
+            <button
+              onClick={() => setTheme(false)}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                !light ? 'bg-navy-700 text-white' : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              Dark
+            </button>
+            <button
+              onClick={() => setTheme(true)}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                light ? 'bg-navy-700 text-white' : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              Light
+            </button>
+          </div>
           <LogoutButton />
         </div>
       </header>
