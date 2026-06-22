@@ -34,11 +34,7 @@ export default function ArcReader({ sections }: ArcReaderProps) {
         >
           <div
             className="prose prose-invert max-w-none"
-            style={{
-              color: '#e8e8e3',
-              fontSize: '1.125rem',
-              lineHeight: '1.8',
-            }}
+            style={{ fontSize: '1.125rem', lineHeight: '1.8' }}
             dangerouslySetInnerHTML={{ __html: section.html }}
           />
           {i < sections.length - 1 && (

@@ -43,76 +43,39 @@ export default async function ReadPage() {
   const sections = await loadSections()
 
   return (
-    <div style={{ background: '#0f0f0f', minHeight: '100vh' }}>
+    <div className="bg-navy-950 min-h-screen">
       {/* Book header */}
-      <div style={{
-        paddingTop: '3rem',
-        paddingBottom: '1.5rem',
-        textAlign: 'center',
-        borderBottom: '1px solid rgba(255,255,255,0.06)',
-      }}>
-        <p style={{
-          color: 'var(--gold-500, #c9a84c)',
-          fontSize: '0.7rem',
-          letterSpacing: '0.3em',
-          textTransform: 'uppercase',
-          fontWeight: 600,
-          marginBottom: '0.75rem',
-        }}>
+      <div className="pt-12 pb-6 text-center border-b border-navy-800">
+        <p className="text-gold-500 text-[0.7rem] tracking-[0.3em] uppercase font-semibold mb-3">
           Advance Reader Manuscript
         </p>
-        <h1 style={{
-          fontFamily: 'var(--font-playfair, Georgia, serif)',
-          fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
-          fontWeight: 700,
-          color: '#ffffff',
-          letterSpacing: '-0.01em',
-          margin: '0 0 0.4rem',
-        }}>
+        <h1
+          className="font-serif font-bold text-white tracking-[-0.01em] mb-1.5"
+          style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}
+        >
           The Wrong Jesus
         </h1>
-        <p style={{ color: '#666', fontSize: '0.875rem', margin: 0 }}>
-          Dr. William C.K. Yomes
-        </p>
+        <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
       </div>
 
       {/* Sticky anchor nav */}
-      <style>{`
-        .arc-nav-link { color: #888; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.25rem 0.5rem; transition: color 0.15s; }
-        .arc-nav-link:hover { color: #c9a84c; }
-      `}</style>
-      <div style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 30,
-        background: '#0f0f0f',
-        borderBottom: '1px solid rgba(255,255,255,0.06)',
-        padding: '0.6rem 1.5rem',
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '0.5rem',
-        flexWrap: 'wrap',
-      }}>
+      <div className="sticky top-0 z-30 bg-navy-950 border-b border-navy-800 px-6 py-2 flex justify-center gap-1 flex-wrap">
         {sections.map((s, i) => (
           <a
             key={s.id}
             href={`#${s.id}`}
-            className="arc-nav-link"
+            className="text-slate-400 hover:text-gold-500 text-[0.72rem] tracking-[0.1em] uppercase no-underline px-2 py-1 transition-colors"
           >
             {s.label}
             {i < sections.length - 1 && (
-              <span style={{ marginLeft: '0.5rem', color: '#333' }}>·</span>
+              <span className="ml-2 text-navy-700">·</span>
             )}
           </a>
         ))}
       </div>
 
       {/* Content */}
-      <div style={{
-        maxWidth: 680,
-        margin: '0 auto',
-        padding: '3rem 1.5rem 8rem',
-      }}>
+      <div className="max-w-[680px] mx-auto px-6 pt-12 pb-32">
         <ArcReader sections={sections} />
       </div>
     </div>

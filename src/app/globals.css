@@ -72,3 +72,23 @@ body {
 .room-root.light input::placeholder {
   color: #a8a5a0;
 }
+
+/* prose-invert typography vars — flips Read + Beta draft text for light mode */
+.room-root.light .prose-invert {
+  --tw-prose-body: #3a3936;
+  --tw-prose-headings: #1c1b18;
+  --tw-prose-lead: #4a4946;
+  --tw-prose-links: #be8a28;
+  --tw-prose-bold: #1c1b18;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #6b7280;
+  --tw-prose-hr: #dedad4;
+  --tw-prose-quotes: #3a3936;
+  --tw-prose-quote-borders: #dedad4;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: #1c1b18;
+  --tw-prose-pre-code: #3a3936;
+  --tw-prose-pre-bg: #f0ede8;
+  --tw-prose-th-borders: #dedad4;
+  --tw-prose-td-borders: #e8e5e0;
+}
