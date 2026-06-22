@@ -124,13 +124,19 @@ export default function PostList({
 
   async function handleDelete(postId: number) {
     if (!window.confirm('Delete this post?')) return
-    const res = await fetch('/api/room/post', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ postId }),
-    })
-    if (res.ok) {
-      setPosts((prev) => prev.filter((p) => p.id !== postId))
+    try {
+      const res = await fetch('/api/room/post', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ postId }),
+      })
+      if (res.ok) {
+        setPosts((prev) => prev.filter((p) => p.id !== postId))
+      } else {
+        alert('Could not delete. Please try again.')
+      }
+    } catch {
+      alert('Could not delete. Please try again.')
     }
   }
 
@@ -189,7 +195,7 @@ export default function PostList({
                   {(session.partnerId === post.partner_id || session.isAdmin) && (
                     <button
                       onClick={() => handleDelete(post.id)}
-                      className="text-slate-600 hover:text-red-400 text-xs transition-colors ml-auto shrink-0"
+                      className="text-slate-600 hover:text-red-400 text-xs transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
                       title="Delete post"
                     >
                       ✕
@@ -246,7 +252,7 @@ export default function PostList({
                         {(session.partnerId === reply.partner_id || session.isAdmin) && (
                           <button
                             onClick={() => handleDelete(reply.id)}
-                            className="text-slate-600 hover:text-red-400 text-[10px] transition-colors ml-auto shrink-0"
+                            className="text-slate-600 hover:text-red-400 text-[10px] transition-colors ml-auto shrink-0 w-11 h-11 flex items-center justify-center"
                             title="Delete reply"
                           >
                             ✕

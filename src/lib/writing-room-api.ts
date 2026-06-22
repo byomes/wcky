@@ -37,13 +37,17 @@ async function watsonPost<T>(path: string, body: object): Promise<T | null> {
 }
 
 async function watsonDelete(path: string, body?: object): Promise<any> {
-  const res = await fetch(`${WATSON_BASE}${path}`, {
-    method: 'DELETE',
-    headers: headers(),
-    body: body ? JSON.stringify(body) : undefined,
-  })
-  if (!res.ok) return null
-  return res.json()
+  try {
+    const res = await fetch(`${WATSON_BASE}${path}`, {
+      method: 'DELETE',
+      headers: headers(),
+      body: body ? JSON.stringify(body) : undefined,
+    })
+    if (!res.ok) return null
+    return res.json()
+  } catch {
+    return null
+  }
 }
 
 export interface Post {
