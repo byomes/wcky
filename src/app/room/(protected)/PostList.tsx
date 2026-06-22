@@ -46,6 +46,7 @@ export default function PostList({
   const [submitting, setSubmitting] = useState(false)
   const [replyingTo, setReplyingTo] = useState<number | null>(null)
   const [replyContent, setReplyContent] = useState('')
+  const [replyError, setReplyError] = useState('')
   const [expandedReplies, setExpandedReplies] = useState<Set<number>>(new Set())
 
   const topLevel = posts
@@ -70,12 +71,16 @@ export default function PostList({
   }, [section])
 
   async function apiPost(body: object): Promise<boolean> {
-    const res = await fetch('/api/room/post', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    })
-    return res.ok
+    try {
+      const res = await fetch('/api/room/post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+      return res.ok
+    } catch {
+      return false
+    }
   }
 
   async function handleNewPost(e: FormEvent) {
@@ -94,12 +99,15 @@ export default function PostList({
     e.preventDefault()
     if (!replyContent.trim()) return
     setSubmitting(true)
+    setReplyError('')
     const ok = await apiPost({ section, content: replyContent.trim(), parentId })
     if (ok) {
       setReplyContent('')
       setReplyingTo(null)
       setExpandedReplies((prev) => new Set(prev).add(parentId))
       await refetch()
+    } else {
+      setReplyError('Could not post reply. Please try again.')
     }
     setSubmitting(false)
   }
@@ -153,7 +161,7 @@ export default function PostList({
           value={newContent}
           onChange={(e) => setNewContent(e.target.value)}
           placeholder={placeholder}
-          className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-500 transition-colors resize-none rounded-sm"
+          className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-base focus:outline-none focus:border-gold-500 transition-colors resize-none rounded-sm"
         />
         <div className="mt-3 flex justify-end">
           <button
@@ -289,8 +297,11 @@ export default function PostList({
                         value={replyContent}
                         onChange={(e) => setReplyContent(e.target.value)}
                         placeholder="Write a reply…"
-                        className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-3 py-2 text-sm focus:outline-none focus:border-gold-500 transition-colors resize-none rounded-sm"
+                        className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-3 py-2 text-base focus:outline-none focus:border-gold-500 transition-colors resize-none rounded-sm"
                       />
+                      {replyError && (
+                        <p className="text-red-400 text-xs mt-1">{replyError}</p>
+                      )}
                       <div className="mt-2 flex gap-2 justify-end">
                         <button
                           type="button"
