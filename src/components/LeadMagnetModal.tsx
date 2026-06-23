@@ -31,7 +31,7 @@ export default function LeadMagnetModal({ isOpen, onClose }: Props) {
         </button>
 
         {/* Cover image */}
-        <div className="relative w-full aspect-[4/3] sm:aspect-auto sm:h-auto sm:w-2/5 shrink-0">
+        <div className="relative w-full h-40 sm:aspect-auto sm:h-auto sm:w-2/5 shrink-0">
           <Image
             src="/images/lead-magnet2.png"
             alt="Study the Bible Like a Pastor"
