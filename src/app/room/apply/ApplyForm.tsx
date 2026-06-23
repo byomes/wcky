@@ -12,6 +12,7 @@ export default function ApplyForm() {
   })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [faithError, setFaithError] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   function update(field: string, value: string | boolean) {
@@ -22,6 +23,12 @@ export default function ApplyForm() {
     e.preventDefault()
     setLoading(true)
     setError('')
+    setFaithError('')
+    if (form.faith_description.length < 50) {
+      setFaithError('Please share a bit more (50 characters minimum)')
+      setLoading(false)
+      return
+    }
     try {
       const res = await fetch('/api/room/apply', {
         method: 'POST',
@@ -110,13 +117,16 @@ export default function ApplyForm() {
         </label>
         <textarea
           required
-          minLength={20}
+          minLength={50}
           rows={5}
           value={form.faith_description}
-          onChange={(e) => update('faith_description', e.target.value)}
+          onChange={(e) => { update('faith_description', e.target.value); if (faithError) setFaithError('') }}
           className="w-full bg-navy-800 border border-navy-700 text-slate-200 placeholder-slate-500 px-4 py-3 text-sm focus:outline-none focus:border-gold-600 focus:ring-1 focus:ring-gold-600/30 transition-colors resize-none"
           placeholder="Share a bit about your faith…"
         />
+        {faithError && (
+          <p className="mt-1 text-red-400 text-xs">{faithError}</p>
+        )}
       </div>
 
       <label className="flex items-start gap-3 cursor-pointer">
