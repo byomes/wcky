@@ -593,7 +593,7 @@ export default function TWJPressKit() {
                 ['Website', 'williamckyomes.com', 'https://williamckyomes.com'],
                 ['Press Inquiries', 'press@williamckyomes.com', 'mailto:press@williamckyomes.com'],
                 ['Interview / Speaking', 'hello@williamckyomes.com', 'mailto:hello@williamckyomes.com'],
-                ['ARC Copies', 'williamckyomes.com/arc', 'https://williamckyomes.com/arc'],
+                ['Writing Room', 'williamckyomes.com/room/apply', 'https://williamckyomes.com/room/apply'],
               ].map(([label, text, href]) => (
                 <div className="twj-contact-block" key={label}>
                   <dt>{label}</dt>
