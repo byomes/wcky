@@ -111,9 +111,7 @@ export default async function ArcDashboardPage() {
           <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
         </div>
 
-        <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
-          <ManuscriptReader sections={sections} />
-        </div>
+        <ManuscriptReader sections={sections} />
       </div>
 
       {/* Commitment tracker */}
