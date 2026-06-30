@@ -45,7 +45,12 @@ export default function ArcSignupForm() {
       <div className="bg-navy-800 border border-gold-700/30 p-8 text-center">
         <p className="text-gold-400 text-lg font-serif font-bold mb-2">You&apos;re on the team.</p>
         <p className="text-slate-400 text-sm leading-relaxed">
-          Welcome to the ARC. We&apos;ll be in touch with details as the launch approaches.
+          Welcome to the ARC. Check your email — we&apos;ve sent you login instructions so you can
+          track your commitments as you complete them. Use that same email and password to log in at{' '}
+          <a href="/arc/login" className="text-gold-400 underline underline-offset-2">
+            your commitment tracker
+          </a>
+          .
         </p>
       </div>
     )
