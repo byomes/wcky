@@ -95,27 +95,9 @@ export default async function ArcDashboardPage() {
   const sections = await loadSections()
 
   return (
-    <div className="bg-navy-950 min-h-screen">
-      {/* Manuscript reader */}
-      <div>
-        <div className="pt-12 pb-6 text-center border-b border-navy-800">
-          <p className="text-gold-500 text-[0.7rem] tracking-[0.3em] uppercase font-semibold mb-3">
-            Advance Reader Manuscript
-          </p>
-          <h1
-            className="font-serif font-bold text-white tracking-[-0.01em] mb-1.5"
-            style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}
-          >
-            The Wrong Jesus
-          </h1>
-          <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
-        </div>
-
-        <ManuscriptReader sections={sections} />
-      </div>
-
+    <div className="bg-navy-950 min-h-screen pt-16 lg:pt-20">
       {/* Commitment tracker */}
-      <div className="border-t-4 border-navy-800">
+      <div>
         <section className="pt-16 pb-16">
           <div className="max-w-2xl mx-auto px-6">
             <div className="mb-10">
@@ -133,6 +115,24 @@ export default async function ArcDashboardPage() {
             <ArcDashboard initialData={data} />
           </div>
         </section>
+      </div>
+
+      {/* Manuscript reader */}
+      <div className="border-t-4 border-navy-800">
+        <div className="pt-12 pb-6 text-center border-b border-navy-800">
+          <p className="text-gold-500 text-[0.7rem] tracking-[0.3em] uppercase font-semibold mb-3">
+            Advance Reader Manuscript
+          </p>
+          <h1
+            className="font-serif font-bold text-white tracking-[-0.01em] mb-1.5"
+            style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}
+          >
+            The Wrong Jesus
+          </h1>
+          <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
+        </div>
+
+        <ManuscriptReader sections={sections} />
       </div>
     </div>
   )

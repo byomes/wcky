@@ -65,7 +65,7 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
     <div>
       <div
         ref={panelRef}
-        className="sticky top-0 z-30 bg-navy-950 border-b border-navy-800"
+        className="sticky top-16 lg:top-20 z-30 bg-navy-950 border-b border-navy-800"
       >
         <div className="flex items-center justify-between px-6 py-3">
           <button
