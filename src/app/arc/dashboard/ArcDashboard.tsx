@@ -19,7 +19,7 @@ interface DashboardData {
   progress: { checked: number; total: number }
 }
 
-const EVIDENCE_REQUIRED = new Set([4, 5, 6])
+const EVIDENCE_REQUIRED = new Set([3, 4, 5])
 
 type RowStatus = 'idle' | 'saving' | 'saved' | 'error'
 
@@ -76,7 +76,6 @@ export default function ArcDashboard({ initialData }: { initialData: DashboardDa
   }
 
   function handleCheck(num: number, val: boolean) {
-    if (num === 2) return
     if (EVIDENCE_REQUIRED.has(num) && val && !evidence[num]?.trim()) return
     setChecked((prev) => ({ ...prev, [num]: val }))
     // Cancel any pending evidence debounce before firing the checkbox save
@@ -108,13 +107,13 @@ export default function ArcDashboard({ initialData }: { initialData: DashboardDa
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex justify-between text-xs text-slate-500 mb-2 font-mono">
-          <span>{checkedCount} of 6 completed</span>
-          <span>{Math.round((checkedCount / 6) * 100)}%</span>
+          <span>{checkedCount} of 5 completed</span>
+          <span>{Math.round((checkedCount / 5) * 100)}%</span>
         </div>
         <div className="h-1 bg-navy-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-gold-500 transition-all duration-500"
-            style={{ width: `${(checkedCount / 6) * 100}%` }}
+            style={{ width: `${(checkedCount / 5) * 100}%` }}
           />
         </div>
       </div>
@@ -123,10 +122,9 @@ export default function ArcDashboard({ initialData }: { initialData: DashboardDa
       <ol className="space-y-6">
         {initialData.commitments.map((c) => {
           const needsEvidence = EVIDENCE_REQUIRED.has(c.commitment_number)
-          const isAutoChecked = c.commitment_number === 2
           const evidenceValue = evidence[c.commitment_number] ?? ''
           const isChecked     = checked[c.commitment_number] ?? false
-          const canCheck      = isAutoChecked || !needsEvidence || !!evidenceValue.trim()
+          const canCheck      = !needsEvidence || !!evidenceValue.trim()
 
           return (
             <li key={c.id} className="bg-navy-900 border border-navy-700 p-5">
@@ -139,7 +137,7 @@ export default function ArcDashboard({ initialData }: { initialData: DashboardDa
                     <input
                       type="checkbox"
                       checked={isChecked}
-                      disabled={isAutoChecked || !canCheck}
+                      disabled={!canCheck}
                       onChange={(e) => handleCheck(c.commitment_number, e.target.checked)}
                       className="mt-1 shrink-0 w-4 h-4 accent-gold-500 cursor-pointer disabled:cursor-default disabled:opacity-50"
                     />
