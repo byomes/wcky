@@ -36,7 +36,7 @@ export default function Footer() {
                 { href: '/blog', label: 'Blog' },
                 { href: '/theology', label: 'Theology' },
                 { href: '/dreamstone', label: 'Dreamstone' },
-                { href: '/room/apply', label: 'Writing Room' },
+                { href: '/arc', label: 'Become an ARC Reader' },
               ].map(link => (
                 <Link
                   key={link.href}

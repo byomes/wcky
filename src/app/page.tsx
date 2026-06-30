@@ -123,10 +123,10 @@ export default function HomePage() {
                 available.
               </p>
               <Link
-                href="/room/apply"
+                href="/arc"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
-                Join the Writing Room →
+                Join the Launch Team →
               </Link>
             </div>
           </div>

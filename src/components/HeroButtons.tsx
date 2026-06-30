@@ -18,10 +18,10 @@ export default function HeroButtons() {
           Get the Free Resource
         </button>
         <Link
-          href="/room/apply"
+          href="/arc"
           className="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 border border-white/40 text-white text-xs lg:text-sm font-bold tracking-wide uppercase hover:border-white/70 hover:bg-white/10 transition-colors duration-200"
         >
-          Join the Writing Room
+          Join the Launch Team
         </Link>
       </div>
     </>
