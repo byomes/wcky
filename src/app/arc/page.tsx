@@ -41,7 +41,7 @@ export default function ArcPage() {
             What ARC Members Do
           </p>
           <h2 className="font-serif text-3xl font-bold text-white mb-10">
-            Six Commitments
+            Five Commitments
           </h2>
           <ol className="space-y-5">
             {commitments.map((commitment, index) => (
@@ -67,7 +67,7 @@ export default function ArcPage() {
           </h2>
           <p className="text-slate-400 leading-relaxed mb-10">
             Fill out the form below. By checking the box, you&apos;re committing
-            to all six ARC Partner responsibilities. We&apos;ll be in touch with
+            to all five ARC Partner responsibilities. We&apos;ll be in touch with
             details as the launch approaches.
           </p>
 
