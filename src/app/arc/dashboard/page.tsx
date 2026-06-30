@@ -31,32 +31,32 @@ interface DashboardData {
 }
 
 const SECTIONS = [
-  { id: 'introduction', label: 'Intro',       file: 'introduction.md' },
-  { id: 'chapter-01',  label: 'Ch. 1',        file: 'chapter-01.md'  },
-  { id: 'chapter-02',  label: 'Ch. 2',        file: 'chapter-02.md'  },
-  { id: 'chapter-03',  label: 'Ch. 3',        file: 'chapter-03.md'  },
-  { id: 'chapter-04',  label: 'Ch. 4',        file: 'chapter-04.md'  },
-  { id: 'chapter-05',  label: 'Ch. 5',        file: 'chapter-05.md'  },
-  { id: 'chapter-06',  label: 'Ch. 6',        file: 'chapter-06.md'  },
-  { id: 'chapter-07',  label: 'Ch. 7',        file: 'chapter-07.md'  },
-  { id: 'chapter-08',  label: 'Ch. 8',        file: 'chapter-08.md'  },
-  { id: 'chapter-09',  label: 'Ch. 9',        file: 'chapter-09.md'  },
-  { id: 'chapter-10',  label: 'Ch. 10',       file: 'chapter-10.md'  },
-  { id: 'chapter-11',  label: 'Ch. 11',       file: 'chapter-11.md'  },
-  { id: 'chapter-12',  label: 'Ch. 12',       file: 'chapter-12.md'  },
-  { id: 'conclusion',  label: 'Conclusion',   file: 'conclusion.md'  },
+  { id: 'introduction', label: 'Intro',       title: 'Introduction: The Most Dangerous Kind of Wrong',                    file: 'introduction.md' },
+  { id: 'chapter-01',  label: 'Ch. 1',        title: 'Chapter 1: The Parade We All Join',                                 file: 'chapter-01.md'  },
+  { id: 'chapter-02',  label: 'Ch. 2',        title: 'Chapter 2: The Jesus We Needed',                                    file: 'chapter-02.md'  },
+  { id: 'chapter-03',  label: 'Ch. 3',        title: 'Chapter 3: The Sincerity Trap',                                     file: 'chapter-03.md'  },
+  { id: 'chapter-04',  label: 'Ch. 4',        title: "Chapter 4: When Jesus Doesn't Do What You Hired Him For",           file: 'chapter-04.md'  },
+  { id: 'chapter-05',  label: 'Ch. 5',        title: 'Chapter 5: The Jesus Who Tears Things Down',                        file: 'chapter-05.md'  },
+  { id: 'chapter-06',  label: 'Ch. 6',        title: "Chapter 6: Going Somewhere You Didn't Sign Up For",                 file: 'chapter-06.md'  },
+  { id: 'chapter-07',  label: 'Ch. 7',        title: 'Chapter 7: Choosing Barabbas',                                      file: 'chapter-07.md'  },
+  { id: 'chapter-08',  label: 'Ch. 8',        title: 'Chapter 8: Loud Voices',                                            file: 'chapter-08.md'  },
+  { id: 'chapter-09',  label: 'Ch. 9',        title: 'Chapter 9: The Quieter Sin',                                        file: 'chapter-09.md'  },
+  { id: 'chapter-10',  label: 'Ch. 10',       title: 'Chapter 10: Jesus Has Never Been Ambiguous About Who He Is',        file: 'chapter-10.md'  },
+  { id: 'chapter-11',  label: 'Ch. 11',       title: 'Chapter 11: The Disciples as Servants Who Simply Kept Walking',     file: 'chapter-11.md'  },
+  { id: 'chapter-12',  label: 'Ch. 12',       title: 'Chapter 12: You Cannot Surrender What You Have Not Named',          file: 'chapter-12.md'  },
+  { id: 'conclusion',  label: 'Conclusion',   title: 'Conclusion: Not a Resolution, an Orientation',                      file: 'conclusion.md'  },
 ]
 
 async function loadSections() {
   const chaptersDir = path.join(process.cwd(), 'src/app/twj/read/chapters')
-  const results: { id: string; label: string; html: string }[] = []
+  const results: { id: string; label: string; title: string; html: string }[] = []
 
   for (const s of SECTIONS) {
     const filepath = path.join(chaptersDir, s.file)
     if (!fs.existsSync(filepath)) continue
     const source = fs.readFileSync(filepath, 'utf-8')
     const processed = await remark().use(remarkHtml, { sanitize: false }).process(source)
-    results.push({ id: s.id, label: s.label, html: processed.toString() })
+    results.push({ id: s.id, label: s.label, title: s.title, html: processed.toString() })
   }
 
   return results
@@ -109,21 +109,6 @@ export default async function ArcDashboardPage() {
             The Wrong Jesus
           </h1>
           <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
-        </div>
-
-        <div className="sticky top-0 z-30 bg-navy-950 border-b border-navy-800 px-6 py-2 flex justify-center gap-1 flex-wrap">
-          {sections.map((s, i) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="text-slate-400 hover:text-gold-500 text-[0.72rem] tracking-[0.1em] uppercase no-underline px-2 py-1 transition-colors"
-            >
-              {s.label}
-              {i < sections.length - 1 && (
-                <span className="ml-2 text-navy-700">·</span>
-              )}
-            </a>
-          ))}
         </div>
 
         <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
