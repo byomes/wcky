@@ -106,7 +106,7 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
         )}
       </div>
 
-      <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
+      <div className="max-w-[680px] mx-auto px-6 pt-16 pb-16">
         <div
           style={{ userSelect: 'none', WebkitUserSelect: 'none' } as React.CSSProperties}
           onContextMenu={(e) => e.preventDefault()}
