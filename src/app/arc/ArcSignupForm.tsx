@@ -113,7 +113,7 @@ export default function ArcSignupForm() {
               htmlFor="arc-agree"
               className="text-slate-300 text-sm leading-relaxed cursor-pointer"
             >
-              I have read the ARC Partner commitments above and I agree to fulfill all six.
+              I have read the ARC Partner commitments above and I agree to fulfill all five.
               I want to be an ARC team member.
             </label>
           </div>
