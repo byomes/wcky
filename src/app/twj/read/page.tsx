@@ -6,6 +6,7 @@ import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 import LoginForm from './LoginForm'
 import ManuscriptReader from './ManuscriptReader'
+import { getReaderSession } from '@/lib/twj-api'
 
 export const metadata: Metadata = {
   title: 'Manuscript Reader — The Wrong Jesus',
@@ -16,25 +17,6 @@ interface Chapter {
   id: string
   title: string
   html: string
-}
-
-async function kvGet(key: string): Promise<string | null> {
-  const url = process.env.VERCEL_KV_REST_API_URL
-  const token = process.env.VERCEL_KV_REST_API_TOKEN
-  if (!url || !token) return null
-
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify(['GET', key]),
-      cache: 'no-store',
-    })
-    const data = await res.json()
-    return data.result ?? null
-  } catch {
-    return null
-  }
 }
 
 const CHAPTERS = [
@@ -84,9 +66,9 @@ export default async function TwjReadPage() {
     )
   }
 
-  const raw = await kvGet(`twj:reader:${session.value}`)
+  const user = await getReaderSession(session.value)
 
-  if (!raw) {
+  if (!user) {
     return (
       <main className="min-h-screen bg-navy-950">
         <LoginForm error="Your session has expired. Please sign in again." />
@@ -94,7 +76,6 @@ export default async function TwjReadPage() {
     )
   }
 
-  const user = JSON.parse(raw) as { name: string; email: string }
   const chapters = await loadChapters()
 
   return (

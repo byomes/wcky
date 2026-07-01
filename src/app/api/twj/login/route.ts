@@ -1,20 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import bcrypt from 'bcryptjs'
-
-async function kvGet(key: string): Promise<string | null> {
-  const url = process.env.VERCEL_KV_REST_API_URL
-  const token = process.env.VERCEL_KV_REST_API_TOKEN
-  if (!url || !token) return null
-
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify(['GET', key]),
-    cache: 'no-store',
-  })
-  const data = await res.json()
-  return data.result ?? null
-}
+import { loginReader } from '@/lib/twj-api'
 
 export async function POST(req: NextRequest) {
   try {
@@ -24,22 +9,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Username and password are required' }, { status: 400 })
     }
 
-    const raw = await kvGet(`twj:reader:${username}`)
-    if (!raw) {
+    const session = await loginReader(username, password)
+    if (!session) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
     }
 
-    const user = (typeof raw === 'string' ? JSON.parse(raw) : raw) as { name: string; email: string; password: string }
-    console.log('user object:', JSON.stringify(user))
-    const valid = await bcrypt.compare(password, user.password)
-    console.log('bcrypt result:', valid)
-
-    if (!valid) {
-      return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
-    }
-
-    const response = NextResponse.json({ ok: true, name: user.name })
-    response.cookies.set('twj_session', username, {
+    const response = NextResponse.json({ ok: true, name: session.name })
+    response.cookies.set('twj_session', session.username, {
       httpOnly: true,
       maxAge: 7 * 24 * 60 * 60,
       path: '/',
