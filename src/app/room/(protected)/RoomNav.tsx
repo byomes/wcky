@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NAV = [
-  { href: '/room/board',  label: 'Board'  },
-  { href: '/room/read',   label: 'Read'   },
-  { href: '/room/beta',   label: 'Beta'   },
-  { href: '/room/prayer', label: 'Prayer' },
-  { href: '/room/calls',  label: 'Calls'  },
+  { href: '/room/board',   label: 'Board'   },
+  { href: '/room/read',    label: 'Read'    },
+  { href: '/room/beta',    label: 'Beta'    },
+  { href: '/room/prayer',  label: 'Prayer'  },
+  { href: '/room/calls',   label: 'Calls'   },
+  { href: '/room/account', label: 'Account' },
 ]
 
 export default function RoomNav() {
