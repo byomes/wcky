@@ -92,3 +92,70 @@ body {
   --tw-prose-th-borders: #dedad4;
   --tw-prose-td-borders: #e8e5e0;
 }
+
+/* ── ARC dashboard light theme (scoped to .arc-root.light) ───────────── */
+
+.arc-root.light {
+  background-color: #faf9f7;
+  color: #1c1b18;
+}
+
+/* Navy-9xx backgrounds (header, cards, nav) → white */
+.arc-root.light [class*="bg-navy-9"] {
+  background-color: #ffffff;
+}
+
+/* Navy-8xx backgrounds (textareas, inputs, secondary surfaces) → warm light */
+.arc-root.light [class*="bg-navy-8"] {
+  background-color: #f0ede8;
+}
+
+/* Navy-7xx backgrounds (avatar circles) → slightly darker warm light */
+.arc-root.light [class*="bg-navy-7"] {
+  background-color: #e4e1db;
+}
+
+/* Border overrides */
+.arc-root.light [class*="border-navy-8"] {
+  border-color: #dedad4;
+}
+.arc-root.light [class*="border-navy-7"] {
+  border-color: #d0ccc6;
+}
+
+/* Text overrides — light-optimized values of colors that are unreadable on white */
+.arc-root.light .text-white {
+  color: #1c1b18;
+}
+.arc-root.light .text-slate-200 {
+  color: #3a3936;
+}
+.arc-root.light .text-slate-300 {
+  color: #5a5956;
+}
+
+/* Input/textarea placeholder */
+.arc-root.light textarea::placeholder,
+.arc-root.light input::placeholder {
+  color: #a8a5a0;
+}
+
+/* prose-invert typography vars — flips Read + Beta draft text for light mode */
+.arc-root.light .prose-invert {
+  --tw-prose-body: #3a3936;
+  --tw-prose-headings: #1c1b18;
+  --tw-prose-lead: #4a4946;
+  --tw-prose-links: #be8a28;
+  --tw-prose-bold: #1c1b18;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #6b7280;
+  --tw-prose-hr: #dedad4;
+  --tw-prose-quotes: #3a3936;
+  --tw-prose-quote-borders: #dedad4;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: #1c1b18;
+  --tw-prose-pre-code: #3a3936;
+  --tw-prose-pre-bg: #f0ede8;
+  --tw-prose-th-borders: #dedad4;
+  --tw-prose-td-borders: #e8e5e0;
+}

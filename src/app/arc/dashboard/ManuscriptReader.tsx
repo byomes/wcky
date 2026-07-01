@@ -16,7 +16,17 @@ interface ManuscriptReaderProps {
 export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [light, setLight] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (localStorage.getItem('arc-theme') === 'light') setLight(true)
+  }, [])
+
+  function setTheme(isLight: boolean) {
+    setLight(isLight)
+    localStorage.setItem('arc-theme', isLight ? 'light' : 'dark')
+  }
 
   function blockCopy(e: KeyboardEvent<HTMLDivElement>) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'c') e.preventDefault()
@@ -78,25 +88,47 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
   }
 
   return (
-    <div>
+    <div className={`arc-root${light ? ' light' : ''}`}>
       <div
         ref={panelRef}
         className="sticky top-16 lg:top-20 z-30 bg-navy-950 border-b border-navy-800"
       >
         <div className="flex items-center justify-between px-6 py-3">
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Table of contents"
-            aria-expanded={menuOpen}
-            className="text-slate-400 hover:text-gold-500 transition-colors p-1"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setMenuOpen((open) => !open)}
+              aria-label="Table of contents"
+              aria-expanded={menuOpen}
+              className="text-slate-400 hover:text-gold-500 transition-colors p-1"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+            <div className="flex items-center bg-navy-800 rounded-full p-0.5 shrink-0">
+              <button
+                type="button"
+                onClick={() => setTheme(false)}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  !light ? 'bg-navy-700 text-white' : 'text-slate-500 hover:text-slate-300'
+                }`}
+              >
+                Dark
+              </button>
+              <button
+                type="button"
+                onClick={() => setTheme(true)}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  light ? 'bg-navy-700 text-white' : 'text-slate-500 hover:text-slate-300'
+                }`}
+              >
+                Light
+              </button>
+            </div>
+          </div>
           <p className="text-slate-400 text-[0.72rem] tracking-[0.1em] uppercase">
             {activeSection ? sectionLabel(activeSection) : ''}
           </p>
