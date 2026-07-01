@@ -98,7 +98,7 @@ export default async function ArcDashboardPage() {
     <div className="bg-navy-950 min-h-screen pt-16 lg:pt-20">
       {/* Commitment tracker */}
       <div>
-        <section className="pt-16 pb-16">
+        <section id="commitments" className="pt-16 pb-16">
           <div className="max-w-2xl mx-auto px-6">
             <div className="mb-10">
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-2">

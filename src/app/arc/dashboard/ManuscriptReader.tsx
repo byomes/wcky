@@ -136,6 +136,13 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
 
         {menuOpen && (
           <div className="absolute left-0 right-0 top-full bg-navy-950 border-b border-navy-800 shadow-lg max-h-[70vh] overflow-y-auto">
+            <button
+              type="button"
+              onClick={() => goToSection('commitments')}
+              className="w-full text-left px-6 py-3 text-xs tracking-[0.08em] uppercase font-semibold text-gold-500 hover:bg-navy-900 transition-colors border-b-2 border-navy-700"
+            >
+              ← Back to Commitments
+            </button>
             {sections.map((s, i) => (
               <button
                 key={s.id}
