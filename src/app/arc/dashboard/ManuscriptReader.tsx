@@ -57,8 +57,24 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
   }, [menuOpen])
 
   function goToSection(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    const target = document.getElementById(id)
+    if (target) {
+      const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 0
+      const barHeight = panelRef.current?.getBoundingClientRect().height ?? 0
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - barHeight
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
     setMenuOpen(false)
+  }
+
+  const activeSection = sections[currentIndex]
+  const totalChapters = sections.filter((s) => s.id.startsWith('chapter-')).length
+
+  function sectionLabel(section: Section) {
+    if (section.id === 'introduction') return 'Introduction'
+    if (section.id === 'conclusion') return 'Conclusion'
+    const chapterNumber = parseInt(section.id.replace('chapter-', ''), 10)
+    return `Chapter ${chapterNumber} of ${totalChapters}`
   }
 
   return (
@@ -82,7 +98,7 @@ export default function ManuscriptReader({ sections }: ManuscriptReaderProps) {
             </svg>
           </button>
           <p className="text-slate-400 text-[0.72rem] tracking-[0.1em] uppercase">
-            Chapter {currentIndex + 1} of {sections.length}
+            {activeSection ? sectionLabel(activeSection) : ''}
           </p>
         </div>
 
