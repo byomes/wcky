@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   robots: { index: false },
 }
 
-export default function ArcLoginPage() {
+export default function ArcLoginPage({
+  searchParams,
+}: {
+  searchParams: { session?: string }
+}) {
+  const expired = searchParams?.session === 'expired'
+
   return (
     <section className="bg-navy-950 min-h-screen pt-32 pb-16">
       <div className="max-w-md mx-auto px-6">
@@ -21,7 +27,9 @@ export default function ArcLoginPage() {
           Log in with the email and password from your signup confirmation email.
         </p>
 
-        <ArcLoginForm />
+        <ArcLoginForm
+          initialMessage={expired ? 'Your session has expired. Please sign in again.' : undefined}
+        />
       </div>
     </section>
   )

@@ -71,16 +71,25 @@ export default async function ArcDashboardPage() {
   const key  = process.env.WATSON_API_KEY ?? ''
 
   let data: DashboardData | null = null
+  let sessionInvalid = false
   try {
     const res = await fetch(`${base}/api/arc/dashboard`, {
       headers: { 'X-Watson-Key': key, 'X-Arc-Session': token },
       cache: 'no-store',
     })
-    if (res.status === 401) redirect('/arc/login')
-    if (res.ok) data = await res.json()
+    if (res.status === 401) {
+      sessionInvalid = true
+    } else if (res.ok) {
+      data = await res.json()
+    }
   } catch {
-    // Watson unreachable — show error state
+    // Watson unreachable — show error state below
   }
+
+  // redirect() throws a special Next.js error that must not be swallowed by a
+  // try/catch — call it here, outside the block above, once we know for sure
+  // the session itself (not just connectivity) is the problem.
+  if (sessionInvalid) redirect('/arc/login?session=expired')
 
   if (!data) {
     return (

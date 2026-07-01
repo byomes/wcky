@@ -3,10 +3,10 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-export default function ArcLoginForm() {
+export default function ArcLoginForm({ initialMessage }: { initialMessage?: string }) {
   const [email, setEmail]       = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError]       = useState('')
+  const [error, setError]       = useState(initialMessage ?? '')
   const [loading, setLoading]   = useState(false)
   const router                  = useRouter()
 
