@@ -116,6 +116,8 @@ export default function TheWrongJesusPage() {
           </p>
           <a
             href={GIVEBUTTER_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 mb-5"
           >
             Become a Monthly Partner
