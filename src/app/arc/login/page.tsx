@@ -21,7 +21,7 @@ export default function ArcLoginPage({
           ARC Team
         </p>
         <h1 className="font-serif text-4xl font-bold text-white mb-2">
-          Commitment Tracker
+          ARC Login
         </h1>
         <p className="text-slate-400 text-sm leading-relaxed mb-10">
           Log in with the email and password from your signup confirmation email.
