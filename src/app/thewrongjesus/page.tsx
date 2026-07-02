@@ -107,7 +107,7 @@ export default function TheWrongJesusPage() {
             </p>
             <Link
               href="/arc"
-              className="inline-flex items-center justify-center px-7 py-3 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-7 py-3 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
             >
               Join the Launch Team
             </Link>
