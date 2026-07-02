@@ -5,7 +5,7 @@ import CountdownTimer from './CountdownTimer'
 import SignupForm from './SignupForm'
 
 export const metadata: Metadata = {
-  title: 'The Wrong Jesus — Coming September 15, 2026',
+  title: 'The Wrong Jesus (Coming September 15, 2026)',
   description:
     "Most Christians never think to ask the question. The Wrong Jesus asks it anyway: What if the Jesus you're following isn't actually true? By Dr. Bill Yomes. Coming September 15, 2026.",
   openGraph: {
@@ -125,7 +125,7 @@ export default function TheWrongJesusPage() {
             Be the first to know
           </h2>
           <p className="text-slate-400 text-sm mb-6">
-            Get notified when the book is available — and when the preorder goes live.
+            Get notified when the book is available, and when the preorder goes live.
           </p>
           <SignupForm />
           <p className="text-slate-500 text-xs mt-4">
@@ -161,13 +161,13 @@ export default function TheWrongJesusPage() {
           </a>
           <p className="text-slate-400 text-sm leading-relaxed mb-8">
             <em>
-              Monthly partners receive a signed copy of every WCKY book at launch — starting with
+              Monthly partners receive a signed copy of every WCKY book at launch, starting with
               this one. Join before September 15 to receive yours.
             </em>
           </p>
           <p className="text-slate-500 text-sm leading-relaxed border-t border-navy-800 pt-8">
             Faith Makes Sense is a ministry training pastors in East Africa. Your monthly gift funds
-            that work — and puts this book in your hands at every launch.
+            that work, and puts this book in your hands at every launch.
           </p>
         </div>
       </section>
