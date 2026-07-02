@@ -88,18 +88,18 @@ export default function TheWrongJesusPage() {
       <section className="bg-navy-950 py-16 lg:py-20 border-t border-navy-800">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <div className="border border-navy-700 p-8 lg:p-10">
-            <p className="text-slate-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
               Join the Launch Team
             </p>
             <h2 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight mb-4">
               Read it before anyone else
             </h2>
-            <p className="text-slate-400 leading-relaxed mb-4">
+            <p className="text-slate-300 leading-relaxed mb-4">
               Get early digital access to{' '}
-              <em className="text-slate-300">The Wrong Jesus</em> before it launches. Access
+              <em className="text-white">The Wrong Jesus</em> before it launches. Access
               closes September 15th.
             </p>
-            <p className="text-slate-400 text-sm mb-8">
+            <p className="text-slate-400 text-sm leading-relaxed mb-8">
               <em>
                 Read it early. Post your review on launch day. Help this book reach the people who
                 need it.
@@ -121,7 +121,7 @@ export default function TheWrongJesusPage() {
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">
             Launch Updates
           </p>
-          <h2 className="font-serif text-2xl font-bold text-white mb-2">
+          <h2 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight mb-2">
             Be the first to know
           </h2>
           <p className="text-slate-400 text-sm mb-6">
@@ -174,7 +174,7 @@ export default function TheWrongJesusPage() {
 
       {/* TERTIARY CTA — Amazon preorder (hidden until live) */}
       {AMAZON_LIVE && (
-        <section className="bg-navy-900 py-16 border-t border-navy-800">
+        <section className="bg-navy-900 py-16 lg:py-20 border-t border-navy-800">
           <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
             <p className="text-slate-400 text-lg mb-6">Available now for preorder on Amazon.</p>
             <a
