@@ -5,6 +5,7 @@ import { getAllPosts } from '@/lib/posts'
 import HeroButtons from '@/components/HeroButtons'
 import FreeResourceButton from '@/components/FreeResourceButton'
 import HomePopup from '@/components/HomePopup'
+import { LeadMagnetModalProvider } from '@/components/LeadMagnetModalContext'
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +19,7 @@ export default function HomePage() {
   const recentPosts = getAllPosts().slice(0, 3)
 
   return (
-    <>
+    <LeadMagnetModalProvider>
       <HomePopup />
       {/* Hero */}
       <section className="relative bg-navy-950 overflow-hidden">
@@ -163,6 +164,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </LeadMagnetModalProvider>
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import LeadMagnetModal from './LeadMagnetModal'
+import { useEffect, useRef } from 'react'
+import { useLeadMagnetModal } from './LeadMagnetModalContext'
 
 const COOKIE_NAME = 'popup_dismissed'
 const COOKIE_DAYS = 30
@@ -19,18 +19,24 @@ function setCookie(name: string, days: number) {
 }
 
 export default function HomePopup() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, openModal } = useLeadMagnetModal()
+  const openedByPopup = useRef(false)
 
   useEffect(() => {
     if (getCookie(COOKIE_NAME)) return
-    const timer = setTimeout(() => setIsOpen(true), DELAY_MS)
+    const timer = setTimeout(() => {
+      openedByPopup.current = true
+      openModal()
+    }, DELAY_MS)
     return () => clearTimeout(timer)
-  }, [])
+  }, [openModal])
 
-  function handleClose() {
-    setIsOpen(false)
-    setCookie(COOKIE_NAME, COOKIE_DAYS)
-  }
+  useEffect(() => {
+    if (!isOpen && openedByPopup.current) {
+      openedByPopup.current = false
+      setCookie(COOKIE_NAME, COOKIE_DAYS)
+    }
+  }, [isOpen])
 
-  return <LeadMagnetModal isOpen={isOpen} onClose={handleClose} />
+  return null
 }
