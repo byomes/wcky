@@ -43,6 +43,46 @@ export default function HomePage() {
       </section>
 
 
+      {/* Coming Soon: The Wrong Jesus */}
+      <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative max-w-sm mx-auto lg:mx-0">
+              <Image
+                src="/images/wrong-jesus-cover-iso.png"
+                alt="The Wrong Jesus by Dr. William C.K. Yomes"
+                width={400}
+                height={600}
+                className="w-full h-auto drop-shadow-2xl max-w-[260px] mx-auto lg:mx-0"
+              />
+            </div>
+            <div>
+              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+                Coming Soon
+              </p>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                The Wrong Jesus
+              </h2>
+              <p className="text-slate-300 text-xl leading-relaxed mb-6 font-serif italic">
+                When the Worship Is Real But the Jesus Is Wrong
+              </p>
+              <p className="text-slate-400 leading-relaxed mb-10">
+                What happens when sincerity isn&apos;t enough? This book confronts
+                the most dangerous counterfeit in the church — a Jesus who feels
+                right but isn&apos;t. Sign up to be the first to know when it&apos;s
+                available.
+              </p>
+              <Link
+                href="/thewrongjesus"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Recent Posts */}
       {recentPosts.length > 0 && (
         <section className="bg-navy-950 py-24 lg:py-32">
@@ -93,46 +133,6 @@ export default function HomePage() {
           </div>
         </section>
       )}
-
-      {/* Coming Soon: The Wrong Jesus */}
-      <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative max-w-sm mx-auto lg:mx-0">
-              <Image
-                src="/images/wrong-jesus-cover-iso.png"
-                alt="The Wrong Jesus by Dr. William C.K. Yomes"
-                width={400}
-                height={600}
-                className="w-full h-auto drop-shadow-2xl max-w-[260px] mx-auto lg:mx-0"
-              />
-            </div>
-            <div>
-              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-                Coming Soon
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                The Wrong Jesus
-              </h2>
-              <p className="text-slate-300 text-xl leading-relaxed mb-6 font-serif italic">
-                When the Worship Is Real But the Jesus Is Wrong
-              </p>
-              <p className="text-slate-400 leading-relaxed mb-10">
-                What happens when sincerity isn&apos;t enough? This book confronts
-                the most dangerous counterfeit in the church — a Jesus who feels
-                right but isn&apos;t. Sign up to be the first to know when it&apos;s
-                available.
-              </p>
-              <Link
-                href="/thewrongjesus"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-              >
-                Learn More →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Free Resource */}
       <section className="bg-navy-950 py-24 lg:py-32 border-t border-navy-800">
