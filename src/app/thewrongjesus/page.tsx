@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     title: 'The Wrong Jesus by Dr. Bill Yomes',
     description:
       "What if the Jesus you're following isn't actually true? Coming September 15, 2026.",
-    images: [{ url: '/images/wrong-jesus-cover-iso.png' }],
   },
 }
 
