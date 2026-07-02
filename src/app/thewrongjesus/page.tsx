@@ -65,20 +65,20 @@ export default function TheWrongJesusPage() {
             <p>
               Most Christians never think to ask the question.{' '}
               <em className="text-white">The Wrong Jesus</em> asks it anyway: What if the Jesus
-              you&apos;re following isn&apos;t actually true?
+              I&apos;m following isn&apos;t the right one?
             </p>
             <p>
               Drawing from the Palm Sunday crowd in the Gospel of Mark, pastor and author Dr. Bill
               Yomes shows how ordinary, sincere, passionate believers can worship a Jesus shaped by
-              their wounds, their politics, their tribe, and their needs — and miss the real One
-              entirely. The danger isn&apos;t cynicism or rebellion. It&apos;s sincerity aimed at
-              the wrong target.
+              their wounds, their politics, their tribe, and their needs, and miss the real Jesus
+              entirely. The danger isn&apos;t cynicism or rebellion. It&apos;s sincere worship aimed
+              at the wrong target.
             </p>
             <p>
               Part pastoral narrative, part theological reckoning,{' '}
               <em className="text-white">The Wrong Jesus</em> walks readers through Holy Week and
-              invites them to lay down the Jesus they built — and encounter the One who rode in on
-              His own terms.
+              invites them to lay down the Jesus they&apos;ve built for themselves and encounter
+              the One who rode in on His own terms.
             </p>
           </div>
         </div>
