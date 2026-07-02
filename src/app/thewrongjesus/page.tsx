@@ -97,6 +97,12 @@ export default function TheWrongJesusPage() {
             Get notified when the book is available — and when the preorder goes live.
           </p>
           <SignupForm />
+          <p className="text-slate-500 text-xs mt-4">
+            Want to do more than get notified?{' '}
+            <Link href="/arc" className="text-gold-500 hover:text-gold-400 underline">
+              Join the ARC Team →
+            </Link>
+          </p>
         </div>
       </section>
 
