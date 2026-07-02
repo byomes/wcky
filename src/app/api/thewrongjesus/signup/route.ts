@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const KIT_API_KEY = process.env.KIT_API_KEY
 const KIT_TWJ_TAG_ID = process.env.KIT_TWJ_TAG_ID
-  ? Number(process.env.KIT_TWJ_TAG_ID)
-  : null
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,9 +20,6 @@ export async function POST(req: NextRequest) {
     if (firstName && typeof firstName === 'string' && firstName.trim()) {
       body.first_name = firstName.trim()
     }
-    if (KIT_TWJ_TAG_ID) {
-      body.tags = [KIT_TWJ_TAG_ID]
-    }
 
     const res = await fetch('https://api.kit.com/v4/subscribers', {
       method: 'POST',
@@ -42,6 +37,27 @@ export async function POST(req: NextRequest) {
         { error: err?.errors?.[0] ?? 'Subscription failed.' },
         { status: res.status }
       )
+    }
+
+    const created = await res.json()
+    const subscriberId = created?.subscriber?.id
+
+    if (KIT_TWJ_TAG_ID && subscriberId) {
+      const tagRes = await fetch(
+        `https://api.kit.com/v4/tags/${KIT_TWJ_TAG_ID}/subscribers/${subscriberId}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Kit-Api-Key': KIT_API_KEY,
+          },
+          body: JSON.stringify({}),
+        }
+      )
+      if (!tagRes.ok) {
+        const tagErr = await tagRes.json().catch(() => ({}))
+        console.error('Kit tag error:', tagErr)
+      }
     }
 
     return NextResponse.json({ ok: true })
