@@ -148,7 +148,7 @@ export default function TheWrongJesusPage() {
           </h2>
           <p className="text-slate-300 leading-relaxed mb-8">
             Every monthly donor to Faith Makes Sense receives a signed physical copy of{' '}
-            <em>The Wrong Jesus</em> at launch. This is a permanent program — not a one-time
+            <em>The Wrong Jesus</em> at launch. This is a permanent program, not a one-time
             promotion. Every future WCKY book will also ship to active monthly donors at launch.
           </p>
           <a
