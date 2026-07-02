@@ -7,6 +7,7 @@ import { redirect }  from 'next/navigation'
 import type { Metadata } from 'next'
 import ArcDashboard from './ArcDashboard'
 import ManuscriptReader from './ManuscriptReader'
+import { ARC_MANUSCRIPT_UNLOCK, ARC_MANUSCRIPT_CLOSE } from '@/lib/launch-dates'
 
 export const metadata: Metadata = {
   title: 'ARC — The Wrong Jesus',
@@ -62,6 +63,15 @@ async function loadSections() {
   return results
 }
 
+type ManuscriptStatus = 'locked' | 'open' | 'closed'
+
+function getManuscriptStatus(): ManuscriptStatus {
+  const now = Date.now()
+  if (now < new Date(ARC_MANUSCRIPT_UNLOCK).getTime()) return 'locked'
+  if (now >= new Date(ARC_MANUSCRIPT_CLOSE).getTime()) return 'closed'
+  return 'open'
+}
+
 export default async function ArcDashboardPage() {
   const cookieStore = cookies()
   const token = cookieStore.get('arc_session')?.value
@@ -101,7 +111,8 @@ export default async function ArcDashboardPage() {
     )
   }
 
-  const sections = await loadSections()
+  const manuscriptStatus = getManuscriptStatus()
+  const sections = manuscriptStatus === 'open' ? await loadSections() : []
 
   return (
     <div className="bg-navy-950 min-h-screen pt-16 lg:pt-20">
@@ -141,7 +152,17 @@ export default async function ArcDashboardPage() {
           <p className="text-slate-500 text-sm">Dr. William C.K. Yomes</p>
         </div>
 
-        <ManuscriptReader sections={sections} />
+        {manuscriptStatus === 'locked' && (
+          <div className="max-w-[680px] mx-auto px-6 py-24 text-center">
+            <p className="text-slate-400 text-lg">Manuscript unlocks July 15, 2026.</p>
+          </div>
+        )}
+        {manuscriptStatus === 'closed' && (
+          <div className="max-w-[680px] mx-auto px-6 py-24 text-center">
+            <p className="text-slate-400 text-lg">Manuscript access has closed.</p>
+          </div>
+        )}
+        {manuscriptStatus === 'open' && <ManuscriptReader sections={sections} />}
       </div>
     </div>
   )

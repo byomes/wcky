@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { TWJ_LAUNCH_DATE } from '@/lib/launch-dates'
 
-const LAUNCH_DATE = new Date('2026-09-15T00:00:00-04:00')
+const LAUNCH_DATE = new Date(TWJ_LAUNCH_DATE)
 
 function getDaysRemaining(): number {
   const now = new Date()
