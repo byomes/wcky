@@ -26,7 +26,7 @@ interface Commitment {
 }
 
 interface DashboardData {
-  reader: { id: number; first_name: string; last_name: string; email: string }
+  reader: { id: number; first_name: string; last_name: string; email: string; is_admin_preview: boolean }
   commitments: Commitment[]
   progress: { checked: number; total: number }
 }
@@ -65,7 +65,8 @@ async function loadSections() {
 
 type ManuscriptStatus = 'locked' | 'open' | 'closed'
 
-function getManuscriptStatus(): ManuscriptStatus {
+function getManuscriptStatus(isAdminPreview: boolean): ManuscriptStatus {
+  if (isAdminPreview) return 'open'
   const now = Date.now()
   if (now < new Date(ARC_MANUSCRIPT_UNLOCK).getTime()) return 'locked'
   if (now >= new Date(ARC_MANUSCRIPT_CLOSE).getTime()) return 'closed'
@@ -111,7 +112,7 @@ export default async function ArcDashboardPage() {
     )
   }
 
-  const manuscriptStatus = getManuscriptStatus()
+  const manuscriptStatus = getManuscriptStatus(data.reader.is_admin_preview)
   const sections = manuscriptStatus === 'open' ? await loadSections() : []
 
   return (
