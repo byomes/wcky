@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const AMAZON_LIVE = false
 const AMAZON_LINK = '[AMAZON_LINK]'
 
-const GIVEBUTTER_LINK = '[GIVEBUTTER_LINK]'
+const GIVEBUTTER_LINK = 'https://givebutter.com/fms1'
 
 export default function TheWrongJesusPage() {
   return (
