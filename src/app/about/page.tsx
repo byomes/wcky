@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'William CK Yomes — pastor, apologist, and author. Senior Pastor of Catalyst Community Church and founding apologist of Faith Makes Sense.',
+    'William CK Yomes: pastor, apologist, and author. Senior Pastor of Catalyst Community Church and founding apologist of Faith Makes Sense.',
 }
 
 export default function AboutPage() {
@@ -58,10 +58,10 @@ export default function AboutPage() {
                   network in Uganda.
                 </p>
                 <p>
-                  He writes theology for the church — including{' '}
+                  He writes theology for the church, including{' '}
                   <em className="text-slate-300">He Is Risen</em> and the
                   forthcoming{' '}
-                  <em className="text-slate-300">The Wrong Jesus</em> — and
+                  <em className="text-slate-300">The Wrong Jesus</em>, and
                   children&apos;s fantasy fiction for his family through the
                   Dreamstone Chronicles series.
                 </p>

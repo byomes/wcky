@@ -22,18 +22,18 @@ export const metadata: Metadata = {
     template: '%s | Dr. William C.K. Yomes',
   },
   description:
-    'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+    'Dr. William C.K. Yomes: pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
   keywords: ['William Yomes', 'WCKY', 'Christian apologist', 'pastor', 'author', 'theology', 'Faith Makes Sense', 'Adelphos Academy'],
   openGraph: {
     title: 'Dr. William C.K. Yomes | Pastor. Apologist. Author.',
-    description: 'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+    description: 'Dr. William C.K. Yomes: pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
     type: 'website',
     images: [
       {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Dr. William C.K. Yomes — Pastor. Apologist. Author.',
+        alt: 'Dr. William C.K. Yomes: Pastor. Apologist. Author.',
       },
     ],
   },

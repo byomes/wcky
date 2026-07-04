@@ -83,7 +83,7 @@ export default function TheWrongJesusPage() {
         </div>
       </section>
 
-      {/* PRIMARY CTA — ARC / Launch Team */}
+      {/* PRIMARY CTA: ARC / Launch Team */}
       <section className="bg-navy-950 py-16 lg:py-20 border-t border-navy-800">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <div className="border border-navy-700 p-8 lg:p-10">
@@ -136,7 +136,7 @@ export default function TheWrongJesusPage() {
         </div>
       </section>
 
-      {/* SECONDARY CTA — FMS Monthly Donor */}
+      {/* SECONDARY CTA: FMS Monthly Donor */}
       <section className="bg-navy-950 py-16 lg:py-20 border-t border-navy-800">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
@@ -172,7 +172,7 @@ export default function TheWrongJesusPage() {
         </div>
       </section>
 
-      {/* TERTIARY CTA — Amazon preorder (hidden until live) */}
+      {/* TERTIARY CTA: Amazon preorder (hidden until live) */}
       {AMAZON_LIVE && (
         <section className="bg-navy-900 py-16 lg:py-20 border-t border-navy-800">
           <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">

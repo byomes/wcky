@@ -6,7 +6,7 @@ import StartCTA from '@/components/StartCTA'
 export const metadata: Metadata = {
   title: 'Start Here',
   description:
-    'Links, resources, and free downloads from Dr. William C.K. Yomes — pastor, apologist, and author.',
+    'Links, resources, and free downloads from Dr. William C.K. Yomes: pastor, apologist, and author.',
 }
 
 const links = [

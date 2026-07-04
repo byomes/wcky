@@ -3,7 +3,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 export const runtime = 'nodejs'
-export const alt = 'About Dr. William C.K. Yomes — Pastor, Apologist, and Author'
+export const alt = 'About Dr. William C.K. Yomes: Pastor, Apologist, and Author'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Theology & Apologetics',
   description:
-    'Books by Dr. William C.K. Yomes — theology and apologetics written for the church.',
+    'Books by Dr. William C.K. Yomes: theology and apologetics written for the church.',
 }
 
 export default function TheologyPage() {
@@ -20,7 +20,7 @@ export default function TheologyPage() {
             Theology &amp; Apologetics
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-            Books written for the church — because theology belongs to everyone,
+            Books written for the church, because theology belongs to everyone,
             not just the academy.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function TheologyPage() {
       <section className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-0">
 
-          {/* Book 1: He Is Risen — Published */}
+          {/* Book 1: He Is Risen (Published) */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
               <Image
@@ -66,7 +66,7 @@ export default function TheologyPage() {
           {/* Divider */}
           <div className="border-t border-navy-800" />
 
-          {/* Book 2: The Wrong Jesus — Coming Soon */}
+          {/* Book 2: The Wrong Jesus (Coming Soon) */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
             <div className="lg:col-span-1">
               <Image
@@ -89,7 +89,7 @@ export default function TheologyPage() {
                 When the Worship Is Real But the Jesus Is Wrong
               </p>
               <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                Many people are devoted — but devoted to a Jesus they constructed rather than the Jesus of Scripture. This book diagnoses the problem and points back to the real thing.
+                Many people are devoted. But devoted to a Jesus they constructed rather than the Jesus of Scripture. This book diagnoses the problem and points back to the real thing.
               </p>
               <a
                 href="https://faithmakessense.kit.com/31040c8e97"

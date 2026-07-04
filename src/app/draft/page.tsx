@@ -91,7 +91,7 @@ export default function DraftPage() {
           className="draft-textarea"
           value={content}
           onChange={handleContentChange}
-          placeholder="Paste markdown here — frontmatter, body, everything..."
+          placeholder="Paste markdown here: frontmatter, body, everything..."
           style={{ ...field, minHeight:460, fontFamily:'ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace', fontSize:13, lineHeight:1.7, padding:'1rem', resize:'vertical' }}
         />
         <p style={{ fontSize:12, color:'#64748b', textAlign:'right', margin:'4px 0 0' }}>

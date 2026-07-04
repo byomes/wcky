@@ -4,7 +4,7 @@ import ArcSignupForm from './ArcSignupForm'
 export const metadata: Metadata = {
   title: 'Join the ARC Team',
   description:
-    'Join the Advance Reader Corps for The Wrong Jesus — read early, review honestly, and help get the word out.',
+    'Join the Advance Reader Corps for The Wrong Jesus: read early, review honestly, and help get the word out.',
 }
 
 const commitments = [

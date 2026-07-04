@@ -5,7 +5,7 @@ import { getPartnerSession, PARTNER_COOKIE } from '@/lib/writing-room-auth'
 import ApplyForm from './ApplyForm'
 
 export const metadata: Metadata = {
-  title: 'Apply — The Writing Room',
+  title: 'Apply: The Writing Room',
   robots: 'noindex, nofollow',
 }
 

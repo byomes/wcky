@@ -1,7 +1,7 @@
 'use client';
 
 // src/app/ingest/page.tsx
-// File ingestion tool — upload PDF, Excel, or Word files.
+// File ingestion tool: upload PDF, Excel, or Word files.
 // Sends to /api/ingest, which extracts text and saves to kb/ in the watson repo.
 
 import { useState, useRef } from 'react';
@@ -79,7 +79,7 @@ export default function IngestPage() {
         </p>
         <h1 style={{ fontSize: 28, fontWeight: 500, margin: '0 0 4px' }}>Knowledge base ingest</h1>
         <p style={{ fontSize: 14, color: '#6b7280', margin: 0 }}>
-          PDF, Excel, Word — extracted and saved to kb/ in the watson repo.
+          PDF, Excel, Word: extracted and saved to kb/ in the watson repo.
         </p>
       </div>
 

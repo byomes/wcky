@@ -3,7 +3,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 export const runtime = 'nodejs'
-export const alt = 'The Wrong Jesus by Dr. Bill Yomes — Launching September 15, 2026'
+export const alt = 'The Wrong Jesus by Dr. Bill Yomes: Launching September 15, 2026'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

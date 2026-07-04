@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getCalls } from '@/lib/writing-room-api'
 
 export const metadata: Metadata = {
-  title: 'Calls — Writing Room',
+  title: 'Calls: Writing Room',
   robots: 'noindex, nofollow',
 }
 

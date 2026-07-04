@@ -5,7 +5,7 @@ import remarkHtml from 'remark-html'
 import ArcReader from './ArcReader'
 
 export const metadata = {
-  title: 'The Wrong Jesus — Writing Room',
+  title: 'The Wrong Jesus: Writing Room',
   robots: 'noindex, nofollow',
 }
 

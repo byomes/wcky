@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     absolute: 'Dr. William C.K. Yomes | Pastor. Apologist. Author.',
   },
   description:
-    'Dr. William C.K. Yomes — pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+    'Dr. William C.K. Yomes: pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
 }
 
 export default function HomePage() {
@@ -68,7 +68,7 @@ export default function HomePage() {
               </p>
               <p className="text-slate-400 leading-relaxed mb-10">
                 What happens when sincerity isn&apos;t enough? This book confronts
-                the most dangerous counterfeit in the church — a Jesus who feels
+                the most dangerous counterfeit in the church: a Jesus who feels
                 right but isn&apos;t. Sign up to be the first to know when it&apos;s
                 available.
               </p>
@@ -141,7 +141,7 @@ export default function HomePage() {
             <div className="relative max-w-sm mx-auto lg:mx-0 order-first lg:order-last">
               <Image
                 src="/images/lead-magnet.png"
-                alt="Study the Bible Like a Pastor — Free Guide"
+                alt="Study the Bible Like a Pastor: Free Guide"
                 width={400}
                 height={520}
                 className="w-full h-auto drop-shadow-2xl"
@@ -156,7 +156,7 @@ export default function HomePage() {
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-10">
                 A practical guide to reading, understanding, and applying
-                Scripture — built for everyday believers who want to go deeper
+                Scripture, built for everyday believers who want to go deeper
                 than a devotional and actually know what the Bible says.
               </p>
               <FreeResourceButton />

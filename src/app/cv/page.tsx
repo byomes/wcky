@@ -19,7 +19,7 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   title: 'Curriculum Vitae',
-  description: 'Academic CV — Dr. William C.K. Yomes, DMin, MA. Pastor, Apologist, Author.',
+  description: 'Academic CV: Dr. William C.K. Yomes, DMin, MA. Pastor, Apologist, Author.',
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
@@ -63,7 +63,7 @@ export default function CVPage() {
           <div className="space-y-5">
             <div className="flex justify-between items-start gap-6">
               <div>
-                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Doctor of Ministry — Theology and Apologetics</p>
+                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Doctor of Ministry: Theology and Apologetics</p>
                 <p className="text-[14px] text-gray-600">Liberty University, Lynchburg, VA</p>
                 <p className="text-[13.5px] italic text-gray-500 mt-0.5">Thesis: &ldquo;Asynchronous Theologetics for a Digital Church&rdquo;</p>
               </div>
@@ -102,9 +102,9 @@ export default function CVPage() {
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Founder &amp; Lead Apologist</p>
-                <p className="text-[14px] text-gray-700 font-medium">Faith Makes Sense — Nonprofit Apologetics Ministry</p>
+                <p className="text-[14px] text-gray-700 font-medium">Faith Makes Sense: Nonprofit Apologetics Ministry</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
-                  Faith Makes Sense is a nonprofit apologetics ministry producing and distributing free resources for individuals and local churches. Its work spans conference teaching, written and digital content, and direct partnership with pastor networks in East Africa — all focused on equipping believers to engage their faith thoughtfully and defend it credibly.
+                  Faith Makes Sense is a nonprofit apologetics ministry producing and distributing free resources for individuals and local churches. Its work spans conference teaching, written and digital content, and direct partnership with pastor networks in East Africa, all focused on equipping believers to engage their faith thoughtfully and defend it credibly.
                 </p>
               </div>
               <span className="text-[13px] text-gray-500 whitespace-nowrap mt-0.5" style={{ fontFamily: 'var(--font-jost, system-ui, sans-serif)' }}>2021–Present</span>
@@ -112,21 +112,21 @@ export default function CVPage() {
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Lead Pastor</p>
-                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church — Wilmington, DE</p>
+                <p className="text-[14px] text-gray-700 font-medium">Catalyst Community Church: Wilmington, DE</p>
               </div>
               <span className="text-[13px] text-gray-500 whitespace-nowrap mt-0.5" style={{ fontFamily: 'var(--font-jost, system-ui, sans-serif)' }}>2022–Present</span>
             </div>
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Senior Pastor</p>
-                <p className="text-[14px] text-gray-700 font-medium">Reedswood Christian Church — Gloucester, VA</p>
+                <p className="text-[14px] text-gray-700 font-medium">Reedswood Christian Church: Gloucester, VA</p>
               </div>
               <span className="text-[13px] text-gray-500 whitespace-nowrap mt-0.5" style={{ fontFamily: 'var(--font-jost, system-ui, sans-serif)' }}>2017–2022</span>
             </div>
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Senior Pastor</p>
-                <p className="text-[14px] text-gray-700 font-medium">Christ Community Church — Cape Coral, FL</p>
+                <p className="text-[14px] text-gray-700 font-medium">Christ Community Church: Cape Coral, FL</p>
               </div>
               <span className="text-[13px] text-gray-500 whitespace-nowrap mt-0.5" style={{ fontFamily: 'var(--font-jost, system-ui, sans-serif)' }}>2011–2017</span>
             </div>
@@ -139,7 +139,7 @@ export default function CVPage() {
           <div className="space-y-6">
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
-                <p className="text-[15px] font-semibold text-gray-900 leading-snug">International Pastor Training — Uganda &amp; Tanzania</p>
+                <p className="text-[15px] font-semibold text-gray-900 leading-snug">International Pastor Training: Uganda &amp; Tanzania</p>
                 <p className="text-[14px] text-gray-700 font-medium">East Africa Pastor Networks</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Two-week intensive teaching tour (Uganda wk. 1; Tanzania wk. 2). Ongoing instruction of Uganda network via video conferencing and web-deployed curriculum.
@@ -150,7 +150,7 @@ export default function CVPage() {
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
                 <p className="text-[15px] font-semibold text-gray-900 leading-snug">Conference Instructor</p>
-                <p className="text-[14px] text-gray-700 font-medium">Defending the Faith Conference — Philadelphia, PA</p>
+                <p className="text-[14px] text-gray-700 font-medium">Defending the Faith Conference: Philadelphia, PA</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Three sessions: Introduction to Worldviews · Apologetics in Ministry · Christ in Culture
                 </p>
@@ -159,7 +159,7 @@ export default function CVPage() {
             </div>
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
-                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Defending the Faith Conference — Philadelphia, PA</p>
+                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Defending the Faith Conference: Philadelphia, PA</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Three sessions: Introduction to Worldviews · Apologetics in Ministry · Christ in Culture
                 </p>
@@ -168,7 +168,7 @@ export default function CVPage() {
             </div>
             <div className="flex justify-between items-start gap-6">
               <div className="flex-1">
-                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Apologetics Youth Conference — Venice, FL</p>
+                <p className="text-[15px] font-semibold text-gray-900 leading-snug">Apologetics Youth Conference: Venice, FL</p>
                 <p className="text-[13.5px] text-gray-600 mt-1 leading-relaxed">
                   Two-day youth apologetics event; sessions in development
                 </p>

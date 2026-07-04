@@ -28,7 +28,7 @@ const topics = [
   {
     title: 'Faith and Reason',
     description:
-      'Are faith and reason enemies or allies? Dr. Yomes demonstrates that Christian faith is not a leap in the dark but a step into the light — informed by evidence, history, and philosophy.',
+      'Are faith and reason enemies or allies? Dr. Yomes demonstrates that Christian faith is not a leap in the dark but a step into the light, informed by evidence, history, and philosophy.',
     events: ['Church Retreats', 'Adult Education', 'Interfaith Dialogues'],
   },
 ]
@@ -53,7 +53,7 @@ export default function SpeakingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-slate-300 text-xl leading-relaxed mb-5">
-              Dr. Yomes is available for a wide range of speaking engagements —
+              Dr. Yomes is available for a wide range of speaking engagements,
               from Sunday morning sermons and conference keynotes to apologetics
               seminars and academic lectures.
             </p>

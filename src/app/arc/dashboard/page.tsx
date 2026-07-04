@@ -10,7 +10,7 @@ import ManuscriptReader from './ManuscriptReader'
 import { ARC_MANUSCRIPT_UNLOCK, ARC_MANUSCRIPT_CLOSE } from '@/lib/launch-dates'
 
 export const metadata: Metadata = {
-  title: 'ARC — The Wrong Jesus',
+  title: 'ARC: The Wrong Jesus',
   robots: { index: false },
 }
 
@@ -94,11 +94,11 @@ export default async function ArcDashboardPage() {
       data = await res.json()
     }
   } catch {
-    // Watson unreachable — show error state below
+    // Watson unreachable, show error state below
   }
 
   // redirect() throws a special Next.js error that must not be swallowed by a
-  // try/catch — call it here, outside the block above, once we know for sure
+  // try/catch. Call it here, outside the block above, once we know for sure
   // the session itself (not just connectivity) is the problem.
   if (sessionInvalid) redirect('/arc/login?session=expired')
 

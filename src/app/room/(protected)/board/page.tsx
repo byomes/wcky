@@ -5,7 +5,7 @@ import { getPartnerSession, PARTNER_COOKIE } from '@/lib/writing-room-auth'
 import PostList from '../PostList'
 
 export const metadata: Metadata = {
-  title: 'Board — Writing Room',
+  title: 'Board: Writing Room',
   robots: 'noindex, nofollow',
 }
 

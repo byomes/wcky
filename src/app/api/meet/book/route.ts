@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
         `Date: ${dateStr}`,
         `Time: ${timeRange}`,
         ``,
-        `Join here: ${meetLink ?? '(link unavailable — please reply to this email)'}`,
+        `Join here: ${meetLink ?? '(link unavailable, please reply to this email)'}`,
         ``,
         `Topic: ${context}`,
         ``,
@@ -158,8 +158,8 @@ export async function POST(req: NextRequest) {
     from: process.env.WATSON_SMTP_FROM,
     to: email,
     subject: isVirtual
-      ? `Your Virtual Appointment with Pastor Bill — ${dateStr}`
-      : `Your Appointment with Pastor Bill — ${dateStr}`,
+      ? `Your Virtual Appointment with Pastor Bill: ${dateStr}`
+      : `Your Appointment with Pastor Bill: ${dateStr}`,
     text: emailLines.join('\n'),
   })
 

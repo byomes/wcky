@@ -9,7 +9,7 @@ import { getPartnerSession, PARTNER_COOKIE } from '@/lib/writing-room-auth'
 import BetaDraftList from './BetaDraftList'
 
 export const metadata: Metadata = {
-  title: 'Beta — Writing Room',
+  title: 'Beta: Writing Room',
   robots: 'noindex, nofollow',
 }
 

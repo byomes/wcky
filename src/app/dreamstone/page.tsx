@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'The Dreamstone Chronicles',
   description:
-    "The Dreamstone Chronicles — a children's fantasy series by William CK Yomes. Written for the family.",
+    "The Dreamstone Chronicles: a children's fantasy series by William CK Yomes. Written for the family.",
 }
 
 export default function DreastonePage() {

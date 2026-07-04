@@ -498,9 +498,9 @@ export default function TWJPressKit() {
         <section className="twj-hero">
           <div className="twj-hero-left">
             <div>
-              <p className="twj-eyebrow">Forthcoming — William CK Yomes</p>
+              <p className="twj-eyebrow">Forthcoming: William CK Yomes</p>
               <h1 className="twj-title">The<br /><em>Wrong</em><br />Jesus</h1>
-              <p className="twj-subtitle">Am I following Jesus — or am I following what I want Him to be?</p>
+              <p className="twj-subtitle">Am I following Jesus, or am I following what I want Him to be?</p>
             </div>
             <p className="twj-author">William CK Yomes &nbsp;·&nbsp; Theology &amp; Christian Living</p>
           </div>
@@ -510,7 +510,7 @@ export default function TWJPressKit() {
               <strong>They were genuinely, passionately, sincerely wrong about who He was.</strong>
             </p>
             <p className="twj-hero-premise">
-              By Good Friday, some of those same voices were calling for His crucifixion. <em>The Wrong Jesus</em> traces how that same dynamic plays out in every generation — including ours.
+              By Good Friday, some of those same voices were calling for His crucifixion. <em>The Wrong Jesus</em> traces how that same dynamic plays out in every generation, including ours.
             </p>
           </div>
         </section>
@@ -520,8 +520,8 @@ export default function TWJPressKit() {
           <div className="twj-overview-body">
             <p className="twj-section-label">Book Overview</p>
             <h2>A diagnosis every sincere Christian needs</h2>
-            <p>We don&apos;t construct a wrong Jesus out of rebellion or dishonesty. We construct him out of need — from wounds that needed healing, from comfort we didn&apos;t want disturbed, from political convictions we needed God to endorse, from voices we trusted who handed us their picture of Jesus without us ever examining it.</p>
-            <p>Using Palm Sunday as its central lens, <em>The Wrong Jesus</em> examines figures from Passion Week — Pilate, the crowd, the disciples, Barabbas — as mirrors for the ways we drift from the real Jesus. It moves from diagnosis to practice, closing with honest tools for identifying the wrong Jesus you&apos;ve been carrying and finding your way back to the One who is actually there.</p>
+            <p>We don&apos;t construct a wrong Jesus out of rebellion or dishonesty. We construct him out of need: from wounds that needed healing, from comfort we didn&apos;t want disturbed, from political convictions we needed God to endorse, from voices we trusted who handed us their picture of Jesus without us ever examining it.</p>
+            <p>Using Palm Sunday as its central lens, <em>The Wrong Jesus</em> examines figures from Passion Week (Pilate, the crowd, the disciples, Barabbas) as mirrors for the ways we drift from the real Jesus. It moves from diagnosis to practice, closing with honest tools for identifying the wrong Jesus you&apos;ve been carrying and finding your way back to the One who is actually there.</p>
             <p>The tone is pastoral and direct. The target reader is a sincere Christian who has never been asked whether the Jesus they&apos;re following is actually Jesus.</p>
           </div>
           <dl className="twj-overview-meta">
@@ -546,7 +546,7 @@ export default function TWJPressKit() {
           <div className="twj-parts-grid" ref={cardsRef}>
             {[
               ['I', 'The Problem', 'What Palm Sunday reveals about the human tendency to overlay what we need onto who Jesus actually is.'],
-              ['II', 'How to Recognize It', 'Figures from Passion Week as mirrors — Pilate, the crowd, the disciples — each a distinct pattern of misrecognition.'],
+              ['II', 'How to Recognize It', 'Figures from Passion Week as mirrors (Pilate, the crowd, the disciples), each a distinct pattern of misrecognition.'],
               ['III', 'What It Costs Us', 'The spiritual and relational consequences of following a Jesus of our own construction rather than the one revealed in Scripture.'],
               ['IV', 'Finding the Real Jesus', 'Practical, honest tools for examining the Jesus you\'ve been following and reorienting toward the one who is actually there.'],
             ].map(([num, title, desc]) => (
@@ -570,8 +570,8 @@ export default function TWJPressKit() {
               &ldquo;We don&apos;t construct a wrong Jesus out of rebellion. We construct him out of need.&rdquo;
             </blockquote>
             <p>The crowd at Palm Sunday weren&apos;t hypocrites. They were true believers who had layered centuries of political memory and national longing onto the Son of God standing in front of them. Their worship was real. Their theology was catastrophically wrong.</p>
-            <p><em>The Wrong Jesus</em> argues that this is not a first-century problem — it is the perennial human problem. Every generation reshapes Jesus in the image of its own anxieties, wounds, and hopes. The book doesn&apos;t target skeptics or apostates. It speaks directly to sincere, committed Christians who may never have examined whether the Jesus they are following bears a genuine resemblance to the Jesus of the Gospels.</p>
-            <p>This is not deconstruction. It is reconstruction — a pastoral invitation to put down the Jesus we built and pick up the one who is actually there.</p>
+            <p><em>The Wrong Jesus</em> argues that this is not a first-century problem. It is the perennial human problem. Every generation reshapes Jesus in the image of its own anxieties, wounds, and hopes. The book doesn&apos;t target skeptics or apostates. It speaks directly to sincere, committed Christians who may never have examined whether the Jesus they are following bears a genuine resemblance to the Jesus of the Gospels.</p>
+            <p>This is not deconstruction. It is reconstruction: a pastoral invitation to put down the Jesus we built and pick up the one who is actually there.</p>
           </div>
         </section>
 
@@ -582,7 +582,7 @@ export default function TWJPressKit() {
             <h2 className="twj-author-name">William<br />CK Yomes</h2>
             <div className="twj-author-bio">
               <p>William CK Yomes is a pastor, theologian, and writer whose work sits at the intersection of Christian faith, honest inquiry, and the pastoral realities of ordinary life. He writes for people who take their faith seriously enough to question it.</p>
-              <p>His writing explores the gap between the Jesus people say they follow and the Jesus the Gospels actually present — with pastoral warmth and theological rigor.</p>
+              <p>His writing explores the gap between the Jesus people say they follow and the Jesus the Gospels actually present, with pastoral warmth and theological rigor.</p>
               <p><em>The Wrong Jesus</em> is his first book.</p>
             </div>
           </div>
