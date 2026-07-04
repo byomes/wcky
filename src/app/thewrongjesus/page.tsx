@@ -69,7 +69,7 @@ export default function TheWrongJesusPage() {
             <p>
               Drawing from the Palm Sunday crowd in the Gospel of Mark, pastor and author Dr. Bill
               Yomes shows how ordinary, sincere, passionate believers can worship a Jesus shaped by
-              their wounds, their politics, their tribe, and their needs, and miss the real Jesus
+              their wounds, their politics, their tribe, and their needs… and miss the real Jesus
               entirely. The danger isn&apos;t cynicism or rebellion. It&apos;s sincere worship aimed
               at the wrong target.
             </p>
@@ -161,7 +161,7 @@ export default function TheWrongJesusPage() {
           </a>
           <p className="text-slate-400 text-sm leading-relaxed mb-8">
             <em>
-              Monthly partners receive a signed copy of every WCKY book at launch, starting with
+              Monthly partners receive a signed copy of every book at launch, starting with
               this one. Join before September 15 to receive yours.
             </em>
           </p>
