@@ -149,7 +149,7 @@ export default function TheWrongJesusPage() {
             Every monthly donor to Dr. Bill&apos;s teaching ministry, Faith Makes Sense, receives
             a signed physical copy of <em>The Wrong Jesus</em> at launch. This is a permanent
             program, not a one-time
-            promotion. Every future WCKY book will also ship to active monthly donors at launch.
+            promotion. Every future book will also ship to active monthly donors at launch.
           </p>
           <a
             href={GIVEBUTTER_LINK}
