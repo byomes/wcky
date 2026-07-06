@@ -4,6 +4,7 @@ import { MessageCircle, Share2 } from 'lucide-react'
 
 const shareText =
   "I'm getting an advance copy of The Wrong Jesus by Dr. Bill Yomes — check it out:"
+const smsText = 'I want to share this with you.'
 const shareUrl = 'https://williamckyomes.com/thewrongjesus'
 
 const buttonClasses =
@@ -29,7 +30,7 @@ export default function ShareButtons() {
   return (
     <div className="flex flex-col sm:flex-row gap-3 justify-center">
       <a
-        href={`sms:?&body=${encodeURIComponent(`${shareText} ${shareUrl}`)}`}
+        href={`sms:?&body=${encodeURIComponent(`${smsText} ${shareUrl}`)}`}
         className={buttonClasses}
       >
         <MessageCircle size={18} className="mr-2" />
