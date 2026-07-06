@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CountdownTimer from './CountdownTimer'
 import SignupForm from './SignupForm'
+import ShareButtons from './ShareButtons'
 
 export const metadata: Metadata = {
   title: 'The Wrong Jesus (Coming September 15, 2026)',
@@ -80,6 +81,13 @@ export default function TheWrongJesusPage() {
               the One who rode in on His own terms.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* SHARE */}
+      <section className="bg-navy-900 py-14 border-t border-navy-800">
+        <div className="max-w-2xl mx-auto px-6 lg:px-8">
+          <ShareButtons />
         </div>
       </section>
 
