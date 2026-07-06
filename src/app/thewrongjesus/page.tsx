@@ -85,7 +85,7 @@ export default function TheWrongJesusPage() {
       </section>
 
       {/* SHARE */}
-      <section className="bg-navy-900 py-14 border-t border-navy-800">
+      <section className="bg-navy-950 py-14 border-t border-navy-800">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <ShareButtons />
         </div>
