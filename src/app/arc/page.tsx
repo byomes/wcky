@@ -5,6 +5,27 @@ export const metadata: Metadata = {
   title: 'Join the ARC Team',
   description:
     'Join the Advance Reader Corps for The Wrong Jesus: read early, review honestly, and help get the word out.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 const commitments = [

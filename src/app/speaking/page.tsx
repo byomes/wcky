@@ -4,6 +4,27 @@ export const metadata: Metadata = {
   title: 'Speaking',
   description:
     'Book Dr. William C.K. Yomes for your church, conference, or academic event.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 const topics = [

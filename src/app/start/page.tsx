@@ -7,6 +7,27 @@ export const metadata: Metadata = {
   title: 'Start Here',
   description:
     'Links, resources, and free downloads from Dr. William C.K. Yomes: pastor, apologist, and author.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 const links = [

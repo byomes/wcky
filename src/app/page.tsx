@@ -13,6 +13,27 @@ export const metadata: Metadata = {
   },
   description:
     'Dr. William C.K. Yomes: pastor, apologist, and author. Theology, apologetics, and resources for Christians who take their faith seriously.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 export default function HomePage() {

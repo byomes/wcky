@@ -20,6 +20,27 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: 'Curriculum Vitae',
   description: 'Academic CV: Dr. William C.K. Yomes, DMin, MA. Pastor, Apologist, Author.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {

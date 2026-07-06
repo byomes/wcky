@@ -5,6 +5,27 @@ export const metadata: Metadata = {
   title: 'The Dreamstone Chronicles',
   description:
     "The Dreamstone Chronicles: a children's fantasy series by William CK Yomes. Written for the family.",
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 export default function DreastonePage() {

@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'William CK Yomes: pastor, apologist, and author. Senior Pastor of Catalyst Community Church and founding apologist of Faith Makes Sense.',
+  openGraph: {
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
+  },
 }
 
 export default function AboutPage() {

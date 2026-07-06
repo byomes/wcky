@@ -5,10 +5,25 @@ export const metadata: Metadata = {
   title: 'Book an Appointment',
   openGraph: {
     title: 'Book an Appointment with Dr. Bill Yomes',
-    images: ['/images/og-meet.png'],
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
-    images: ['/images/og-meet.png'],
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
   },
 }
 

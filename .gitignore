@@ -11,3 +11,6 @@ next-env.d.ts
 .env*.local
 .env*
 tsconfig.tsbuildinfo
+
+# Manuscript chapter backups (not part of the site build)
+chapters_backup_*/
