@@ -131,7 +131,7 @@ export async function POST(req: NextRequest) {
     ? [
         `Hi ${name},`,
         ``,
-        `Your virtual appointment with Pastor Bill is confirmed.`,
+        `Your virtual appointment with Dr. Bill is confirmed.`,
         ``,
         `Date: ${dateStr}`,
         `Time: ${timeRange}`,
@@ -151,14 +151,14 @@ export async function POST(req: NextRequest) {
     : [
         `Hi ${name},`,
         ``,
-        `Your appointment request with Pastor Bill has been received.`,
+        `Your appointment request with Dr. Bill has been received.`,
         ``,
         `Date: ${dateStr}`,
         `Time: ${timeRange}`,
         ``,
         `Topic: ${context}`,
         ``,
-        `Pastor Bill will be in touch to confirm the location details.`,
+        `Dr. Bill will be in touch to confirm the location details.`,
         ``,
         `Sincerely,`,
         `Watson`,
@@ -171,8 +171,8 @@ export async function POST(req: NextRequest) {
     from: process.env.WATSON_SMTP_FROM,
     to: email,
     subject: isVirtual
-      ? `Your Virtual Appointment with Pastor Bill: ${dateStr}`
-      : `Your Appointment with Pastor Bill: ${dateStr}`,
+      ? `Your Virtual Appointment with Dr. Bill: ${dateStr}`
+      : `Your Appointment with Dr. Bill: ${dateStr}`,
     text: emailLines.join('\n'),
   })
 
