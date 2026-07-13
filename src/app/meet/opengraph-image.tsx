@@ -9,7 +9,7 @@ export default function Image() {
   return renderBrandImage({
     eyebrow: 'Need to Talk?',
     headline: [{ text: 'Book an Appointment' }, { text: 'with Dr. Bill', color: 'gold' }],
-    tagline: 'Virtual or in-person meetings with Pastor Bill.',
+    tagline: 'Virtual or in-person meetings with Dr. Bill.',
     goldLine: 'Pick a time that works for you.',
   })
 }

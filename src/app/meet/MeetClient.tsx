@@ -111,7 +111,7 @@ export default function MeetClient() {
         <div className="text-center mb-10">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">Need to Talk?</p>
           <h1 className="font-serif text-3xl font-bold text-white leading-snug">
-            Book an Appointment<br />with Pastor Bill
+            Book an Appointment<br />with Dr. Bill
           </h1>
         </div>
 
@@ -292,7 +292,7 @@ export default function MeetClient() {
                 <textarea
                   value={context}
                   onChange={e => setContext(e.target.value)}
-                  placeholder="Give Pastor Bill a brief idea of what you'd like to discuss."
+                  placeholder="Give Dr. Bill a brief idea of what you'd like to discuss."
                   rows={4}
                   className={`${inputCls} resize-none`}
                 />
@@ -325,7 +325,7 @@ export default function MeetClient() {
             <p className="text-slate-400 leading-relaxed text-sm max-w-xs mx-auto">
               {result?.isVirtual
                 ? 'A Google Meet link will be in your confirmation email.'
-                : 'Pastor Bill will be in touch to confirm the location details.'}
+                : 'Dr. Bill will be in touch to confirm the location details.'}
             </p>
 
             <div className="mt-8 p-4 bg-navy-800 border border-navy-700 text-left">
