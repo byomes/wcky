@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 type AppointmentType = 'virtual' | 'inperson'
 type Step = 1 | 2 | 3 | 4 | 5
@@ -50,6 +50,7 @@ export default function MeetClient() {
   const [submitting,        setSubmitting]        = useState(false)
   const [result,            setResult]            = useState<BookResult | null>(null)
   const [error,             setError]             = useState<string | null>(null)
+  const submittingRef = useRef(false)
 
   useEffect(() => {
     if (step !== 3 || !duration) return
@@ -73,6 +74,8 @@ export default function MeetClient() {
 
   async function handleBook() {
     if (!name || !email || !selectedSlot) return
+    if (submittingRef.current) return
+    submittingRef.current = true
     setSubmitting(true)
     setError(null)
     try {
@@ -88,6 +91,7 @@ export default function MeetClient() {
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Something went wrong. Please try again.')
     } finally {
+      submittingRef.current = false
       setSubmitting(false)
     }
   }
