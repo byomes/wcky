@@ -4,6 +4,11 @@ import nodemailer from 'nodemailer'
 
 const CALENDAR_ID = 'bill.yomes@gmail.com'
 
+const VALID_DURATIONS: Record<string, number[]> = {
+  virtual: [15, 30],
+  inperson: [30],
+}
+
 function fmt(iso: string, opts: Intl.DateTimeFormatOptions): string {
   return new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', ...opts }).format(new Date(iso))
 }
@@ -16,6 +21,10 @@ export async function POST(req: NextRequest) {
 
   if (!name || !email || !start || !end || !type || !context) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+  }
+
+  if (!VALID_DURATIONS[type]?.includes(duration)) {
+    return NextResponse.json({ error: 'Invalid duration' }, { status: 400 })
   }
 
   const isVirtual = type === 'virtual'
@@ -63,9 +72,12 @@ export async function POST(req: NextRequest) {
   const confirmationId = crypto.randomUUID()
 
   try {
-    await fetch('http://100.117.237.96:5200/api/book-appointment', {
+    await fetch(`${process.env.WATSON_API_URL}/api/book-appointment`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Watson-Key': process.env.WATSON_API_KEY ?? '',
+      },
       body: JSON.stringify({
         confirmation_id: confirmationId,
         event_id: eventId,
@@ -74,6 +86,7 @@ export async function POST(req: NextRequest) {
         appointment_type: type,
         scheduled_at: start,
       }),
+      signal: AbortSignal.timeout(5000),
     })
   } catch (e) {
     console.error('[meet/book] watson store failed (non-fatal):', e)
