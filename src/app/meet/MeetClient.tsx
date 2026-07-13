@@ -8,8 +8,8 @@ type Step = 1 | 2 | 3 | 4 | 5
 interface Slot { start: string; end: string }
 interface BookResult { meetLink?: string | null; isVirtual?: boolean }
 
-const VIRTUAL_DURATIONS  = [15, 30, 60]
-const INPERSON_DURATIONS = [30, 60]
+const VIRTUAL_DURATIONS  = [15, 30]
+const INPERSON_DURATIONS = [30]
 
 function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', {
@@ -32,7 +32,7 @@ function fmtDateHeader(iso: string) {
     timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric',
   })
 }
-function durLabel(d: number) { return d === 60 ? '1 hour' : `${d} minutes` }
+function durLabel(d: number) { return `${d} minutes` }
 
 export default function MeetClient() {
   const [step,              setStep]              = useState<Step>(1)

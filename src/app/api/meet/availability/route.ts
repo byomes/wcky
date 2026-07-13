@@ -50,7 +50,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const duration = parseInt(searchParams.get('duration') ?? '30', 10)
 
-  if (![15, 30, 60].includes(duration)) {
+  if (![15, 30].includes(duration)) {
     return NextResponse.json({ error: 'Invalid duration' }, { status: 400 })
   }
 
