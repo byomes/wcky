@@ -19,7 +19,7 @@ export type BrandImageConfig = {
   headline: HeadlineLine[]
   tagline: string
   goldLine: string
-  media: Media
+  media?: Media
 }
 
 const MEDIA_BOX: Record<Media['type'], { width: number; height: number }> = {
@@ -46,11 +46,11 @@ async function loadFonts() {
 export async function renderBrandImage(config: BrandImageConfig) {
   const [fonts, mediaFile] = await Promise.all([
     loadFonts(),
-    fs.readFile(path.join(process.cwd(), config.media.src)),
+    config.media ? fs.readFile(path.join(process.cwd(), config.media.src)) : Promise.resolve(null),
   ])
 
-  const mediaSrc = `data:image/png;base64,${mediaFile.toString('base64')}`
-  const box = MEDIA_BOX[config.media.type]
+  const mediaSrc = mediaFile ? `data:image/png;base64,${mediaFile.toString('base64')}` : null
+  const box = config.media ? MEDIA_BOX[config.media.type] : null
 
   return new ImageResponse(
     (
@@ -60,41 +60,44 @@ export async function renderBrandImage(config: BrandImageConfig) {
           height: '100%',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: config.media ? 'flex-start' : 'center',
           padding: '70px',
           backgroundColor: '#0f0e0d',
           backgroundImage: 'linear-gradient(135deg, #0f0e0d 0%, #181715 100%)',
           fontFamily: 'Inter',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            flexShrink: 0,
-            width: box.width,
-            height: box.height,
-            borderRadius: config.media.type === 'circle' ? '50%' : 0,
-            overflow: 'hidden',
-            boxShadow:
-              config.media.type === 'portrait'
-                ? '0 40px 80px rgba(0, 0, 0, 0.55)'
-                : '0 30px 70px rgba(0, 0, 0, 0.55)',
-          }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={mediaSrc}
-            width={box.width}
-            height={box.height}
-            style={{ width: box.width, height: box.height, objectFit: 'cover' }}
-          />
-        </div>
+        {config.media && box && (
+          <div
+            style={{
+              display: 'flex',
+              flexShrink: 0,
+              width: box.width,
+              height: box.height,
+              borderRadius: config.media.type === 'circle' ? '50%' : 0,
+              overflow: 'hidden',
+              boxShadow:
+                config.media.type === 'portrait'
+                  ? '0 40px 80px rgba(0, 0, 0, 0.55)'
+                  : '0 30px 70px rgba(0, 0, 0, 0.55)',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={mediaSrc!}
+              width={box.width}
+              height={box.height}
+              style={{ width: box.width, height: box.height, objectFit: 'cover' }}
+            />
+          </div>
+        )}
 
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            marginLeft: 64,
-            width: 616,
+            marginLeft: config.media ? 64 : 0,
+            width: config.media ? 616 : 860,
           }}
         >
           <div
