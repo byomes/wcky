@@ -7,6 +7,8 @@ import { redirect }  from 'next/navigation'
 import type { Metadata } from 'next'
 import ArcDashboard from './ArcDashboard'
 import ManuscriptReader from './ManuscriptReader'
+import CommitmentsPreview from './CommitmentsPreview'
+import CountdownTimer from '@/app/thewrongjesus/CountdownTimer'
 import { ARC_MANUSCRIPT_UNLOCK, ARC_MANUSCRIPT_CLOSE } from '@/lib/launch-dates'
 
 export const metadata: Metadata = {
@@ -154,8 +156,14 @@ export default async function ArcDashboardPage() {
         </div>
 
         {manuscriptStatus === 'locked' && (
-          <div className="max-w-[680px] mx-auto px-6 py-24 text-center">
-            <p className="text-slate-400 text-lg">Manuscript unlocks July 15, 2026.</p>
+          <div className="max-w-[680px] mx-auto px-6 py-16">
+            <div className="flex justify-center mb-12">
+              <CountdownTimer targetDate={ARC_MANUSCRIPT_UNLOCK} label="until manuscript unlocks" size="sm" />
+            </div>
+            <p className="text-gold-500 text-xs tracking-[0.2em] uppercase font-semibold mb-4 text-center">
+              Your Commitments
+            </p>
+            <CommitmentsPreview commitments={data.commitments} />
           </div>
         )}
         {manuscriptStatus === 'closed' && (
