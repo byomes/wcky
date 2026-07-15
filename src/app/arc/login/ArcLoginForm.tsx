@@ -66,6 +66,12 @@ export default function ArcLoginForm({ initialMessage }: { initialMessage?: stri
       >
         {loading ? 'Logging in…' : 'Log In'}
       </button>
+
+      <p className="text-center">
+        <a href="/arc/forgot-password" className="text-slate-500 hover:text-gold-400 text-sm transition-colors">
+          Forgot password?
+        </a>
+      </p>
     </form>
   )
 }
