@@ -29,41 +29,62 @@ function buildSubject(data: ConnectCardPayload): string {
   return `Connect Card — ${campusLabel(data.campus)} — ${data.firstName} ${data.lastName}${flags.join('')}`
 }
 
-function buildBody(data: ConnectCardPayload): string {
-  const lines: string[] = []
-  lines.push(`Campus: ${campusLabel(data.campus)}`)
-  lines.push(`Name: ${data.firstName} ${data.lastName}`)
-  lines.push(`Email: ${data.email}`)
-  if (data.phone && data.phone.trim()) lines.push(`Phone: ${data.phone}`)
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+function escapeHtmlMultiline(value: string): string {
+  return escapeHtml(value).replace(/\n/g, '<br>\n')
+}
+
+// Matches Bill's existing inbox convention (see ConnectCardSample.png):
+// <b>Field Label</b><br>Value<br><br> per field, omitted entirely when empty.
+function field(label: string, valueHtml: string): string {
+  return `<b>${label}</b><br>\n${valueHtml}<br>\n<br>\n`
+}
+
+function buildHtmlBody(data: ConnectCardPayload): string {
+  const parts: string[] = []
+
+  parts.push(field('Where did you attend with us?', `${campusLabel(data.campus)} Campus`))
+  parts.push(field('First Name', escapeHtml(data.firstName)))
+  parts.push(field('Last Name', escapeHtml(data.lastName)))
+  parts.push(field('Email', `<a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a>`))
+
+  if (data.phone && data.phone.trim()) {
+    parts.push(field('Phone Number', escapeHtml(data.phone)))
+  }
 
   if (data.comment && data.comment.trim()) {
-    lines.push('')
-    lines.push(`Comment: ${data.comment}`)
+    parts.push(field('Do you have a question/comment?', escapeHtmlMultiline(data.comment)))
   }
 
   if (data.nextSteps.length > 0) {
-    lines.push('')
-    lines.push('Next Steps requested:')
-    for (const step of data.nextSteps) lines.push(`- ${step}`)
+    const stepsHtml = data.nextSteps.map(step => escapeHtml(step)).join('<br>\n')
+    parts.push(field('Are you ready to take a Next Step this week?', stepsHtml))
   }
 
   if (data.firstSunday) {
-    lines.push('')
-    lines.push('First Sunday: Yes')
+    parts.push(field('Is this your first Sunday with us?', 'Yes'))
     if (data.howHeard && data.howHeard.trim()) {
-      lines.push(`Heard about us via: ${data.howHeard}`)
+      parts.push(field('Please share who/how you heard about Catalyst', escapeHtmlMultiline(data.howHeard)))
     }
   }
 
-  if (data.prayerRequest && data.prayerRequest.trim()) {
-    lines.push('')
-    const label = data.restrictToLeadership
-      ? 'Prayer request (restricted to leadership only)'
-      : 'Prayer request'
-    lines.push(`${label}: ${data.prayerRequest}`)
+  if (data.restrictToLeadership) {
+    parts.push(field('Restrict to leadership only', 'Yes'))
   }
 
-  return lines.join('\n')
+  if (data.prayerRequest && data.prayerRequest.trim()) {
+    parts.push(field('How can we pray for you this week?', escapeHtmlMultiline(data.prayerRequest)))
+  }
+
+  return parts.join('')
 }
 
 export async function POST(req: NextRequest) {
@@ -125,7 +146,7 @@ export async function POST(req: NextRequest) {
             ? { bcc: [{ email: process.env.CONNECT_CARD_BCC, name: 'Watson Intake' }] }
             : {}),
           subject: buildSubject(payload),
-          textContent: buildBody(payload),
+          htmlContent: buildHtmlBody(payload),
         }),
         signal: AbortSignal.timeout(15000),
       })
