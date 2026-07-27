@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Campus = 'wilmington' | 'online'
 
@@ -109,8 +109,6 @@ export default function ConnectCardForm() {
   const [hasStoredProfile, setHasStoredProfile] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
-  const [success, setSuccess] = useState(false)
-  const successTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const profile = readStoredProfile()
@@ -121,9 +119,6 @@ export default function ConnectCardForm() {
       setEmail(profile.email)
       setPhone(profile.phone)
       setHasStoredProfile(true)
-    }
-    return () => {
-      if (successTimeout.current) clearTimeout(successTimeout.current)
     }
   }, [])
 
@@ -173,7 +168,9 @@ export default function ConnectCardForm() {
         return
       }
 
-      // Persist only the five-field identity whitelist for next time.
+      // Persist only the five-field identity whitelist for next time (kiosk
+      // reuse on a later page load). localStorage.setItem is synchronous, so
+      // this is guaranteed to complete before the redirect below fires.
       window.localStorage.setItem(
         STORAGE_KEY,
         JSON.stringify({ campus, firstName, lastName, email, phone }),
@@ -189,9 +186,10 @@ export default function ConnectCardForm() {
       setRestrictToLeadership(false)
       setPrayerRequest('')
 
-      setSuccess(true)
-      if (successTimeout.current) clearTimeout(successTimeout.current)
-      successTimeout.current = setTimeout(() => setSuccess(false), 6000)
+      // Redirect immediately on success — no in-page banner. Cross-origin
+      // destination, so window.location.href, not the Next.js router (which
+      // only handles internal routes).
+      window.location.href = 'https://secure.subsplash.com/ui/access/7BVGB9'
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
@@ -208,11 +206,6 @@ export default function ConnectCardForm() {
       {error && (
         <p className={`text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3 ${INPUT_FONT}`}>
           {error}
-        </p>
-      )}
-      {success && (
-        <p className={`text-green-700 text-sm bg-green-50 border border-green-200 rounded-lg px-4 py-3 ${INPUT_FONT}`}>
-          Thanks! Your connect card was submitted.
         </p>
       )}
 
