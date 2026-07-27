@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 type Campus = 'wilmington' | 'online'
@@ -187,9 +188,19 @@ export default function ConnectCardForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <h1 className={`text-[28px] font-extrabold tracking-[-0.7px] text-[#222222] ${HEADING_FONT}`}>
-        Catalyst Connect Card
-      </h1>
+      <div className="flex items-center gap-2">
+        <Image
+          src="/images/catalyst-logo-black.png"
+          alt="Catalyst Community Church"
+          width={816}
+          height={934}
+          className="w-auto h-[20.5px]"
+          priority
+        />
+        <h1 className={`text-[28px] font-extrabold tracking-[-0.7px] text-[#222222] ${HEADING_FONT}`}>
+          Catalyst Connect Card
+        </h1>
+      </div>
 
       {error && (
         <p className={`text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3 ${INPUT_FONT}`}>
