@@ -42,7 +42,17 @@ const checkboxClass = 'mt-0.5 shrink-0 w-4 h-4 cursor-pointer'
 const checkboxLabelClass = `text-black font-normal text-[16.5px] leading-relaxed cursor-pointer ${HEADING_FONT}`
 
 function formatPhone(raw: string): string {
-  const digits = raw.replace(/\D/g, '').slice(0, 10)
+  let digits = raw.replace(/\D/g, '')
+  // iOS/browser autofill inserts E.164-ish values ("+13025590000") in a
+  // single change event with the full string, not keystroke-by-keystroke —
+  // strip the leading US country code before masking, or it occupies the
+  // first area-code digit slot and shifts every digit after it by one.
+  // Only strip when it's unambiguous (exactly 11 digits, leading 1) — don't
+  // guess or truncate for anything else, so a genuinely different-length
+  // (e.g. non-US) number isn't silently mangled.
+  if (digits.length === 11 && digits.startsWith('1')) {
+    digits = digits.slice(1)
+  }
   if (digits.length === 0) return ''
   if (digits.length < 4) return `(${digits}`
   if (digits.length < 7) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
