@@ -31,8 +31,12 @@ const NEXT_STEP_OPTIONS = [
 const HEADING_FONT = 'font-[family-name:var(--font-connect-card-heading)]'
 const INPUT_FONT = 'font-[family-name:var(--font-connect-card-input)]'
 
+// text-base (16px), not text-sm (14px) -- iOS Safari auto-zooms the viewport
+// on focus for any field under 16px. Fixing font-size here (not
+// maximum-scale/user-scalable on the viewport meta tag) keeps pinch-zoom
+// available everywhere else on the page for anyone who needs it.
 const inputClass =
-  `w-full bg-[#ebebeb] border-0 text-black placeholder-gray-500 rounded-lg px-3 py-3 text-sm ${INPUT_FONT} focus:outline-none focus:ring-2 focus:ring-black/20 transition-shadow`
+  `w-full bg-[#ebebeb] border-0 text-black placeholder-gray-500 rounded-lg px-3 py-3 text-base ${INPUT_FONT} focus:outline-none focus:ring-2 focus:ring-black/20 transition-shadow`
 const labelClass = `block text-black font-bold text-[15px] mb-2 ${HEADING_FONT}`
 const checkboxRowClass = 'flex items-start gap-3'
 // No accent-color override — the live form doesn't set one either (its radio/
