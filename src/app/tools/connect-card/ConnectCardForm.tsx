@@ -24,12 +24,22 @@ const NEXT_STEP_OPTIONS = [
   'I want to join a ministry team',
 ]
 
+// Font families, colors, radii, and fill below are extracted from the live
+// Subsplash form's computed styles (Playwright), not approximated by eye —
+// see the connect-card visual-parity pass commit for the extraction method.
+// Heading font is Montserrat standing in for Proxima Nova (paid, see layout.tsx).
+const HEADING_FONT = 'font-[family-name:var(--font-connect-card-heading)]'
+const INPUT_FONT = 'font-[family-name:var(--font-connect-card-input)]'
+
 const inputClass =
-  'w-full bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black/10 transition-colors'
-const labelClass = 'block text-sm font-medium text-gray-800 mb-1.5'
+  `w-full bg-[#ebebeb] border-0 text-black placeholder-gray-500 rounded-lg px-3 py-3 text-sm ${INPUT_FONT} focus:outline-none focus:ring-2 focus:ring-black/20 transition-shadow`
+const labelClass = `block text-black font-bold text-[15px] mb-2 ${HEADING_FONT}`
 const checkboxRowClass = 'flex items-start gap-3'
-const checkboxClass = 'mt-0.5 shrink-0 w-4 h-4 accent-black cursor-pointer'
-const checkboxLabelClass = 'text-sm text-gray-700 leading-relaxed cursor-pointer'
+// No accent-color override — the live form doesn't set one either (its radio/
+// checkbox "blue" is just the browser's own default accent-color: auto, not
+// a deliberate brand color), so native default rendering is the faithful match.
+const checkboxClass = 'mt-0.5 shrink-0 w-4 h-4 cursor-pointer'
+const checkboxLabelClass = `text-black font-normal text-[16.5px] leading-relaxed cursor-pointer ${HEADING_FONT}`
 
 function formatPhone(raw: string): string {
   const digits = raw.replace(/\D/g, '').slice(0, 10)
@@ -176,18 +186,18 @@ export default function ConnectCardForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
-      <h1 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900">
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <h1 className={`text-[28px] font-extrabold tracking-[-0.7px] text-[#222222] ${HEADING_FONT}`}>
         Catalyst Connect Card
       </h1>
 
       {error && (
-        <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+        <p className={`text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3 ${INPUT_FONT}`}>
           {error}
         </p>
       )}
       {success && (
-        <p className="text-green-700 text-sm bg-green-50 border border-green-200 rounded-lg px-4 py-3">
+        <p className={`text-green-700 text-sm bg-green-50 border border-green-200 rounded-lg px-4 py-3 ${INPUT_FONT}`}>
           Thanks! Your connect card was submitted.
         </p>
       )}
@@ -196,7 +206,7 @@ export default function ConnectCardForm() {
         <button
           type="button"
           onClick={handleClear}
-          className="text-xs text-gray-500 underline underline-offset-2 hover:text-gray-800"
+          className={`text-xs text-gray-500 underline underline-offset-2 hover:text-gray-800 ${INPUT_FONT}`}
         >
           Not you? Clear
         </button>
@@ -233,7 +243,7 @@ export default function ConnectCardForm() {
       </fieldset>
 
       {campus && (
-        <div className="space-y-6">
+        <div className="space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className={labelClass} htmlFor="firstName">First Name *</label>
@@ -319,7 +329,8 @@ export default function ConnectCardForm() {
             </div>
           </fieldset>
 
-          <div>
+          <fieldset>
+            <legend className={labelClass}>Is this your first Sunday with us?</legend>
             <label className={checkboxRowClass}>
               <input
                 type="checkbox"
@@ -328,12 +339,7 @@ export default function ConnectCardForm() {
                 onChange={e => setFirstSunday(e.target.checked)}
                 className={checkboxClass}
               />
-              <span className={checkboxLabelClass}>
-                <span className="block font-medium text-gray-800 mb-0.5">
-                  Is this your first Sunday with us?
-                </span>
-                Yes it is!
-              </span>
+              <span className={checkboxLabelClass}>Yes it is!</span>
             </label>
 
             {firstSunday && (
@@ -353,9 +359,13 @@ export default function ConnectCardForm() {
                 <CharCounter value={howHeard} />
               </div>
             )}
-          </div>
+          </fieldset>
 
-          <div>
+          <fieldset>
+            <legend className={labelClass}>
+              Prayer requests are shared with our church family. Please let us know if you
+              want your request shared with leadership only.
+            </legend>
             <label className={checkboxRowClass}>
               <input
                 type="checkbox"
@@ -364,15 +374,9 @@ export default function ConnectCardForm() {
                 onChange={e => setRestrictToLeadership(e.target.checked)}
                 className={checkboxClass}
               />
-              <span className={checkboxLabelClass}>
-                <span className="block font-medium text-gray-800 mb-0.5">
-                  Prayer requests are shared with our church family. Please let us know if you
-                  want your request shared with leadership only.
-                </span>
-                Please restrict my request to leadership only.
-              </span>
+              <span className={checkboxLabelClass}>Please restrict my request to leadership only.</span>
             </label>
-          </div>
+          </fieldset>
 
           <div>
             <label className={labelClass} htmlFor="prayerRequest">
@@ -395,7 +399,7 @@ export default function ConnectCardForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full sm:w-auto bg-black hover:bg-gray-900 disabled:opacity-60 text-white font-semibold py-3.5 px-10 rounded-full text-sm tracking-wide transition-colors"
+        className={`w-full sm:w-auto bg-[#131313] hover:bg-black disabled:opacity-60 text-white font-medium py-3 px-10 rounded-full text-[15px] transition-colors ${HEADING_FONT}`}
       >
         {submitting ? 'Submitting…' : 'Submit'}
       </button>
