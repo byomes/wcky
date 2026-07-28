@@ -6,6 +6,7 @@ import { cookies } from 'next/headers'
 import { redirect }  from 'next/navigation'
 import type { Metadata } from 'next'
 import ArcDashboard from './ArcDashboard'
+import ArcFeedbackBox from './ArcFeedbackBox'
 import ManuscriptReader from './ManuscriptReader'
 import CommitmentsPreview from './CommitmentsPreview'
 import CountdownTimer from '@/app/thewrongjesus/CountdownTimer'
@@ -139,6 +140,8 @@ export default async function ArcDashboardPage() {
           </div>
         </section>
       </div>
+
+      <ArcFeedbackBox />
 
       {/* Manuscript reader */}
       <div className="border-t-4 border-navy-800">
