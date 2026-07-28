@@ -45,7 +45,8 @@ export default function ArcFeedbackBox() {
         </h3>
         <p className="text-slate-400 text-sm mb-4">
           Anything you share here may be used (with your permission at launch)
-          as a reader quote for the book.
+          as a reader quote for the book. Please feel free to leave as many
+          comments as you like.
         </p>
 
         <textarea
