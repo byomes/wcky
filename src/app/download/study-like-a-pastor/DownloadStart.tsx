@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 const FILE_PATH = '/guides/study-like-a-pastor.pdf'
 const FILE_NAME = 'Study-Like-A-Pastor-WilliamCKYomes.pdf'
@@ -21,6 +22,14 @@ export default function DownloadStart() {
         <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
           You&apos;re All Set
         </p>
+        <div className="relative w-32 aspect-[825/1275] mx-auto mb-6 shadow-2xl">
+          <Image
+            src="/images/lead-magnet2.png"
+            alt="How to Study Like a Pastor"
+            fill
+            className="object-cover"
+          />
+        </div>
         <h1 className="font-serif text-4xl font-bold text-white leading-tight mb-6">
           Your Guide Is Ready
         </h1>
