@@ -7,6 +7,21 @@ import type { Post, PostFrontmatter } from '@/types'
 
 const POSTS_DIR = path.join(process.cwd(), 'content/blog')
 
+/**
+ * Merge a post's categories, legacy singular `category`, and tags into a single
+ * de-duplicated label list, preserving first-seen order. Posts commonly set both
+ * `category` and `categories` to the same value, so exact-string duplicates are
+ * collapsed here rather than repeated in the UI.
+ */
+export function getPostLabels(frontmatter: PostFrontmatter): string[] {
+  const labels = [
+    ...(frontmatter.categories ?? []),
+    ...(frontmatter.category ? [frontmatter.category] : []),
+    ...(frontmatter.tags ?? []),
+  ]
+  return Array.from(new Set(labels))
+}
+
 export function getAllPosts(): Post[] {
   if (!fs.existsSync(POSTS_DIR)) return []
 

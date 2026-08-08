@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getAllPosts, getPostBySlug } from '@/lib/posts'
+import { getAllPosts, getPostBySlug, getPostLabels } from '@/lib/posts'
 
 interface Props {
   params: { slug: string }
@@ -45,11 +45,7 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getPostBySlug(params.slug)
   if (!post) notFound()
 
-  const labels = [
-    ...(post.frontmatter.categories ?? []),
-    ...(post.frontmatter.category ? [post.frontmatter.category] : []),
-    ...(post.frontmatter.tags ?? []),
-  ]
+  const labels = getPostLabels(post.frontmatter)
 
   return (
     <>
