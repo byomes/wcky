@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getAllPosts } from '@/lib/posts'
+import { getAllPosts, getPostLabels } from '@/lib/posts'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -65,11 +65,7 @@ export default function BlogPage() {
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div className="flex-1">
                       {(() => {
-                        const labels = [
-                          ...(post.frontmatter.categories ?? []),
-                          ...(post.frontmatter.category ? [post.frontmatter.category] : []),
-                          ...(post.frontmatter.tags ?? []),
-                        ]
+                        const labels = getPostLabels(post.frontmatter)
                         return labels.length > 0 ? (
                           <div className="flex flex-wrap gap-2 mb-3">
                             {labels.map(label => (
