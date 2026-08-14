@@ -1,40 +1,11 @@
 import type { Metadata } from 'next'
-import ArcSignupForm from './ArcSignupForm'
+import ArcInterestForm from './ArcInterestForm'
 
 export const metadata: Metadata = {
-  title: 'Join the ARC Team',
+  title: 'Advance Reader Corps',
   description:
-    'Join the Advance Reader Corps for The Wrong Jesus: read early, review honestly, and help get the word out.',
-  openGraph: {
-    images: [
-      {
-        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: [
-      {
-        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-      },
-    ],
-  },
+    'Read early. Give honest feedback. Help a book find its footing before launch day. Join the waitlist for the next ARC team.',
 }
-
-const commitments = [
-  'Pray for the book\'s impact',
-  'Read the book before the launch date',
-  'Post an honest review on Amazon on launch day',
-  'Share about the book on at least one social media platform',
-  'Tell people in your life who you think would connect with this book',
-]
 
 export default function ArcPage() {
   return (
@@ -43,56 +14,72 @@ export default function ArcPage() {
       <section className="bg-navy-950 pt-32 pb-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            The Wrong Jesus
+            Advance Reader Corps
           </p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Join the ARC Team
+            Wanna Join The ARC?
           </h1>
           <p className="text-slate-300 text-xl leading-relaxed">
-            ARC stands for <span className="text-gold-400 font-semibold">Advance Reader Corps</span>.
-            You read early. You review honestly. You help get the word out.
+            Before a book reaches the public, a small group of readers gets it first.
+            They read early, give honest feedback, and help the book find its footing
+            before launch day. That&apos;s ARC.
           </p>
         </div>
       </section>
 
-      {/* Commitments */}
+      {/* Why It Matters */}
       <section className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            What ARC Members Do
+            Why It Matters
           </p>
           <h2 className="font-serif text-3xl font-bold text-white mb-10">
-            Five Commitments
+            A Book Gets Better With Real Readers
           </h2>
-          <ol className="space-y-5">
-            {commitments.map((commitment, index) => (
-              <li key={index} className="flex gap-5 items-start">
-                <span className="shrink-0 w-8 h-8 flex items-center justify-center border border-gold-600/50 text-gold-500 text-xs font-bold font-serif">
-                  {index + 1}
-                </span>
-                <p className="text-slate-300 leading-relaxed pt-1">{commitment}</p>
-              </li>
-            ))}
-          </ol>
+          <p className="text-slate-300 leading-relaxed">
+            Every book I write goes through an ARC team before it goes out into the
+            world. Early readers catch what I can&apos;t see anymore after months of
+            writing. They tell me where a chapter lands and where it doesn&apos;t. And
+            on launch day, their honest reviews are often the first thing a new reader
+            sees.
+          </p>
         </div>
       </section>
 
-      {/* Signup Form */}
+      {/* What You Get */}
       <section className="bg-navy-950 py-16 lg:py-24 border-t border-navy-800">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            Ready to Join?
+            What You Get
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-white mb-10">
+            Early Access. Real Input.
+          </h2>
+          <p className="text-slate-300 leading-relaxed">
+            ARC readers get the manuscript before anyone else — weeks ahead of the
+            public release. It&apos;s a chance to read something before it&apos;s
+            finished being shaped, and to have a real say in how it lands. Your
+            feedback isn&apos;t a formality; it shapes edits, and your honest review
+            helps the book find its first readers.
+          </p>
+        </div>
+      </section>
+
+      {/* Join The List */}
+      <section className="bg-navy-950 py-16 lg:py-24 border-t border-navy-800">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+            Join The List
           </p>
           <h2 className="font-serif text-3xl font-bold text-white mb-4">
-            Sign Up for the ARC Team
+            Be First to Know
           </h2>
           <p className="text-slate-400 leading-relaxed mb-10">
-            Fill out the form below. By checking the box, you&apos;re committing
-            to all five ARC Partner responsibilities. We&apos;ll be in touch with
-            details as the launch approaches.
+            There isn&apos;t an open ARC team right now. Leave your name and email,
+            and you&apos;ll be the first to hear when the next one opens.
           </p>
 
-          <ArcSignupForm />
+          <ArcInterestForm />
         </div>
       </section>
     </>
