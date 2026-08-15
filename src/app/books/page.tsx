@@ -58,43 +58,7 @@ export default function BooksPage() {
 
           <div className="space-y-0">
 
-            {/* Book 1: He Is Risen (Published) */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
-              <div className="lg:col-span-1">
-                <Image
-                  src="/images/HeIsRisen-Cover.jpg"
-                  alt="He Is Risen book cover"
-                  width={344}
-                  height={516}
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="lg:col-span-3">
-                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
-                  Published
-                </span>
-                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                  He Is Risen
-                </h2>
-                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                  A careful examination of the resurrection accounts across the four Gospels. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
-                </p>
-                <a
-                  href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-                >
-                  Order on Amazon
-                </a>
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-navy-800" />
-
-            {/* Book 2: The Wrong Jesus (Coming Soon) */}
+            {/* Book 1: The Wrong Jesus (Coming Soon) */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
               <div className="lg:col-span-1">
                 <Image
@@ -126,6 +90,42 @@ export default function BooksPage() {
                   className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
                 >
                   Let Me Know When It&apos;s Available
+                </a>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-navy-800" />
+
+            {/* Book 2: He Is Risen (Published) */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/HeIsRisen-Cover.jpg"
+                  alt="He Is Risen book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  He Is Risen
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  A careful examination of the resurrection accounts across the four Gospels. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
+                </p>
+                <a
+                  href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Order on Amazon
                 </a>
               </div>
             </div>
