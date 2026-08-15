@@ -142,9 +142,8 @@ export default function BooksPage() {
               The Dreamstone Chronicles
             </p>
             <p className="text-slate-300 text-xl leading-relaxed mb-5">
-              The Dreamstone Chronicles is a fantasy fiction series born out of
-              bedtime stories and the belief that great stories point to a
-              greater Story.
+              The Dreamstone Chronicles is a fantasy fiction series written to
+              remind children of the power of family.
             </p>
             <p className="text-slate-400 leading-relaxed">
               Written for children, enjoyed by the whole family.
