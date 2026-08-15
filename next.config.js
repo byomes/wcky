@@ -5,5 +5,19 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/theology',
+        destination: '/books',
+        permanent: true,
+      },
+      {
+        source: '/dreamstone',
+        destination: '/books',
+        permanent: true,
+      },
+    ]
+  },
 }
 module.exports = nextConfig

@@ -9,8 +9,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/start', label: 'Start' },
   { href: '/blog', label: 'Blog' },
-  { href: '/theology', label: 'Theology' },
-  { href: '/dreamstone', label: 'Dreamstone' },
+  { href: '/books', label: 'Books' },
   { href: '/arc', label: 'ARC' },
 ]
 
