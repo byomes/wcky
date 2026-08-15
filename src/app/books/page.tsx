@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Books',
@@ -27,131 +28,232 @@ export const metadata: Metadata = {
   },
 }
 
-const books = [
-  {
-    id: 1,
-    title: 'The Case for the Resurrection',
-    subtitle: "Historical Evidence for Christianity's Central Claim",
-    year: '2023',
-    publisher: 'Placeholder Publisher',
-    description:
-      'A rigorous examination of the historical evidence for the resurrection of Jesus Christ. Drawing on the latest New Testament scholarship and historiographical methodology, Dr. Yomes presents a compelling case that the resurrection is not merely a matter of faith but of historical fact.',
-    buyLinks: { amazon: '#', barnesNoble: '#' },
-    tags: ['Apologetics', 'History', 'New Testament'],
-  },
-  {
-    id: 2,
-    title: 'Faith That Thinks',
-    subtitle: 'An Introduction to Christian Apologetics',
-    year: '2021',
-    publisher: 'Placeholder Publisher',
-    description:
-      'An accessible guide to defending the Christian faith, equipping believers to engage thoughtfully with the most pressing intellectual challenges of our time. Ideal for small groups, college students, and anyone who wants to know not just what they believe, but why.',
-    buyLinks: { amazon: '#', barnesNoble: '#' },
-    tags: ['Apologetics', 'Introduction', 'Faith'],
-  },
-  {
-    id: 3,
-    title: "The Preacher's Creed",
-    subtitle: 'Expository Preaching in the 21st Century',
-    year: '2019',
-    publisher: 'Placeholder Publisher',
-    description:
-      'A theology and practice of biblical preaching, calling pastors back to the power and centrality of the proclaimed Word of God. Written from decades of pastoral experience, this book combines deep theological conviction with practical wisdom for the modern pulpit.',
-    buyLinks: { amazon: '#', barnesNoble: '#' },
-    tags: ['Preaching', 'Pastoral Ministry', 'Theology'],
-  },
-]
-
 export default function BooksPage() {
   return (
     <>
+      {/* Header */}
       <section className="bg-navy-950 pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
             Published Works
           </p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Books by
-            <br />
-            <span className="text-gold-400">Dr. Yomes</span>
+            Books
           </h1>
         </div>
       </section>
 
+      {/* Theology & Apologetics */}
       <section className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="space-y-0">
-            {books.map((book, index) => (
-              <div
-                key={book.id}
-                className={`grid grid-cols-1 lg:grid-cols-4 gap-10 py-16 ${
-                  index > 0 ? 'border-t border-navy-800' : ''
-                }`}
-              >
-                <div className="lg:col-span-1">
-                  <div className="aspect-[2/3] bg-navy-800 border border-navy-700 flex items-center justify-center">
-                    <p className="text-slate-600 text-xs text-center px-4">
-                      Book cover
-                      <br />
-                      placeholder
-                    </p>
-                  </div>
-                </div>
+          <div className="max-w-3xl mb-4">
+            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+              Theology &amp; Apologetics
+            </p>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Books written for the church, because theology belongs to everyone,
+              not just the academy.
+            </p>
+          </div>
 
-                <div className="lg:col-span-3">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {book.tags.map(tag => (
-                      <span
-                        key={tag}
-                        className="text-xs text-gold-600 border border-gold-700/30 px-3 py-1 tracking-wide"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-slate-500 text-sm mb-2">
-                    {book.year} · {book.publisher}
-                  </p>
-                  <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white mb-2 leading-tight">
-                    {book.title}
-                  </h2>
-                  <p className="text-slate-500 text-lg mb-6">{book.subtitle}</p>
-                  <p className="text-slate-400 leading-relaxed mb-8">
-                    {book.description}
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href={book.buyLinks.amazon}
-                      className="inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-                    >
-                      Buy on Amazon
-                    </a>
-                    <a
-                      href={book.buyLinks.barnesNoble}
-                      className="inline-flex items-center justify-center px-6 py-3 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
-                    >
-                      Barnes &amp; Noble
-                    </a>
-                  </div>
-                </div>
+          <div className="space-y-0">
+
+            {/* Book 1: He Is Risen (Published) */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/HeIsRisen-Cover.jpg"
+                  alt="He Is Risen book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
               </div>
-            ))}
+
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  He Is Risen
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  A careful examination of the resurrection accounts across the four Gospels. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
+                </p>
+                <a
+                  href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Order on Amazon
+                </a>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-navy-800" />
+
+            {/* Book 2: The Wrong Jesus (Coming Soon) */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/wrong-jesus-cover-iso.png"
+                  alt="The Wrong Jesus book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-gold-500 border border-gold-600/50 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Coming Soon
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
+                  The Wrong Jesus
+                </h2>
+                <p className="text-slate-500 text-xl font-serif italic mb-5">
+                  When the Worship Is Real But the Jesus Is Wrong
+                </p>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  Many people are devoted. But devoted to a Jesus they constructed rather than the Jesus of Scripture. This book diagnoses the problem and points back to the real thing.
+                </p>
+                <a
+                  href="https://faithmakessense.kit.com/31040c8e97"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Let Me Know When It&apos;s Available
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section className="bg-navy-950 py-16 border-t border-navy-800">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-slate-400 text-lg mb-6">
-            Interested in bulk orders for your church or organization?
-          </p>
-          <a
-            href="mailto:contact@williamckyomes.com"
-            className="inline-flex items-center justify-center px-8 py-4 border border-gold-500/50 text-gold-400 text-sm font-bold tracking-wide uppercase hover:border-gold-400 hover:text-gold-300 transition-colors duration-200"
-          >
-            Contact for Bulk Orders
-          </a>
+      {/* The Dreamstone Chronicles */}
+      <section className="bg-navy-950 py-16 lg:py-24 border-t border-navy-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-4">
+            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+              The Dreamstone Chronicles
+            </p>
+            <p className="text-slate-300 text-xl leading-relaxed mb-5">
+              The Dreamstone Chronicles is a fantasy fiction series born out of
+              bedtime stories and the belief that great stories point to a
+              greater Story.
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              Written for children, enjoyed by the whole family.
+            </p>
+          </div>
+
+          <div className="space-y-0">
+
+            {/* Book 1: The Blackstone Curse */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/DS1-cover.png"
+                  alt="The Blackstone Curse book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
+              </div>
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published · Book 1
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  The Blackstone Curse
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  When teenage Ella finds herself sharing dreams with her three younger sisters, she soon discovers they are more than just dreams. Every night while the Stone sisters are asleep they are transported to a magical world and given tremendous powers. But their dreams quickly turn to nightmares as an ancient prophecy places them in the path of a rising evil. Students by day and heroes by night, the sisters must learn to master their powers, defend their family, and become the guardians they were born to be or risk being trapped in their own dreams forever.
+                </p>
+                <a
+                  href="https://www.amazon.com/Blackstone-Curse-Dream-Stone-Chronicles/dp/B09GZBXB3B/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Order on Amazon
+                </a>
+              </div>
+            </div>
+
+            <div className="border-t border-navy-800" />
+
+            {/* Book 2: The Wolf's War */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/DS2-cover.png"
+                  alt="The Wolf's War book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
+              </div>
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published · Book 2
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  The Wolf&apos;s War
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  The Stone sisters continue their exciting adventures as Ella, Charlie, Nicki, and Reagan return each night in their dreams to the magical world of Terea. There, they enhance their powers and discover more about what it means to be Guardians. Werewolves from the western mountains threaten an invasion of the peaceful lands they&apos;re sworn to protect. The heroic Stone sisters are called upon once again to fight against this new evil and to aid the mysterious and powerful Aquarian Queen in defending her kingdom.
+                </p>
+                <a
+                  href="https://www.amazon.com/gp/product/B09LZSF37J"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Order on Amazon
+                </a>
+              </div>
+            </div>
+
+            <div className="border-t border-navy-800" />
+
+            {/* Book 3: The Cave of Kings */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/DS3-cover.png"
+                  alt="The Cave of Kings book cover"
+                  width={344}
+                  height={516}
+                  className="object-cover"
+                />
+              </div>
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published · Book 3
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  The Cave of Kings
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  Ella and her sisters continue their adventure as they learn to balance the challenges of being a student in real life and a Guardian in the magical land of Terea. After the events of The Wolf&apos;s War, the Stone family must seek help from the high council and root out a hidden plot, all while being hunted by a ghostly elemental seeking to destroy them. Meeting new allies and enemies, the Guardians are on a collision course with destiny in the Cave of Kings.
+                </p>
+                <a
+                  href="https://www.amazon.com/gp/product/B09NR7CBFK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Order on Amazon
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </>

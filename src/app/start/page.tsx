@@ -53,7 +53,7 @@ const links = [
   },
   {
     label: 'Books',
-    href: '/theology',
+    href: '/books',
     external: false,
   },
 ]
