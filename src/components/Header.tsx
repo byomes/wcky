@@ -29,6 +29,7 @@ export default function Header() {
   }, [pathname])
 
   if (pathname.startsWith('/tools/connect-card')) return null
+  if (pathname.startsWith('/retreats')) return null
 
   return (
     <header
