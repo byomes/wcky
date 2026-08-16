@@ -12,6 +12,8 @@ interface Listing {
   beds: string
   baths: string
   amenities: string
+  kitchen: string
+  correction?: string
   fit: 'good' | 'warn' | 'bad'
   fitLabel: string
   notes: string
@@ -31,8 +33,9 @@ const mainListings: Listing[] = [
     price: "Cedar House rate not separately listed (2BR cottages on same property: $69/night)",
     capacity: "Up to 25–30 guests", beds: "7", baths: "Not published",
     amenities: "250 wooded acres, A/C, full kitchen, fire pit, 2.5-acre pond, hiking/biking trails, whitewater rafting 90 min away",
-    fit: "good", fitLabel: "Best fit — only listing sized for all 9 of you",
-    notes: "Also has three separate 2BR cottages at $69/night if you'd rather have more privacy than the big house. The discount is baked into the low nightly rate rather than a separate published 'pastor rate.'",
+    kitchen: "Yes — full kitchen confirmed",
+    fit: "warn", fitLabel: "Overkill for 5 — better as an option if you bring another family",
+    notes: "Same grounds/amenities as the 2BR cottage below; only makes sense over the cottage if you're bringing more people than just your household of 5.",
     phone: "3043644019", phoneDisplay: "304-364-4019", website: "https://www.mountainoffaith.org/", email: null,
     source: "my-pastor.com/faith-mountain-ministries-west-virginia.html", sourceUrl: "https://www.my-pastor.com/faith-mountain-ministries-west-virginia.html",
     free: false
@@ -43,8 +46,9 @@ const mainListings: Listing[] = [
     price: "$69/night",
     capacity: "Sleeps approx. 4–6 (2BR)", beds: "2", baths: "Not published",
     amenities: "A/C, full kitchen, fire pit, pond, hiking/biking trails",
-    fit: "warn", fitLabel: "Too small alone — pair with Cedar House",
-    notes: "Same property as above; listed separately since it's priced and booked as its own unit.",
+    kitchen: "Yes — full kitchen confirmed",
+    fit: "good", fitLabel: "Good fit — right-sized for a household of 5",
+    notes: "This is the better booking for your actual travel group — sized correctly and still cheap. Cedar House (7BR, sleeps 25–30) is only worth it if you bring extra people.",
     phone: "3043644019", phoneDisplay: "304-364-4019", website: "https://www.mountainoffaith.org/", email: null,
     source: "my-pastor.com/faith-mountain-ministries-west-virginia.html", sourceUrl: "https://www.my-pastor.com/faith-mountain-ministries-west-virginia.html",
     free: false
@@ -55,8 +59,9 @@ const mainListings: Listing[] = [
     price: "25–75% off posted B&B rates for full-time ministry staff (call for current posted rate)",
     capacity: "Whole-inn rental up to 26 guests", beds: "7 rooms", baths: "7 private baths (1 with 2-person whirlpool)",
     amenities: "2 full kitchens, 4 fireplaces, 2 living rooms, large meeting room",
-    fit: "good", fitLabel: "Good fit — book the whole inn",
-    notes: "Scholarships available if even the discounted rate is out of reach. Book the whole inn rather than a single room for a family your size.",
+    kitchen: "Yes — 2 full kitchens on site (shared inn amenity; confirm access when booking individual rooms)",
+    fit: "good", fitLabel: "Good fit — 1–2 rooms should cover a family of 5",
+    notes: "Scholarships available if even the discounted rate is out of reach. You likely don't need the whole inn — ask about the ministry-discount rate per room instead.",
     phone: null, phoneDisplay: null, website: "http://cannainnbandb.com/", email: null,
     source: "my-pastor.com/canna-country-inn-pennsylvania.html", sourceUrl: "https://www.my-pastor.com/canna-country-inn-pennsylvania.html",
     free: false
@@ -67,7 +72,8 @@ const mainListings: Listing[] = [
     price: "$15 per person, per night",
     capacity: "Sleeps 8", beds: "2", baths: "2 (with showers)",
     amenities: "Log cabin, full kitchen, big living area with couches, 2 fishing ponds, volleyball net, fireplace with wood provided, open year-round, 1.5 hr from Dayton",
-    fit: "good", fitLabel: "Strong fit — sleeps 8, cheap, kid-friendly",
+    kitchen: "Yes — full kitchen confirmed",
+    fit: "good", fitLabel: "Strong fit — sleeps 8, room to spare for a family of 5",
     notes: "One of the best-documented listings across both directories — specific price, specific capacity, specific amenities.",
     phone: "7403843328", phoneDisplay: "740-384-3328", website: null, email: null,
     source: "pastorgetaways.com/disciples-retreat/", sourceUrl: "https://pastorgetaways.com/disciples-retreat/",
@@ -79,7 +85,8 @@ const mainListings: Listing[] = [
     price: "Discounted for licensed pastors, Sunday/Monday nights, based on availability",
     capacity: "Standard hotel rooms", beds: "Not published", baths: "Not published",
     amenities: "Indoor water park — 49-ft slide, dumping buckets, shooting geysers, water basketball, kids' pool area, indoor pool & hot tubs",
-    fit: "warn", fitLabel: "Great for kids, weak for a full week (2 nights only)",
+    kitchen: "No — standard hotel room",
+    fit: "warn", fitLabel: "Great for the kids, weak for a full-week stay (2 nights only)",
     notes: "A hotel chain property, not a ministry retreat — only Sun/Mon nights available and likely requires licensed-pastor verification. Good for a quick stop, not a full vacation.",
     phone: "4198864000", phoneDisplay: "419-886-4000", website: null, email: null,
     source: "pastorgetaways.com/ramada-inn-or-comfort-inn/", sourceUrl: "https://pastorgetaways.com/ramada-inn-or-comfort-inn/",
@@ -91,22 +98,25 @@ const mainListings: Listing[] = [
     price: "Not published — contact for rate",
     capacity: "Varies — some units more/fewer bedrooms", beds: "Not published", baths: "Not published",
     amenities: "On Lake Erie between Cleveland & Toledo, fully furnished units, near Cedar Point amusement park, best availability off-season",
-    fit: "warn", fitLabel: "Good potential — confirm bedroom count",
-    notes: "Cedar Point next door is a real draw for a family of 9, but this is pitched at pastors and wives specifically — call to confirm they can host 7 kids.",
+    kitchen: "Unclear — large camp with buffet-style dining hall; individual cottage kitchens not confirmed",
+    fit: "warn", fitLabel: "Likely a good fit for 5 — confirm bedroom count",
+    notes: "Cedar Point next door is a real draw for younger kids. Pitched at pastors and wives specifically for refreshment, so confirm they're comfortable hosting children.",
     phone: "4409674861", phoneDisplay: "440-967-4861", website: "https://www.beulahbeach.org/", email: null,
     source: "pastorgetaways.com/beulah-beach/", sourceUrl: "https://pastorgetaways.com/beulah-beach/",
     free: false
   },
   {
-    name: "Laurel Ridge Cabins",
+    name: "Laurel Ridge Cabins (now Laurel Leaf Cabins)",
     loc: "near Summersville Lake, WV", miles: 300, time: "5 hr",
-    price: "Discounted rate for pastors/missionaries — contact for pricing",
-    capacity: "6 cabins total on site", beds: "Not published", baths: "Not published",
-    amenities: "15 wooded acres, 4-acre play field, volleyball, horseshoes, playground, near whitewater rafting/fishing/boating",
-    fit: "good", fitLabel: "Good fit — actively pitched as family-friendly",
-    notes: "Christian families, church groups, and pastors only. Still building out nonprofit status — call ahead to confirm current rates.",
-    phone: "3048721602", phoneDisplay: "304-872-1602", website: null, email: null,
-    source: "my-pastor.com/laurel-ridge-cabins-west-virginia.html", sourceUrl: "https://www.my-pastor.com/laurel-ridge-cabins-west-virginia.html",
+    price: "Standard vacation rental rates (no ministry discount) — see laurelleafcabins.com",
+    capacity: "6 cabins on site, each 2BR/1BA, sleeps approx. 6", beds: "2", baths: "1",
+    amenities: "Each cabin: full kitchen, living room, deck with propane BBQ, A/C & heat. 15 wooded acres, playground, near Summersville Lake/New River Gorge.",
+    kitchen: "Yes — full kitchen confirmed (per guest reviews)",
+    correction: "Property sold in Dec. 2016, renamed Laurel Leaf Cabins. New owners: 'We are not a church or ministry.' No pastor discount applies anymore.",
+    fit: "warn", fitLabel: "Kitchen and size are right, but there's no clergy discount here anymore",
+    notes: "The my-pastor.com listing is out of date — this stopped being a ministry property in 2016. Still a solid family cabin if you're fine paying standard rates.",
+    phone: "6015195713", phoneDisplay: "601-519-5713", website: "http://laurelleafcabins.com/", email: null,
+    source: "my-pastor.com/laurel-ridge-cabins-west-virginia.html (now stale)", sourceUrl: "https://www.my-pastor.com/laurel-ridge-cabins-west-virginia.html",
     free: false
   },
   {
@@ -115,6 +125,7 @@ const mainListings: Listing[] = [
     price: "Not published on listing — check sprucelake.org for current rates",
     capacity: "Large conference center, multiple lodging types", beds: "Not published", baths: "Not published",
     amenities: "Full Christian conference center in the Poconos — lodges, activities, dining hall",
+    kitchen: "Unclear — large conference center, likely dining hall service",
     fit: "warn", fitLabel: "Likely fine, but confirm ministry-family pricing directly",
     notes: "A full-scale retreat/conference center, not a small cabin — good if you want programming and other families around, less private than the others.",
     phone: "5705957505", phoneDisplay: "570-595-7505", website: "https://www.sprucelake.org/", email: "mailto:stay@sprucelake.org",
@@ -127,7 +138,8 @@ const mainListings: Listing[] = [
     price: "Not published — contact for pricing",
     capacity: "Not published", beds: "Not published", baths: "Not published",
     amenities: "Blue Ridge Mountain foothills setting, set aside specifically for those in ministry",
-    fit: "bad", fitLabel: "Unknown — too little published detail",
+    kitchen: "Not published — contact for details",
+    fit: "bad", fitLabel: "Unknown — too little published detail to confirm even for 5",
     notes: "The least documented listing found in either directory — worth a direct call before planning around it.",
     phone: "7046343903", phoneDisplay: "704-634-3903", website: "https://www.retreatcabin.com/", email: null,
     source: "pastorgetaways.com (Hidden Hollow Retreat Center)", sourceUrl: "https://pastorgetaways.com/hidden-hollow-retreat-center/",
@@ -139,8 +151,9 @@ const mainListings: Listing[] = [
     price: "Free (no cost)",
     capacity: "Pastor + wife + up to 4 children", beds: "Not published", baths: "Not published",
     amenities: "Private cottage, east of Charlotte / SSW of Raleigh",
-    fit: "warn", fitLabel: "Partial fit — capped at 4 kids, you have 7",
-    notes: "Worth calling to ask whether they can flex above the stated 4-child limit for a large family — that cap is the only thing keeping this off the 'good fit' list.",
+    kitchen: "Not confirmed — likely (private cottage), call to verify",
+    fit: "good", fitLabel: "Good fit — a household of 5 fits the published cap",
+    notes: "Only missed 'good fit' before when measured against 7 kids — with your actual travel group of 5, this comfortably fits the stated pastor+wife+up to 4 children limit.",
     phone: null, phoneDisplay: null, website: null, email: null,
     source: "my-pastor.com/draw-nigh-ministries-north-carolina.html", sourceUrl: "https://www.my-pastor.com/draw-nigh-ministries-north-carolina.html",
     free: true
@@ -151,7 +164,8 @@ const mainListings: Listing[] = [
     price: "$79/night (hotel-style rooms)",
     capacity: "Hotel-style rooms, multiple lodge options on a large campus", beds: "Not published", baths: "Not published",
     amenities: "Large Baptist conference center in the Blue Ridge Mountains, minutes from Asheville",
-    fit: "warn", fitLabel: "Likely fine on a big campus, but runs slightly over 8 hours",
+    kitchen: "No — hotel-style rooms, dining hall on campus",
+    fit: "warn", fitLabel: "Likely fine for 5 on a big campus, but runs slightly over 8 hours",
     notes: "One of two listings genuinely borderline on the 8-hour cutoff — included because it's otherwise strong and well documented.",
     phone: "8005887222", phoneDisplay: "800-588-7222", website: "https://ridgecrestconferencecenter.com/", email: null,
     source: "my-pastor.com/ridgecrest-conference-center-north-carolina.html", sourceUrl: "https://www.my-pastor.com/ridgecrest-conference-center-north-carolina.html",
@@ -163,7 +177,8 @@ const mainListings: Listing[] = [
     price: "Free (donation-based, program retreat)",
     capacity: "Pastor couple only", beds: "Not published", baths: "Not published",
     amenities: "South-central PA mountains, hosted by a retired pastor couple, meals provided",
-    fit: "bad", fitLabel: "Not a fit — 2-day pastor-couple program, not family lodging",
+    kitchen: "No — all meals provided by the host couple",
+    fit: "bad", fitLabel: "Not a fit regardless of group size — 2-day pastor-couple program",
     notes: "Included for completeness since it's on the source list, but this is a scheduled discussion/counseling retreat, not a rentable getaway.",
     phone: null, phoneDisplay: null, website: null, email: null,
     source: "my-pastor.com/churches-in-mission-guest-house-pennsylvania.html", sourceUrl: "https://www.my-pastor.com/churches-in-mission-guest-house-pennsylvania.html",
@@ -175,7 +190,8 @@ const mainListings: Listing[] = [
     price: "Free (donations optional)",
     capacity: "Sleeps 2 adults only", beds: "1 (private suite)", baths: "1",
     amenities: "Private entrance suite, kitchenette, coffee/tea, near restaurants",
-    fit: "bad", fitLabel: "Not a fit — 2-adult suite, no room for kids",
+    kitchen: "No — kitchenette only (fridge, toaster oven, microwave), no stove/oven",
+    fit: "bad", fitLabel: "Not a fit — 2-adult suite regardless of how many kids you bring",
     notes: "A couples' respite space, not family lodging — kept on the list since it's a genuinely nice option for you and Mel alone sometime.",
     phone: null, phoneDisplay: null, website: "http://www.newseasonretreat.com/", email: "mailto:info@newseasonretreat.com",
     source: "my-pastor.com/new-season-retreat-virginia.html", sourceUrl: "https://www.my-pastor.com/new-season-retreat-virginia.html",
@@ -187,7 +203,8 @@ const mainListings: Listing[] = [
     price: "Not published — contact required",
     capacity: "Not published", beds: "Not published", baths: "Not published",
     amenities: "Urban NYC location, hosts personal retreats, retreat events, and trainings",
-    fit: "bad", fitLabel: "Unknown — too little public detail for a family of 9",
+    kitchen: "Not published — contact required",
+    fit: "bad", fitLabel: "Unknown — too little public detail to evaluate for a family of 5",
     notes: "The least useful listing here for a family vacation — an urban ministry-events space.",
     phone: "7187941076", phoneDisplay: "718-794-1076", website: null, email: "mailto:HOHINTL@gmail.com",
     source: "my-pastor.com/house-of-hope-international-new-york-city.html", sourceUrl: "https://www.my-pastor.com/house-of-hope-international-new-york-city.html",
@@ -199,7 +216,8 @@ const mainListings: Listing[] = [
     price: "Discounted for missionaries/pastors (blacked out October + some summer weekends) — contact for current rate",
     capacity: "B&B, multiple rooms", beds: "Not published", baths: "Not published",
     amenities: "Bed & breakfast setting near Lancaster/Amish Country",
-    fit: "warn", fitLabel: "Possible — confirm total room count for a family of 9",
+    kitchen: "No — standard B&B model, breakfast provided",
+    fit: "good", fitLabel: "Likely a good fit — a couple of rooms should cover a family of 5",
     notes: "Blackout dates apply (October, some summer weekends) — plan around those.",
     phone: null, phoneDisplay: null, website: null, email: null,
     source: "my-pastor.com/blue-rock-b-b-and-healing-ministry-pennsylvania.html", sourceUrl: "https://www.my-pastor.com/blue-rock-b-b-and-healing-ministry-pennsylvania.html",
@@ -214,7 +232,8 @@ const borderListings: Listing[] = [
     price: "$150/week suggested donation (no one turned away)",
     capacity: "3 cabins, kids welcome, toy room, sports equipment", beds: "Not published", baths: "Not published",
     amenities: "9-acre property, porch swings, gazebo, near Pickett State Park & Big South Fork",
-    fit: "good", fitLabel: "Would be the best family match on the whole list — if it were closer",
+    kitchen: "Yes — each unit equipped with a kitchen (confirmed)",
+    fit: "good", fitLabel: "Great fit for a family of 5 — if it were closer",
     notes: "Excluded from the main list because it runs roughly 9 hours, past the 8-hour cutoff — flagged because it's otherwise an excellent fit.",
     phone: "9318796784", phoneDisplay: "931-879-6784", website: "http://www.christianpastorretreat.org/", email: null,
     source: "my-pastor.com/christian-pastor-retreat-tennessee.html", sourceUrl: "https://www.my-pastor.com/christian-pastor-retreat-tennessee.html",
@@ -226,7 +245,8 @@ const borderListings: Listing[] = [
     price: "Contact for cost/availability",
     capacity: "Cabin sleeps 6", beds: "Not published", baths: "Not published",
     amenities: "440-acre wilderness setting along Gunpowder Creek, fishing, hiking, close to the Creation Museum",
-    fit: "warn", fitLabel: "Sleeps 6, not 9 — would need a second unit",
+    kitchen: "Yes — Cedar Cabins each have a kitchen, living room, dining room (confirmed)",
+    fit: "good", fitLabel: "Good fit — sleeps 6, comfortably covers a family of 5",
     notes: "Friday–Saturday stays for pastors and family. Close to Cincinnati if you want a city day mixed in.",
     phone: "8595865475", phoneDisplay: "859-586-5475", website: "https://www.pottersranch.org/", email: null,
     source: "pastorgetaways.com/potters-ranch-wilderness-retreat/", sourceUrl: "https://pastorgetaways.com/potters-ranch-wilderness-retreat/",
@@ -238,7 +258,8 @@ const borderListings: Listing[] = [
     price: "$95/night for a ministry couple",
     capacity: "1BR + loft with 2 twin beds + queen sleeper sofa", beds: "1 queen + loft (2 twin) + sleeper sofa", baths: "1",
     amenities: "15 chalets/cottages on 100 acres, full kitchen, hiking/boating/historical sites nearby",
-    fit: "warn", fitLabel: "Too small for 9 in one unit — 15 chalets on site though",
+    kitchen: "Yes — full kitchen confirmed",
+    fit: "good", fitLabel: "Good fit — loft plus sleeper sofa sleeps 5 comfortably",
     notes: "With 15 separate chalets on the property, worth asking whether they'll book two adjoining units for a large family.",
     phone: "4237724269", phoneDisplay: "423-772-4269", website: "https://www.fairhavenministries.net/", email: null,
     source: "pastorgetaways.com/fairhaven-ministries/", sourceUrl: "https://pastorgetaways.com/fairhaven-ministries/",
@@ -250,7 +271,8 @@ const borderListings: Listing[] = [
     price: "40% discount Sunday–Thursday for ministry",
     capacity: "Country inn, multiple rooms", beds: "Not published", baths: "Not published",
     amenities: "Full-service country inn setting",
-    fit: "bad", fitLabel: "Unknown — inn-style, would need multiple rooms",
+    kitchen: "No — full-service inn with on-site dining, not self-catering",
+    fit: "warn", fitLabel: "Likely fine with 1–2 rooms for 5, but confirm",
     notes: "Discount applies Sun–Thu only, so plan a midweek stay rather than a weekend.",
     phone: "8653760113", phoneDisplay: "865-376-0113", website: "https://whitestoneinn.com/", email: null,
     source: "pastorgetaways.com/whitestone-country-inn/", sourceUrl: "https://pastorgetaways.com/whitestone-country-inn/",
@@ -269,8 +291,10 @@ function cardHTML(item: Listing): string {
     ? `<div class="contact-row">${links.join("")}</div>`
     : `<div class="contact-row"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8a8571;">No direct contact published — see source link below</span></div>`
 
+  const kitchenConfirmed = item.kitchen.startsWith('Yes')
+
   return `
-  <article class="card" data-name="${item.name.toLowerCase()}" data-loc="${item.loc.toLowerCase()}" data-amen="${item.amenities.toLowerCase()}" data-fit="${item.fit}" data-free="${item.free}">
+  <article class="card" data-name="${item.name.toLowerCase()}" data-loc="${item.loc.toLowerCase()}" data-amen="${item.amenities.toLowerCase()}" data-fit="${item.fit}" data-free="${item.free}" data-kitchen="${kitchenConfirmed}">
     <div class="marker">
       <div class="mi">${item.miles}</div>
       <div class="mi-label">miles</div>
@@ -279,8 +303,13 @@ function cardHTML(item: Listing): string {
     <div class="card-body">
       <h3>${item.name}</h3>
       <div class="location">${item.loc}</div>
+      ${item.correction ? `<div style="background:var(--bad-bg);color:var(--bad);border-radius:4px;padding:8px 12px;font-size:13px;font-weight:600;margin-bottom:12px;">⚠ ${item.correction}</div>` : ''}
       <span class="fit-badge fit-${item.fit}">${fitLabels[item.fit]} — ${item.fitLabel}</span>
       <div class="facts">
+        <div>
+          <div class="fact-label">Full Kitchen</div>
+          <div class="fact-value">${item.kitchen}</div>
+        </div>
         <div>
           <div class="fact-label">Price</div>
           <div class="fact-value">${item.price}</div>
@@ -660,6 +689,7 @@ export default function RetreatsContent() {
         if (activeFilter === 'good') matchesFilter = c.dataset.fit === 'good'
         if (activeFilter === 'warn') matchesFilter = c.dataset.fit === 'warn'
         if (activeFilter === 'free') matchesFilter = c.dataset.free === 'true'
+        if (activeFilter === 'kitchen') matchesFilter = c.dataset.kitchen === 'true'
         const show = matchesText && matchesFilter
         c.style.display = show ? '' : 'none'
         if (show) visible++
@@ -703,7 +733,7 @@ export default function RetreatsContent() {
           <p className="eyebrow">Family trip planning · Pastor lodging guide</p>
           <h1>Where the Yomes Family Could Actually Go</h1>
           <p className="lede">Every clergy-discounted or free retreat property found across two source directories, filtered to a realistic radius, with real prices and capacities where the ministries publish them — and an honest flag where they don&apos;t.</p>
-          <div className="origin"><span className="dot"></span> Measured from Newark, DE · 8-hour drive radius</div>
+          <div className="origin"><span className="dot"></span> Measured from Newark, DE · 8-hour drive radius · 2 adults + 3 teens · full kitchen required</div>
         </div>
       </header>
 
@@ -711,6 +741,7 @@ export default function RetreatsContent() {
         <div className="controls-inner">
           <input id="search" type="text" placeholder="Search by name, state, or amenity…" aria-label="Search listings" />
           <button className="chip active" data-filter="all">All 15</button>
+          <button className="chip" data-filter="kitchen">Confirmed full kitchen</button>
           <button className="chip" data-filter="good">Good family fit</button>
           <button className="chip" data-filter="warn">Partial fit</button>
           <button className="chip" data-filter="free">Free / donation-based</button>
@@ -721,7 +752,7 @@ export default function RetreatsContent() {
       <div className="wrap">
 
         <div className="section-label"><h2>Within 8 Hours</h2><div className="rule"></div></div>
-        <p className="section-note">Sorted nearest to farthest. Distance and drive time are road-trip estimates, not turn-by-turn — confirm before you lock dates.</p>
+        <p className="section-note">Sorted nearest to farthest. Distance and drive time are road-trip estimates, not turn-by-turn — confirm before you lock dates. &quot;Full Kitchen&quot; reflects only what&apos;s confirmed in the source listings — several ministries don&apos;t publish this, so those are marked &quot;Not confirmed.&quot;</p>
         <div className="grid" id="mainGrid"></div>
 
         <div className="section-label"><h2>Just Outside 8 Hours</h2><div className="rule"></div></div>
