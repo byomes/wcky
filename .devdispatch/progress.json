@@ -1,1 +1,1 @@
-{"step": 4, "total": 5, "label": "Testing", "detail": "tsc --noEmit passed clean; next build compiled and type-checked the retreats page (pre-existing unrelated /api/ingest DOMMatrix build failure confirmed out of scope)."}
+{"step": 5, "total": 5, "label": "Reporting", "detail": "Committed (verified non-empty diff), pushed retreats-update-round2-20260815, and opened PR #9."}
