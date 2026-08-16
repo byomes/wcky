@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export default function Footer() {
   const pathname = usePathname()
-  if (pathname.startsWith('/room') || pathname.startsWith('/tools/connect-card')) return null
+  if (pathname.startsWith('/room') || pathname.startsWith('/tools/connect-card') || pathname.startsWith('/retreats')) return null
 
   return (
     <footer className="bg-navy-950 border-t border-navy-800">
