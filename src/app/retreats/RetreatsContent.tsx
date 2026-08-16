@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 
 interface Listing {
+  id: string
   name: string
   loc: string
   miles: number
@@ -28,6 +29,7 @@ interface Listing {
 
 const mainListings: Listing[] = [
   {
+    id: "faith-mountain-ministries-cedar-house",
     name: "Faith Mountain Ministries — Cedar House",
     loc: "Rosedale, WV", miles: 260, time: "4.5 hr",
     price: "Cedar House rate not separately listed (2BR cottages on same property: $69/night)",
@@ -41,6 +43,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "faith-mountain-ministries-2br-cottage",
     name: "Faith Mountain Ministries — 2BR Cottage",
     loc: "Rosedale, WV", miles: 260, time: "4.5 hr",
     price: "$69/night",
@@ -54,6 +57,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "canna-country-inn",
     name: "Canna Country Inn",
     loc: "Etters, PA", miles: 95, time: "1.75 hr",
     price: "25–75% off posted B&B rates for full-time ministry staff (call for current posted rate)",
@@ -67,6 +71,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "disciples-retreat",
     name: "Disciples' Retreat",
     loc: "Wellston, OH", miles: 430, time: "7 hr",
     price: "$15 per person, per night",
@@ -80,6 +85,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "comfort-inn-splash-harbor",
     name: "Comfort Inn Splash Harbor",
     loc: "Bellville, OH", miles: 400, time: "6.5 hr",
     price: "Discounted for licensed pastors, Sunday/Monday nights, based on availability",
@@ -93,6 +99,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "beulah-beach",
     name: "Beulah Beach",
     loc: "Vermillion, OH (Lake Erie)", miles: 430, time: "7 hr",
     price: "Not published — contact for rate",
@@ -106,6 +113,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "laurel-ridge-cabins-now-laurel-leaf-cabins",
     name: "Laurel Ridge Cabins (now Laurel Leaf Cabins)",
     loc: "near Summersville Lake, WV", miles: 300, time: "5 hr",
     price: "Standard vacation rental rates (no ministry discount) — see laurelleafcabins.com",
@@ -120,6 +128,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "spruce-lake-retreat",
     name: "Spruce Lake Retreat",
     loc: "Canadensis, PA (Poconos)", miles: 175, time: "3 hr",
     price: "Not published on listing — check sprucelake.org for current rates",
@@ -133,6 +142,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "hidden-hollow-retreat-center",
     name: "Hidden Hollow Retreat Center",
     loc: "Moravian Falls, NC", miles: 430, time: "7 hr",
     price: "Not published — contact for pricing",
@@ -146,6 +156,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "draw-nigh-ministries",
     name: "Draw Nigh Ministries",
     loc: "Pinehurst, NC", miles: 430, time: "7 hr",
     price: "Free (no cost)",
@@ -159,6 +170,7 @@ const mainListings: Listing[] = [
     free: true
   },
   {
+    id: "ridgecrest-conference-center",
     name: "Ridgecrest Conference Center",
     loc: "Ridgecrest, NC (near Asheville)", miles: 520, time: "8.5 hr",
     price: "$79/night (hotel-style rooms)",
@@ -172,6 +184,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "churches-in-mission-guest-house",
     name: "Churches in Mission Guest House",
     loc: "near Gettysburg, PA", miles: 130, time: "2.25 hr",
     price: "Free (donation-based, program retreat)",
@@ -185,6 +198,7 @@ const mainListings: Listing[] = [
     free: true
   },
   {
+    id: "new-season-retreat",
     name: "New Season Retreat",
     loc: "near Fairfax, VA", miles: 130, time: "2.25 hr",
     price: "Free (donations optional)",
@@ -198,6 +212,7 @@ const mainListings: Listing[] = [
     free: true
   },
   {
+    id: "house-of-hope-international",
     name: "House of Hope International",
     loc: "Bronx, NYC", miles: 130, time: "2.25 hr",
     price: "Not published — contact required",
@@ -211,6 +226,7 @@ const mainListings: Listing[] = [
     free: false
   },
   {
+    id: "blue-rock-bed-breakfast",
     name: "Blue Rock Bed & Breakfast",
     loc: "Millersville, PA", miles: 100, time: "1.75 hr",
     price: "Discounted for missionaries/pastors (blacked out October + some summer weekends) — contact for current rate",
@@ -227,6 +243,7 @@ const mainListings: Listing[] = [
 
 const borderListings: Listing[] = [
   {
+    id: "christian-pastor-retreat",
     name: "Christian Pastor Retreat",
     loc: "Jamestown, TN (Cumberland Plateau)", miles: 560, time: "~9 hr",
     price: "$150/week suggested donation (no one turned away)",
@@ -240,6 +257,7 @@ const borderListings: Listing[] = [
     free: false
   },
   {
+    id: "potter-s-ranch-wilderness-retreat",
     name: "Potter's Ranch Wilderness Retreat",
     loc: "Union, KY (near Cincinnati)", miles: 530, time: "8.5 hr",
     price: "Contact for cost/availability",
@@ -253,6 +271,7 @@ const borderListings: Listing[] = [
     free: false
   },
   {
+    id: "fairhaven-ministries",
     name: "Fairhaven Ministries",
     loc: "Roan Mountain, TN (Blue Ridge Mtns)", miles: 510, time: "8.25 hr",
     price: "$95/night for a ministry couple",
@@ -266,6 +285,7 @@ const borderListings: Listing[] = [
     free: false
   },
   {
+    id: "whitestone-country-inn",
     name: "Whitestone Country Inn",
     loc: "Kingston, TN", miles: 560, time: "9 hr",
     price: "40% discount Sunday–Thursday for ministry",
@@ -294,14 +314,17 @@ function cardHTML(item: Listing): string {
   const kitchenConfirmed = item.kitchen.startsWith('Yes')
 
   return `
-  <article class="card" data-name="${item.name.toLowerCase()}" data-loc="${item.loc.toLowerCase()}" data-amen="${item.amenities.toLowerCase()}" data-fit="${item.fit}" data-free="${item.free}" data-kitchen="${kitchenConfirmed}">
+  <article class="card" data-id="${item.id}" data-name="${item.name.toLowerCase()}" data-loc="${item.loc.toLowerCase()}" data-amen="${item.amenities.toLowerCase()}" data-fit="${item.fit}" data-free="${item.free}" data-kitchen="${kitchenConfirmed}">
     <div class="marker">
       <div class="mi">${item.miles}</div>
       <div class="mi-label">miles</div>
       <div class="time">${item.time}</div>
     </div>
     <div class="card-body">
-      <h3>${item.name}</h3>
+      <div class="card-header">
+        <h3>${item.name}</h3>
+        <button class="remove-btn" data-remove-id="${item.id}" aria-label="Remove ${item.name}">✕ Remove</button>
+      </div>
       <div class="location">${item.loc}</div>
       ${item.correction ? `<div style="background:var(--bad-bg);color:var(--bad);border-radius:4px;padding:8px 12px;font-size:13px;font-weight:600;margin-bottom:12px;">⚠ ${item.correction}</div>` : ''}
       <span class="fit-badge fit-${item.fit}">${fitLabels[item.fit]} — ${item.fitLabel}</span>
@@ -624,6 +647,85 @@ const styles = `
   }
   .retreats-page .source-line a{color:#8a8571;text-decoration:underline;}
 
+  .retreats-page .card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .retreats-page .remove-btn{
+    flex-shrink:0;
+    font-family: var(--font-retreats-mono), monospace;
+    font-size:11px;
+    letter-spacing:0.02em;
+    background:none;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:5px 10px;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all .15s ease;
+    white-space:nowrap;
+  }
+  .retreats-page .remove-btn:hover{
+    background:var(--bad-bg);
+    color:var(--bad);
+    border-color:var(--bad);
+  }
+  .retreats-page .remove-btn:focus-visible{outline:2px solid var(--sienna);outline-offset:2px;}
+
+  .retreats-page .removed-note{
+    text-align:center;
+    padding:24px;
+    font-family: var(--font-retreats-mono), monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .retreats-page .removed-note button{
+    font-family: var(--font-retreats-mono), monospace;
+    font-size:12.5px;
+    background:var(--pine);
+    color:var(--paper);
+    border:none;
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    margin-left:8px;
+  }
+
+  .retreats-page .undo-toast{
+    position:fixed;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%) translateY(0);
+    background:var(--pine);
+    color:var(--paper);
+    padding:12px 18px;
+    border-radius:6px;
+    font-family: var(--font-retreats-mono), monospace;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.2);
+    z-index:50;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  .retreats-page .undo-toast.show{opacity:1;pointer-events:auto;}
+  .retreats-page .undo-toast button{
+    font-family: var(--font-retreats-mono), monospace;
+    font-size:13px;
+    font-weight:600;
+    background:var(--gold);
+    color:var(--pine);
+    border:none;
+    padding:6px 14px;
+    border-radius:4px;
+    cursor:pointer;
+  }
+
   .retreats-page .resource-note{
     margin-top:20px;
     background:var(--paper-2);
@@ -664,6 +766,24 @@ const styles = `
   }
 `
 
+const STORAGE_KEY = 'retreats-removed-v1'
+const allListings: Listing[] = [...mainListings, ...borderListings]
+
+function getRemovedIds(): string[] {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+  } catch {
+    return []
+  }
+}
+function setRemovedIds(ids: string[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids))
+  } catch {
+    // localStorage unavailable (private browsing, etc.) — remove will only last this session
+  }
+}
+
 export default function RetreatsContent() {
   useEffect(() => {
     const mainGrid = document.getElementById('mainGrid')
@@ -671,19 +791,88 @@ export default function RetreatsContent() {
     const search = document.getElementById('search') as HTMLInputElement | null
     const countEl = document.getElementById('count')
     const chips = document.querySelectorAll<HTMLButtonElement>('.retreats-page .chip')
+    const removedNote = document.getElementById('removedNote')
+    const undoToast = document.getElementById('undoToast')
+    const undoText = document.getElementById('undoText')
+    const undoBtn = document.getElementById('undoBtn') as HTMLButtonElement | null
 
-    if (!mainGrid || !borderGrid || !search || !countEl) return
+    if (!mainGrid || !borderGrid || !search || !countEl || !removedNote || !undoToast || !undoText || !undoBtn) return
 
-    mainGrid.innerHTML = mainListings.map(cardHTML).join("")
-    borderGrid.innerHTML = borderListings.map(cardHTML).join("")
-
+    let removedIds = getRemovedIds()
     let activeFilter = 'all'
+    let undoTimer: ReturnType<typeof setTimeout> | null = null
+
+    function render() {
+      mainGrid!.innerHTML = mainListings.map(cardHTML).join("")
+      borderGrid!.innerHTML = borderListings.map(cardHTML).join("")
+      attachRemoveHandlers()
+      applyFilters()
+      renderRemovedNote()
+    }
+
+    function attachRemoveHandlers() {
+      document.querySelectorAll<HTMLButtonElement>('.retreats-page .remove-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = (e.currentTarget as HTMLButtonElement).dataset.removeId
+          if (id) removeListing(id)
+        })
+      })
+    }
+
+    function removeListing(id: string) {
+      if (removedIds.includes(id)) return
+      removedIds.push(id)
+      setRemovedIds(removedIds)
+      const item = allListings.find(x => x.id === id)
+      render()
+      showUndo(item ? item.name : 'Listing', id)
+    }
+
+    function restoreListing(id: string) {
+      removedIds = removedIds.filter(x => x !== id)
+      setRemovedIds(removedIds)
+      render()
+    }
+
+    function showUndo(name: string, id: string) {
+      if (undoTimer) clearTimeout(undoTimer)
+      undoText!.textContent = `Removed "${name}"`
+      undoBtn!.onclick = () => {
+        restoreListing(id)
+        undoToast!.classList.remove('show')
+      }
+      undoToast!.classList.add('show')
+      undoTimer = setTimeout(() => { undoToast!.classList.remove('show') }, 6000)
+    }
+
+    function renderRemovedNote() {
+      if (removedIds.length === 0) {
+        removedNote!.style.display = 'none'
+        return
+      }
+      removedNote!.style.display = ''
+      const names = removedIds
+        .map(id => allListings.find(x => x.id === id))
+        .filter((x): x is Listing => Boolean(x))
+      removedNote!.innerHTML = `${names.length} listing${names.length === 1 ? '' : 's'} hidden on this device — ` +
+        names.map(item => `<button data-restore-id="${item.id}">Restore "${item.name}"</button>`).join(' ')
+      removedNote!.querySelectorAll<HTMLButtonElement>('[data-restore-id]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = (e.currentTarget as HTMLButtonElement).dataset.restoreId
+          if (id) restoreListing(id)
+        })
+      })
+    }
 
     function applyFilters() {
       const q = search!.value.trim().toLowerCase()
       const allCards = document.querySelectorAll<HTMLElement>('.retreats-page #mainGrid .card, .retreats-page #borderGrid .card')
       let visible = 0
       allCards.forEach(c => {
+        if (removedIds.includes(c.dataset.id ?? '')) {
+          c.style.display = 'none'
+          return
+        }
         const matchesText = !q || (c.dataset.name ?? '').includes(q) || (c.dataset.loc ?? '').includes(q) || (c.dataset.amen ?? '').includes(q)
         let matchesFilter = true
         if (activeFilter === 'good') matchesFilter = c.dataset.fit === 'good'
@@ -713,9 +902,10 @@ export default function RetreatsContent() {
 
     search.addEventListener('input', applyFilters)
 
-    applyFilters()
+    render()
 
     return () => {
+      if (undoTimer) clearTimeout(undoTimer)
       search.removeEventListener('input', applyFilters)
       chips.forEach(chip => {
         const handler = chipHandlers.get(chip)
@@ -752,12 +942,14 @@ export default function RetreatsContent() {
       <div className="wrap">
 
         <div className="section-label"><h2>Within 8 Hours</h2><div className="rule"></div></div>
-        <p className="section-note">Sorted nearest to farthest. Distance and drive time are road-trip estimates, not turn-by-turn — confirm before you lock dates. &quot;Full Kitchen&quot; reflects only what&apos;s confirmed in the source listings — several ministries don&apos;t publish this, so those are marked &quot;Not confirmed.&quot;</p>
+        <p className="section-note">Sorted nearest to farthest. Distance and drive time are road-trip estimates, not turn-by-turn — confirm before you lock dates. &quot;Full Kitchen&quot; reflects only what&apos;s confirmed in the source listings — several ministries don&apos;t publish this, so those are marked &quot;Not confirmed.&quot; Removed a listing by mistake? Undo appears right after you remove one — after that, scroll to the bottom of the page to restore it.</p>
         <div className="grid" id="mainGrid"></div>
 
         <div className="section-label"><h2>Just Outside 8 Hours</h2><div className="rule"></div></div>
         <p className="section-note">These missed the cutoff by roughly 15 minutes to an hour, but were documented well enough — or fit the family so well on paper — that they&apos;re worth knowing about.</p>
         <div className="grid" id="borderGrid"></div>
+
+        <div className="removed-note" id="removedNote" style={{ display: 'none' }}></div>
 
         <div className="resource-note">
           <strong>Also worth a call:</strong> Christian Hospitality Network (<a href="https://thechn.org" target="_blank" rel="noopener">thechn.org</a>, <a href="tel:8653767546">865-376-7546</a>) isn&apos;t a single property — it&apos;s a network of roughly 1,000 B&amp;Bs, inns, and other lodging properties across all 50 states offering discounts to full-time ministry staff. Their inventory isn&apos;t broken out by location on the directories searched here, so it&apos;s worth checking directly for something closer to home in DE, PA, NJ, MD, or VA.
@@ -766,6 +958,11 @@ export default function RetreatsContent() {
         <footer>
           Sources: my-pastor.com/pastor-retreat-centers.html · pastorgetaways.com — compiled for personal trip planning, not an endorsement of any listed ministry.
         </footer>
+      </div>
+
+      <div className="undo-toast" id="undoToast">
+        <span id="undoText"></span>
+        <button id="undoBtn">Undo</button>
       </div>
     </div>
   )
