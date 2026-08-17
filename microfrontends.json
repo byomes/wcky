@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "version": "1",
+  "applications": {
+    "wcky": {
+      "packageName": "wcky-website",
+      "development": {
+        "fallback": "wcky.vercel.app"
+      }
+    },
+    "comms-desk": {
+      "routing": [
+        {
+          "paths": ["/comms/:path*"]
+        }
+      ]
+    }
+  }
+}

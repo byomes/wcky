@@ -1,3 +1,5 @@
+const { withMicrofrontends } = require('@vercel/microfrontends/next/config')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
@@ -20,4 +22,4 @@ const nextConfig = {
     ]
   },
 }
-module.exports = nextConfig
+module.exports = withMicrofrontends(nextConfig)
