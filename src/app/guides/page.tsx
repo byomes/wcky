@@ -85,8 +85,9 @@ export default function GuidesPage() {
                   The Wrong Jesus
                 </h2>
                 <p className="text-slate-400 leading-relaxed text-lg">
-                  A free companion guide for The Wrong Jesus is in the works. Check back
-                  soon.
+                  Many people are devoted — just not to the Jesus of Scripture. A free
+                  companion guide to help you tell the difference is in the works. Check
+                  back soon.
                 </p>
               </div>
             </div>
