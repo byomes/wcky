@@ -117,7 +117,7 @@ export default function BooksPage() {
                   He Is Risen
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                  A careful examination of the resurrection accounts across the four Gospels. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
+                  A careful examination of the historical evidence for the resurrection that predates the Gospels themselves. Written for believers who want solid answers and skeptics who want an honest look at the evidence.
                 </p>
                 <a
                   href="https://www.amazon.com/He-Risen-Resurrection-Evidence-Gospels/dp/B0BTRRC8CF/"

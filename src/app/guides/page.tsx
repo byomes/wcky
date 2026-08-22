@@ -50,8 +50,9 @@ export default function GuidesPage() {
                   He Is Risen
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                  Go deeper into the resurrection accounts across the four Gospels with a
-                  free companion study guide, built for personal study or small groups.
+                  Go deeper into the historical evidence for the resurrection that predates
+                  the Gospels themselves with a free companion study guide, built for
+                  personal study or small groups.
                 </p>
                 <Link
                   href="/guide/he-is-risen"
