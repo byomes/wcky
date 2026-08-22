@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/start', label: 'Start' },
   { href: '/blog', label: 'Blog' },
   { href: '/books', label: 'Books' },
+  { href: '/guides', label: 'Guides' },
   { href: '/arc', label: 'ARC' },
 ]
 
