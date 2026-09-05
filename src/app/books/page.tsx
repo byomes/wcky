@@ -83,14 +83,24 @@ export default function BooksPage() {
                 <p className="text-slate-400 leading-relaxed mb-8 text-lg">
                   Many people are devoted. But devoted to a Jesus they constructed rather than the Jesus of Scripture. This book diagnoses the problem and points back to the real thing.
                 </p>
-                <a
-                  href="https://faithmakessense.kit.com/31040c8e97"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-                >
-                  Let Me Know When It&apos;s Available
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://www.amazon.com/Wrong-Jesus-When-Worship-Right-ebook/dp/B0HFCD85QT"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                  >
+                    Pre-order on Kindle
+                  </a>
+                  <a
+                    href="https://faithmakessense.kit.com/31040c8e97"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                  >
+                    Let Me Know When It&apos;s Available
+                  </a>
+                </div>
               </div>
             </div>
 

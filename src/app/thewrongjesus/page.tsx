@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 }
 
 // Flip to true and replace placeholder when preorder goes live
-const AMAZON_LIVE = false
-const AMAZON_LINK = '[AMAZON_LINK]'
+const AMAZON_LIVE = true
+const AMAZON_LINK = 'https://www.amazon.com/Wrong-Jesus-When-Worship-Right-ebook/dp/B0HFCD85QT'
 
 const GIVEBUTTER_LINK = 'https://givebutter.com/fms1'
 
