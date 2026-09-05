@@ -17,6 +17,11 @@ const nextConfig = {
         destination: '/books',
         permanent: true,
       },
+      {
+        source: '/tools/connect-card',
+        destination: 'https://wtsn.me/cat/connect',
+        permanent: true,
+      },
     ]
   },
 }
