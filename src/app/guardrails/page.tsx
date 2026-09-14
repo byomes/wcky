@@ -72,23 +72,19 @@ export default function GuardrailsPage() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <div className="space-y-5 text-slate-300 leading-relaxed text-lg">
             <p>
-              Most Christians never stop to ask where the line is with AI.{' '}
-              <em className="text-white">GUARDRAILS</em> draws it, not to keep you off the
-              road, but to keep you from going somewhere dangerous.
+              Most Christians never stop to ask where the line is with AI. They are either
+              against it or for it. This book draws it.
             </p>
             <p>
-              Pastor and author William CK Yomes walks readers through four biblical guardrails
-              for the AI-driven age: AI is a thing, not a someone. It should amplify your
-              thinking, not replace it. It should strengthen your relationships, not substitute
-              for them. And it should point you back to God, never stand in for Him. Each
-              guardrail is grounded in Scripture, from Genesis to the golden calf of Exodus
-              32, and translated into a plain warning sign: how you know you&apos;ve crossed it.
+              Pastor and author William CK Yomes isn&apos;t interested in fear, and he isn&apos;t
+              interested in blind acceptance either. He&apos;s found a set of biblical guardrails,
+              grounded in Scripture that mark exactly where the dangers are in using artificial
+              intelligence.
             </p>
             <p>
               Part pastoral guide, part theological reckoning,{' '}
-              <em className="text-white">GUARDRAILS</em> doesn&apos;t ask Christians to fear
-              AI or to use it without thinking. It gives them a road to drive, and the rails
-              that keep them on it.
+              <em className="text-white">GUARDRAILS</em> won&apos;t tell you to stay off the
+              road. It&apos;ll teach you how to see the rails before you need them.
             </p>
           </div>
         </div>
