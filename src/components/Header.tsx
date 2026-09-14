@@ -10,7 +10,6 @@ const navLinks = [
   { href: '/blog', label: 'Blog' },
   { href: '/books', label: 'Books' },
   { href: '/guides', label: 'Guides' },
-  { href: '/arc', label: 'ARC' },
 ]
 
 export default function Header() {
