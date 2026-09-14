@@ -52,9 +52,9 @@ export default function GuardrailsPage() {
               />
             </div>
             <div className="flex flex-col justify-center gap-5">
-              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold">
-                New Book
-              </p>
+              <span className="inline-block bg-gold-500 text-black text-xs tracking-[0.3em] uppercase font-semibold px-3 py-1.5 w-fit">
+                Coming Soon
+              </span>
               <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white leading-tight">
                 GUARDRAILS
               </h1>
@@ -62,11 +62,6 @@ export default function GuardrailsPage() {
                 Biblical Navigation For An AI-Driven Age
               </p>
               <p className="text-slate-400 text-lg">by William CK Yomes</p>
-              <div className="border-t border-navy-800 pt-5">
-                <p className="text-slate-500 text-xs tracking-widest uppercase">
-                  Coming Soon
-                </p>
-              </div>
             </div>
           </div>
         </div>
