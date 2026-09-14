@@ -65,7 +65,7 @@ export default function GuidesPage() {
 
             <div className="border-t border-navy-800" />
 
-            {/* The Wrong Jesus — coming soon */}
+            {/* The Wrong Jesus — live */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
               <div className="lg:col-span-1">
                 <Image
@@ -78,17 +78,23 @@ export default function GuidesPage() {
               </div>
 
               <div className="lg:col-span-3">
-                <span className="inline-block text-xs text-gold-500 border border-gold-600/50 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
-                  Coming Soon
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Free Study Guide
                 </span>
                 <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                   The Wrong Jesus
                 </h2>
-                <p className="text-slate-400 leading-relaxed text-lg">
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
                   Many people are devoted — just not to the Jesus of Scripture. A free
-                  companion guide to help you tell the difference is in the works. Check
-                  back soon.
+                  companion guide to help you tell the difference, built for personal
+                  study or small groups.
                 </p>
+                <Link
+                  href="/guide/wrong-jesus"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Get the Free Guide
+                </Link>
               </div>
             </div>
 
