@@ -4,7 +4,7 @@ import SignupForm from './SignupForm'
 import ShareButtons from './ShareButtons'
 
 export const metadata: Metadata = {
-  title: 'GUARDRAILS (Coming Soon) | William CK Yomes',
+  title: 'GUARDRAILS | William CK Yomes',
   description:
     'Most Christians never ask where the line is with AI. GUARDRAILS draws it — four biblical guardrails for using AI without losing what makes you human. By William CK Yomes.',
   openGraph: {
