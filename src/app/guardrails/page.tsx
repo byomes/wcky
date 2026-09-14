@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Four biblical guardrails for using AI without losing what makes you human.',
     images: [
       {
-        url: 'https://williamckyomes.com/images/guardrails-cover.png',
+        url: 'https://williamckyomes.com/images/guardrails-og.png',
         width: 1200,
         height: 630,
         type: 'image/png',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [
       {
-        url: 'https://williamckyomes.com/images/guardrails-cover.png',
+        url: 'https://williamckyomes.com/images/guardrails-og.png',
         width: 1200,
         height: 630,
         type: 'image/png',
