@@ -59,44 +59,6 @@ export default function BooksPage() {
 
           <div className="space-y-0">
 
-            {/* Book 0: GUARDRAILS (Coming Soon) */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
-              <div className="lg:col-span-1">
-                <Image
-                  src="/images/guardrails-cover.png"
-                  alt="GUARDRAILS book cover"
-                  width={344}
-                  height={550}
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="lg:col-span-3">
-                <span className="inline-block text-xs text-gold-500 border border-gold-600/50 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
-                  Coming Soon
-                </span>
-                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-                  GUARDRAILS
-                </h2>
-                <p className="text-slate-500 text-xl font-serif italic mb-5">
-                  Biblical Navigation For An AI-Driven Age
-                </p>
-                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                  Most Christians never stop to ask where the line is with AI. GUARDRAILS draws
-                  it — four biblical guardrails for using AI without losing what makes you human.
-                </p>
-                <Link
-                  href="/guardrails"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-navy-800" />
-
             {/* Book 1: The Wrong Jesus (Coming Soon) */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
               <div className="lg:col-span-1">
@@ -176,6 +138,44 @@ export default function BooksPage() {
                 >
                   Order on Amazon
                 </a>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-navy-800" />
+
+            {/* Book 3: GUARDRAILS (Coming Soon) */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
+              <div className="lg:col-span-1">
+                <Image
+                  src="/images/guardrails-cover.png"
+                  alt="GUARDRAILS book cover"
+                  width={344}
+                  height={550}
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="lg:col-span-3">
+                <span className="inline-block text-xs text-gold-500 border border-gold-600/50 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Coming Soon
+                </span>
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
+                  GUARDRAILS
+                </h2>
+                <p className="text-slate-500 text-xl font-serif italic mb-5">
+                  Biblical Navigation For An AI-Driven Age
+                </p>
+                <p className="text-slate-400 leading-relaxed mb-8 text-lg">
+                  Most Christians never stop to ask where the line is with AI. GUARDRAILS draws
+                  it — four biblical guardrails for using AI without losing what makes you human.
+                </p>
+                <Link
+                  href="/guardrails"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
 
