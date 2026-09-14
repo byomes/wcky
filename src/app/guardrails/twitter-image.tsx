@@ -3,7 +3,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 export const runtime = 'nodejs'
-export const alt = 'GUARDRAILS by Dr. Bill Yomes: Biblical Navigation For An AI-Driven Age'
+export const alt = 'GUARDRAILS by William CK Yomes: Biblical Navigation For An AI-Driven Age'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -134,7 +134,7 @@ export default async function Image() {
               color: '#cbd5e1',
             }}
           >
-            by Dr. Bill Yomes
+            by William CK Yomes
           </div>
         </div>
       </div>

@@ -4,11 +4,11 @@ import SignupForm from './SignupForm'
 import ShareButtons from './ShareButtons'
 
 export const metadata: Metadata = {
-  title: 'GUARDRAILS (Coming Soon) | Dr. William C.K. Yomes',
+  title: 'GUARDRAILS (Coming Soon) | William CK Yomes',
   description:
-    'Most Christians never ask where the line is with AI. GUARDRAILS draws it — four biblical guardrails for using AI without losing what makes you human. By Dr. Bill Yomes.',
+    'Most Christians never ask where the line is with AI. GUARDRAILS draws it — four biblical guardrails for using AI without losing what makes you human. By William CK Yomes.',
   openGraph: {
-    title: 'GUARDRAILS by Dr. Bill Yomes',
+    title: 'GUARDRAILS by William CK Yomes',
     description: 'Four biblical guardrails for using AI without losing what makes you human.',
     images: [
       {
@@ -61,7 +61,7 @@ export default function GuardrailsPage() {
               <p className="text-slate-400 text-lg italic">
                 Biblical Navigation For An AI-Driven Age
               </p>
-              <p className="text-slate-400 text-lg">by Dr. Bill Yomes</p>
+              <p className="text-slate-400 text-lg">by William CK Yomes</p>
               <div className="border-t border-navy-800 pt-5">
                 <p className="text-slate-500 text-xs tracking-widest uppercase">
                   Coming Soon
@@ -82,7 +82,7 @@ export default function GuardrailsPage() {
               road, but to keep you from going somewhere dangerous.
             </p>
             <p>
-              Pastor and author Dr. Bill Yomes walks readers through four biblical guardrails
+              Pastor and author William CK Yomes walks readers through four biblical guardrails
               for the AI-driven age: AI is a thing, not a someone. It should amplify your
               thinking, not replace it. It should strengthen your relationships, not substitute
               for them. And it should point you back to God, never stand in for Him. Each
@@ -132,7 +132,7 @@ export default function GuardrailsPage() {
             Get a signed copy at launch
           </h2>
           <p className="text-slate-300 leading-relaxed mb-8">
-            Every monthly donor to Dr. Bill&apos;s teaching ministry, Faith Makes Sense, receives
+            Every monthly donor to William CK Yomes&apos;s teaching ministry, Faith Makes Sense, receives
             a signed physical copy of <em>GUARDRAILS</em> at launch. This is a permanent
             program, not a one-time promotion. Every future book ships to active monthly donors
             at launch.

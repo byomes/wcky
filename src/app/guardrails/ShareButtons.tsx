@@ -3,7 +3,7 @@
 import { MessageCircle, Share2 } from 'lucide-react'
 
 const shareText =
-  "Check out GUARDRAILS — Dr. Bill Yomes's new book on biblical navigation for an AI-driven age:"
+  "Check out GUARDRAILS — William CK Yomes's new book on biblical navigation for an AI-driven age:"
 const smsText = 'I want to share this with you.'
 const shareUrl = 'https://williamckyomes.com/guardrails'
 
