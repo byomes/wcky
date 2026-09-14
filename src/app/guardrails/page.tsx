@@ -6,7 +6,7 @@ import ShareButtons from './ShareButtons'
 export const metadata: Metadata = {
   title: { absolute: 'GUARDRAILS | William CK Yomes' },
   description:
-    'Most Christians never ask where the line is with AI. GUARDRAILS draws it — four biblical guardrails for using AI without losing what makes you human. By William CK Yomes.',
+    'Most Christians never ask where the line is with AI. GUARDRAILS draws it: four biblical guardrails for using AI without losing what makes you human. By William CK Yomes.',
   openGraph: {
     title: 'GUARDRAILS by William CK Yomes',
     description: 'Four biblical guardrails for using AI without losing what makes you human.',
@@ -73,7 +73,7 @@ export default function GuardrailsPage() {
           <div className="space-y-5 text-slate-300 leading-relaxed text-lg">
             <p>
               Most Christians never stop to ask where the line is with AI.{' '}
-              <em className="text-white">GUARDRAILS</em> draws it — not to keep you off the
+              <em className="text-white">GUARDRAILS</em> draws it, not to keep you off the
               road, but to keep you from going somewhere dangerous.
             </p>
             <p>
@@ -81,13 +81,13 @@ export default function GuardrailsPage() {
               for the AI-driven age: AI is a thing, not a someone. It should amplify your
               thinking, not replace it. It should strengthen your relationships, not substitute
               for them. And it should point you back to God, never stand in for Him. Each
-              guardrail is grounded in Scripture — from Genesis to the golden calf of Exodus
-              32 — and translated into a plain warning sign: how you know you&apos;ve crossed it.
+              guardrail is grounded in Scripture, from Genesis to the golden calf of Exodus
+              32, and translated into a plain warning sign: how you know you&apos;ve crossed it.
             </p>
             <p>
               Part pastoral guide, part theological reckoning,{' '}
               <em className="text-white">GUARDRAILS</em> doesn&apos;t ask Christians to fear
-              AI or to use it without thinking. It gives them a road to drive — and the rails
+              AI or to use it without thinking. It gives them a road to drive, and the rails
               that keep them on it.
             </p>
           </div>
