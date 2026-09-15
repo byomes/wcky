@@ -59,7 +59,7 @@ export default function BooksPage() {
 
           <div className="space-y-0">
 
-            {/* Book 1: The Wrong Jesus (Coming Soon) */}
+            {/* Book 1: The Wrong Jesus (Published) */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 py-16">
               <div className="lg:col-span-1">
                 <Image
@@ -72,8 +72,8 @@ export default function BooksPage() {
               </div>
 
               <div className="lg:col-span-3">
-                <span className="inline-block text-xs text-gold-500 border border-gold-600/50 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
-                  Coming Soon
+                <span className="inline-block text-xs text-white bg-gold-600 px-3 py-1 tracking-wide font-semibold uppercase mb-4">
+                  Published
                 </span>
                 <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
                   The Wrong Jesus
@@ -91,15 +91,15 @@ export default function BooksPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
                   >
-                    Pre-order on Kindle
+                    Order on Kindle
                   </a>
                   <a
-                    href="https://faithmakessense.kit.com/31040c8e97"
+                    href="/go/wrong-jesus-paperback"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
                   >
-                    Let Me Know When It&apos;s Available
+                    Order Paperback
                   </a>
                 </div>
               </div>

@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 // Flip to true and replace placeholder when preorder goes live
 const AMAZON_LIVE = true
 const AMAZON_LINK = 'https://www.amazon.com/Wrong-Jesus-When-Worship-Right-ebook/dp/B0HFCD85QT'
+const AMAZON_PAPERBACK_LINK = '/go/wrong-jesus-paperback'
 
 const GIVEBUTTER_LINK = 'https://givebutter.com/fms1'
 
@@ -199,19 +200,29 @@ export default function TheWrongJesusPage() {
         </div>
       </section>
 
-      {/* TERTIARY CTA: Amazon preorder (hidden until live) */}
+      {/* TERTIARY CTA: Amazon (hidden until live) */}
       {AMAZON_LIVE && (
         <section className="bg-navy-900 py-16 lg:py-20 border-t border-navy-800">
           <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
-            <p className="text-slate-400 text-lg mb-6">Available now for preorder on Amazon.</p>
-            <a
-              href={AMAZON_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-            >
-              Order on Amazon
-            </a>
+            <p className="text-slate-400 text-lg mb-6">Available now on Amazon.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={AMAZON_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Order on Kindle
+              </a>
+              <a
+                href={AMAZON_PAPERBACK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+              >
+                Order Paperback
+              </a>
+            </div>
           </div>
         </section>
       )}

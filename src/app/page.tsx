@@ -64,7 +64,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* Coming Soon: The Wrong Jesus */}
+      {/* Published: The Wrong Jesus */}
       <section className="bg-navy-900 py-24 lg:py-32 border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -79,7 +79,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-                Coming Soon
+                Published
               </p>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 The Wrong Jesus
@@ -90,8 +90,7 @@ export default function HomePage() {
               <p className="text-slate-400 leading-relaxed mb-10">
                 What happens when sincerity isn&apos;t enough? This book confronts
                 the most dangerous counterfeit in the church: a Jesus who feels
-                right but isn&apos;t. Sign up to be the first to know when it&apos;s
-                available.
+                right but isn&apos;t. Available now.
               </p>
               <Link
                 href="/thewrongjesus"
