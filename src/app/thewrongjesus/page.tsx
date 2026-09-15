@@ -10,25 +10,9 @@ export const metadata: Metadata = {
     title: 'The Wrong Jesus by Dr. Bill Yomes',
     description:
       "What if the Jesus you're following isn't actually true? Available now.",
-    images: [
-      {
-        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [
-      {
-        url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-      },
-    ],
   },
 }
 
