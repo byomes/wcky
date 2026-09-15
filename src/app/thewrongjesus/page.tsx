@@ -1,18 +1,15 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import CountdownTimer from './CountdownTimer'
-import SignupForm from './SignupForm'
 import ShareButtons from './ShareButtons'
 
 export const metadata: Metadata = {
-  title: 'The Wrong Jesus (Coming September 15, 2026)',
+  title: 'The Wrong Jesus',
   description:
-    "Most Christians never think to ask the question. The Wrong Jesus asks it anyway: What if the Jesus you're following isn't actually true? By Dr. Bill Yomes. Coming September 15, 2026.",
+    "Most Christians never think to ask the question. The Wrong Jesus asks it anyway: What if the Jesus you're following isn't actually true? By Dr. Bill Yomes. Available now.",
   openGraph: {
     title: 'The Wrong Jesus by Dr. Bill Yomes',
     description:
-      "What if the Jesus you're following isn't actually true? Coming September 15, 2026.",
+      "What if the Jesus you're following isn't actually true? Available now.",
     images: [
       {
         url: 'https://williamckyomes.com/images/TWJ_Launch_2.PNG',
@@ -35,8 +32,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Flip to true and replace placeholder when preorder goes live
-const AMAZON_LIVE = true
 const AMAZON_LINK = 'https://www.amazon.com/Wrong-Jesus-When-Worship-Right-ebook/dp/B0HFCD85QT'
 const AMAZON_PAPERBACK_LINK = '/go/wrong-jesus-paperback'
 
@@ -68,10 +63,9 @@ export default function TheWrongJesusPage() {
               </h1>
               <p className="text-slate-400 text-lg">by Dr. Bill Yomes</p>
               <div className="border-t border-navy-800 pt-5">
-                <p className="text-slate-500 text-xs tracking-widest uppercase mb-3">
-                  September 15, 2026
+                <p className="text-gold-500 text-xs tracking-widest uppercase font-semibold">
+                  Available Now
                 </p>
-                <CountdownTimer />
               </div>
             </div>
           </div>
@@ -104,63 +98,40 @@ export default function TheWrongJesusPage() {
         </div>
       </section>
 
-      {/* SHARE */}
-      <section className="bg-navy-950 py-14 border-t border-navy-800">
-        <div className="max-w-2xl mx-auto px-6 lg:px-8">
-          <ShareButtons />
-        </div>
-      </section>
-
-      {/* PRIMARY CTA: ARC / Launch Team */}
+      {/* PRIMARY CTA: Amazon */}
       <section className="bg-navy-950 py-16 lg:py-20 border-t border-navy-800">
-        <div className="max-w-2xl mx-auto px-6 lg:px-8">
-          <div className="border border-navy-700 p-8 lg:p-10">
-            <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-              Join the Launch Team
-            </p>
-            <h2 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight mb-4">
-              Read it before anyone else
-            </h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              Get early digital access to{' '}
-              <em className="text-white">The Wrong Jesus</em> before it launches. Access
-              closes September 15th.
-            </p>
-            <p className="text-slate-400 text-sm leading-relaxed mb-8">
-              <em>
-                Read it early. Post your review on launch day. Help this book reach the people who
-                need it.
-              </em>
-            </p>
-            <Link
-              href="/arc"
-              className="inline-flex items-center justify-center px-7 py-3 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
+        <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
+            Available Now
+          </p>
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white leading-tight mb-8">
+            Get your copy today
+          </h2>
+          <a
+            href={AMAZON_PAPERBACK_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-10 py-5 bg-gold-500 text-white text-base font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200 mb-4"
+          >
+            Order the Paperback
+          </a>
+          <div>
+            <a
+              href={AMAZON_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 text-sm underline hover:text-gold-400 transition-colors duration-200"
             >
-              Join the Launch Team
-            </Link>
+              Also available on Kindle →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* EMAIL CAPTURE */}
+      {/* SHARE */}
       <section className="bg-navy-900 py-14 border-t border-navy-800">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-3">
-            Launch Updates
-          </p>
-          <h2 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight mb-2">
-            Be the first to know
-          </h2>
-          <p className="text-slate-400 text-sm mb-6">
-            Get notified when the book is available, and when the preorder goes live.
-          </p>
-          <SignupForm />
-          <p className="text-slate-500 text-xs mt-4">
-            Want to do more than get notified?{' '}
-            <Link href="/arc" className="text-gold-500 hover:text-gold-400 underline">
-              Join the Launch Team →
-            </Link>
-          </p>
+          <ShareButtons />
         </div>
       </section>
 
@@ -171,13 +142,13 @@ export default function TheWrongJesusPage() {
             Monthly Partnership
           </p>
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white leading-tight mb-6">
-            Get a signed copy at launch
+            Get a signed copy free
           </h2>
           <p className="text-slate-300 leading-relaxed mb-8">
             Every monthly donor to Dr. Bill&apos;s teaching ministry, Faith Makes Sense, receives
-            a signed physical copy of <em>The Wrong Jesus</em> at launch. This is a permanent
-            program, not a one-time
-            promotion. Every future book will also ship to active monthly donors at launch.
+            a signed physical copy of <em>The Wrong Jesus</em>. This is a permanent program, not
+            a one-time promotion. Every future book will also ship to active monthly donors at
+            launch.
           </p>
           <a
             href={GIVEBUTTER_LINK}
@@ -190,7 +161,7 @@ export default function TheWrongJesusPage() {
           <p className="text-slate-400 text-sm leading-relaxed mb-8">
             <em>
               Monthly partners receive a signed copy of every book at launch, starting with
-              this one. Join before September 15 to receive yours.
+              this one.
             </em>
           </p>
           <p className="text-slate-500 text-sm leading-relaxed border-t border-navy-800 pt-8">
@@ -199,33 +170,6 @@ export default function TheWrongJesusPage() {
           </p>
         </div>
       </section>
-
-      {/* TERTIARY CTA: Amazon (hidden until live) */}
-      {AMAZON_LIVE && (
-        <section className="bg-navy-900 py-16 lg:py-20 border-t border-navy-800">
-          <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
-            <p className="text-slate-400 text-lg mb-6">Available now on Amazon.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={AMAZON_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-              >
-                Order on Kindle
-              </a>
-              <a
-                href={AMAZON_PAPERBACK_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
-              >
-                Order Paperback
-              </a>
-            </div>
-          </div>
-        </section>
-      )}
     </>
   )
 }

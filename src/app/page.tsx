@@ -79,7 +79,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-                Published
+                New Release
               </p>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 The Wrong Jesus
@@ -92,12 +92,14 @@ export default function HomePage() {
                 the most dangerous counterfeit in the church: a Jesus who feels
                 right but isn&apos;t. Available now.
               </p>
-              <Link
-                href="/thewrongjesus"
+              <a
+                href="/go/wrong-jesus-paperback"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-sm font-bold tracking-wide uppercase hover:bg-gold-400 transition-colors duration-200"
               >
                 Learn More →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
