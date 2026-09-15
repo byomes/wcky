@@ -63,21 +63,6 @@ export default async function Image() {
           <div
             style={{
               display: 'flex',
-              fontSize: 20,
-              fontFamily: 'Inter',
-              fontWeight: 600,
-              letterSpacing: 6,
-              textTransform: 'uppercase',
-              color: '#daa33b',
-            }}
-          >
-            New Book
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              marginTop: 20,
               fontSize: 76,
               lineHeight: 1.08,
               fontFamily: 'Playfair Display',
