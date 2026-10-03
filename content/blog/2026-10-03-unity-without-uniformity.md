@@ -1,0 +1,30 @@
+---
+title: "Unity Without Uniformity"
+date: "2026-10-03"
+slug: "unity-without-uniformity"
+category: "Teaching"
+categories: ["Teaching"]
+excerpt: "There is a quiet assumption that circulates in many church communities, rarely spoken aloud but deeply felt. It goes something like this: real unity means ev..."
+---
+
+There is a quiet assumption that circulates in many church communities, rarely spoken aloud but deeply felt. It goes something like this: real unity means everyone eventually agreeing on everything. If two believers land in different places on a secondary doctrine, something has gone wrong. If a congregation contains people from different theological traditions holding hands around the same table, surely one side must be compromising. This assumption feels reasonable on the surface, but it collapses under the weight of Scripture itself.
+
+Paul opens Philippians chapter two with an appeal rooted in shared experience rather than shared conclusions. If there is any encouragement from being united with Christ, any comfort from His love, any common sharing in the Spirit, any tenderness and compassion, then believers are called to complete Paul's joy by being like minded, having the same love, being one in spirit and of one mind. Notice what holds this appeal together. It is not a demand for theological uniformity. It is a call to shared affection, shared posture, and shared submission to the same Lord.
+
+We should be honest about what unity does not mean. It does not mean that every believer arrives at identical conclusions on every doctrinal question. It does not mean suppressing disagreement or pretending differences do not exist. Christians across history have disagreed about matters of real substance, from the mode of baptism to the structure of church governance to the finer points of eschatology, and many of those disagreements persist among faithful, Bible believing people today. If unity required the resolution of every such disagreement before fellowship could occur, the church would have splintered into isolation within a single generation of the apostles.
+
+What unity does require is something deeper and, frankly, more demanding than agreement. It requires that we all bow to the same King and submit our conclusions, however confidently held, to the possibility of correction. None of us reads Scripture from a position of perfect objectivity. We bring our histories, our traditions, our blind spots, and our limitations to every text we study. This means that any one of us may be wrong about something, and that sobering reality ought to produce humility rather than defensiveness. The moment we treat our own theological conclusions as beyond question, we have quietly replaced submission to Christ with submission to ourselves.
+
+This does not lead to relativism. There remain matters on which Scripture speaks with such clarity that faithful interpretation leaves little room for disagreement, chief among them the deity of Christ, the reality of His resurrection, and the necessity of grace for salvation. Unity is not a call to treat every doctrine as negotiable. It is a call to distinguish between what is essential to the gospel and what falls within the range of faithful, Spirit led disagreement, and to hold the second category with far more open hands than we often do.
+
+Paul's vision of unity centers on a shared mindset rather than a shared conclusion on every point. Have the same mindset as Christ Jesus, he writes, immediately before describing the humility of the incarnation. This is instructive. The unity he calls for is modeled not on intellectual consensus but on a posture of self emptying love. Christ did not insist on His own prerogatives. He set them aside for the good of others. When believers disagree, the question is not whether they can be brought to identical positions but whether they will treat one another the way Christ treated us, with humility that prioritizes the relationship over the argument.
+
+This means unity is threatened far less by disagreement than by division. Disagreement is simply two people reasoning differently about a shared text. Division is what happens when disagreement is allowed to curdle into contempt, when we begin protecting our own opinion more fiercely than we protect our brothers and sisters. Paul does not ask believers to abandon their convictions. He asks them not to weaponize those convictions against the body they belong to.
+
+It is worth asking ourselves a hard question at this point. When we disagree with another believer, what are we actually protecting? Are we protecting truth, in which case we should hold our position with conviction while remaining teachable and charitable toward the person across from us? Or are we protecting our own pride, our need to be right, our discomfort with being challenged? The answer is not always obvious, and it often takes an honest season of reflection to see clearly which one is driving us.
+
+The picture Paul gives is of believers from genuinely different backgrounds and convictions gathered around a common confession, joined not by uniform opinion but by common submission to Jesus as Lord. This kind of unity is costly because it requires humility that our instincts resist. It is far easier to build community with people who think exactly as we do. It is far harder, and far more Christlike, to remain in genuine relationship with those who reach different conclusions while still confessing the same Lord and pursuing the same holiness.
+
+The call, then, is not to manufacture agreement where none exists, nor to pretend that all disagreements are equally weighty. The call is to hold our convictions with confidence and our unity with even greater care, remembering that the King we all serve reserves the right to correct every one of us, and that until He returns to settle every question fully, our task is not uniformity but love.
+
+*Dr. William C.K. Yomes is the founding apologist of Faith Makes Sense and the Senior Pastor of Catalyst Community Church in Wilmington, Delaware. This article is part of his ongoing teaching ministry at Catalyst Community Church.*
