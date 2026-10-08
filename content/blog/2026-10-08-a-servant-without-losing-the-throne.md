@@ -1,0 +1,26 @@
+---
+title: "A Servant Without Losing the Throne"
+date: "2026-10-08"
+slug: "a-servant-without-losing-the-throne"
+category: "Teaching"
+categories: ["Teaching"]
+excerpt: "There is a question that surfaces almost instinctively when Christians read of Jesus emptying Himself and taking on the nature of a servant. If He emptied Hi..."
+---
+
+There is a question that surfaces almost instinctively when Christians read of Jesus emptying Himself and taking on the nature of a servant. If He emptied Himself, did He stop being God for a while? Did the divine nature go on pause during the years of His earthly life, only to resume in full at the resurrection? The question is understandable, but the answer Scripture gives is more remarkable than either option we might imagine. Jesus never stopped being God. What changed was not His nature but His posture.
+
+Consider an image that clarifies rather than resolves the mystery. A king who steps down from his throne to walk among his subjects does not cease being king in the moment he does so. If he walks out to the stables and picks up a hammer to reshoe a horse, he remains king even with dirt on his hands and sweat on his brow. If he returns to the palace and takes up a mop to clean the floor, his identity as king has not been altered by the humility of the task. What has changed is his role in that moment, not his nature. He can set aside the exercise of his royal privileges without surrendering his royal identity.
+
+This is the picture Paul gives us in Philippians chapter two. Christ, existing in the very nature of God, did not consider equality with God something to be grasped or exploited for His own advantage. Instead He made Himself nothing, taking the very nature of a servant, being made in human likeness. The language here is precise and worth sitting with. Paul does not say Christ emptied Himself of His deity. He says Christ emptied Himself by adding the nature of a servant to who He already was. Divinity was not subtracted. Humanity, and with it the form of a servant, was added.
+
+This distinction protects one of the most foundational truths of Christian theology, the reality that Jesus is fully God and fully man, two natures united in a single person without confusion, without change, without division, and without separation. Theologians have called this the hypostatic union, and while the term itself may sound abstract, the truth it protects is anything but. If Jesus ceased being God during His earthly life, even temporarily, then the one who died on the cross would not have been fully divine, and the atonement would rest on shakier ground than Scripture allows. If Jesus was never truly human, merely appearing in human form while remaining untouched by our actual condition, then His death would not have addressed our actual condition either. Both natures, held together without compromise, are necessary for the work Christ came to accomplish.
+
+What Paul describes, then, is not a subtraction of deity but an addition of servanthood, and the distinction changes everything about how we understand Christ's humility. His authority did not change. His position within the Godhead did not change. His function changed. He stepped out of the exercise of His heavenly glory and into the constraints of human life, hunger, fatigue, temptation, and eventually suffering and death, all while remaining fully what He had always been.
+
+This has practical weight for how we think about strength and service in our own lives. We tend to assume that taking on a lowly role diminishes us, that serving others somehow costs us status or identity. Christ's example suggests otherwise. He did not become less Himself by becoming a servant. If anything, His willingness to serve revealed the depth of who He truly was. A king who is only willing to rule from a distance, insulated from the mess of his subjects' lives, reveals something limited about his character. A king who steps into the stable and picks up the hammer reveals a character secure enough in its own identity that it does not need constant display of privilege to remain intact.
+
+We are not divine, and we should be careful not to overextend an analogy meant to illuminate rather than equate. But there is a lesson here that applies directly to us. Serving others, taking on roles the world considers beneath our dignity, does not diminish who we are in Christ. Our identity is secure enough that we do not need to protect it by avoiding lowly tasks or humble postures. The Son of God scrubbed no floor beneath Him and considered no act of service unworthy of His hands, and He did this while remaining, in every moment, fully God.
+
+The path from the throne room to the cross was not a path away from divinity. It was divinity expressed in its fullest and most costly form, love that holds nothing back and requires no display to be believed. Christ did not lose the throne by taking up the towel. He revealed, in taking up the towel, exactly what kind of King had always been sitting on it.
+
+*Dr. William C.K. Yomes is the founding apologist of Faith Makes Sense and the Senior Pastor of Catalyst Community Church in Wilmington, Delaware. This article is part of his ongoing teaching ministry at Catalyst Community Church.*
