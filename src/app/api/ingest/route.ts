@@ -5,7 +5,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as XLSX from 'xlsx';
 import mammoth from 'mammoth';
-const pdfParse = require('pdf-parse');
 
 const GITHUB_TOKEN = process.env.WATSON_GITHUB_TOKEN;
 const REPO         = 'byomes/watson';
@@ -13,8 +12,11 @@ const BRANCH       = 'main';
 const KB_PATH      = 'kb';
 
 async function extractPdf(buffer: Buffer): Promise<string> {
-  const data = await pdfParse(buffer);
-  return data.text;
+  // Lazy-load: pdf-parse v2 touches DOMMatrix at import time and crashes the route on cold start.
+  const { PDFParse } = require('pdf-parse');
+  const parser = new PDFParse({ data: buffer });
+  const result = await parser.getText();
+  return result.text;
 }
 
 async function extractExcel(buffer: Buffer): Promise<string> {
