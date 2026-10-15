@@ -1,0 +1,26 @@
+---
+title: "Working Out What God Has Worked In"
+date: "2026-10-15"
+slug: "working-out-what-god-has-worked-in"
+category: "Teaching"
+categories: ["Teaching"]
+excerpt: "Few tensions in the Christian faith have generated as much debate as the relationship between God's sovereignty and human responsibility. Entire theological ..."
+---
+
+Few tensions in the Christian faith have generated as much debate as the relationship between God's sovereignty and human responsibility. Entire theological traditions have formed around where to place the emphasis, and entire congregations have split over which side deserves more weight. Yet Paul, writing to the Philippians from a prison cell, refuses to resolve the tension by choosing a side. Instead, in a single sentence, he holds both truths together and asks us to do the same.
+
+The text reads plainly. We are to continue working out our salvation with fear and trembling, for it is God who works in us to will and to act according to His good purpose. Notice what Paul does not say. He does not say work out your salvation and then, separately, remember that God also happens to be involved. He binds the two statements together with the word for, showing that our working and God's working are not two competing forces but two dimensions of the same reality. This is not contradiction. It is mystery held in tension, and Scripture asks us to live inside that tension rather than escape it.
+
+It helps to understand what working out does not mean. It does not mean manufacturing salvation through effort, as though our striving produces the standing we already have in Christ. Salvation is not a wage we earn through labor. It is a gift already given. The Greek word behind working out carries the sense of bringing to completion something already present, not conjuring something from nothing. We are not told to create fruit. We are told to produce what has already been planted within us. The distinction matters enormously, because it changes the posture of the Christian life from anxious striving to faithful cultivation.
+
+At the same time, Paul does not let us collapse into passivity. He does not say relax, since God will do all the work regardless of what you do. The command to work out our salvation with fear and trembling is real, active, and personal. Fear and trembling here does not describe terror before an angry God. It describes the seriousness with which we ought to approach our obedience, the sober recognition that our choices matter and carry weight. If God's sovereignty made our choices meaningless, Paul would have no reason to command anything of us at all. He commands us precisely because our participation is real.
+
+This tension shows up throughout church history in the long argument between those who emphasize God's absolute control and those who emphasize human freedom and responsibility. Pushed to its extreme in one direction, the argument concludes that if God is fully sovereign, human choice must be an illusion, and our obedience or disobedience makes no genuine difference. Pushed to its extreme in the other direction, the argument concludes that if human choice is fully free, God's sovereignty must be limited, constrained by what we decide to do with our freedom. Both extremes eventually run into trouble. If our choices are illusions, then judgment for sin becomes unjust, since we would be condemned for something we never truly controlled. If God's sovereignty is limited by our choices, then His purposes are ultimately contingent on us, and He is no longer the God Scripture describes. Paul offers a better way, one that refuses to sacrifice either truth for the comfort of a tidy system.
+
+Human responsibility, rightly understood, is not independent of God's sovereignty. It is derivative of it. We do not act as free agents standing outside of God's authority, negotiating with Him for control. We act as those whose very capacity to will and to act has been placed in us by God Himself. This is why Paul can say in the same breath that we must work and that God works in us. Our obedience does not undermine His sovereignty. It is one of the means through which His sovereignty accomplishes its purpose.
+
+There is real comfort here for anyone who has felt the weight of trying to manufacture their own spiritual growth through sheer willpower. We are not left alone to produce holiness by force of effort. God is at work in us, shaping our very desires, our will, and our capacity to act, so that what we produce flows from what He has already begun. But there is also real accountability here for anyone tempted to use God's sovereignty as an excuse for spiritual laziness. His work in us does not remove our responsibility. It enables it.
+
+We are not meant to resolve this tension by flattening it into something simpler than Scripture presents. We are meant to live inside it, working with diligence because our obedience genuinely matters, and resting with confidence because the outcome ultimately depends on the God who is at work in us to will and to act according to His good purpose.
+
+*Dr. William C.K. Yomes is the founding apologist of Faith Makes Sense and the Senior Pastor of Catalyst Community Church in Wilmington, Delaware. This article is part of his ongoing teaching ministry at Catalyst Community Church.*
