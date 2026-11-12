@@ -8,6 +8,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/arc',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/arc/:path*',
+        destination: '/',
+        permanent: false,
+      },
+      {
         source: '/theology',
         destination: '/books',
         permanent: true,

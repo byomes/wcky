@@ -35,7 +35,6 @@ export default function Footer() {
                 { href: '/start', label: 'Start' },
                 { href: '/blog', label: 'Blog' },
                 { href: '/books', label: 'Books' },
-                { href: '/arc', label: 'Join the Launch Team' },
               ].map(link => (
                 <Link
                   key={link.href}
