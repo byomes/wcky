@@ -8,6 +8,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/room',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/room/:path*',
+        destination: '/',
+        permanent: false,
+      },
+      {
         source: '/arc',
         destination: '/',
         permanent: false,
